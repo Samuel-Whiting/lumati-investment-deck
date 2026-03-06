@@ -239,8 +239,7 @@ div:hover > .inst-hint{opacity:1!important}
 #landing{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;transition:transform 1.4s cubic-bezier(.4,0,.0,1),opacity 1.2s ease}
 #landing.portal-enter{transform:scale(3.5);opacity:0;pointer-events:none}
 #landing .cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
-/* Black overlay to hide text in bottom-right of the photo */
-#landing .cover-mask{position:absolute;bottom:0;right:0;width:55%;height:45%;background:linear-gradient(135deg,transparent 0%,rgba(6,6,10,.85) 40%,rgba(6,6,10,.97) 100%)}
+#landing .cover-mask{display:none}
 #landing .cover-mask2{position:absolute;bottom:0;left:0;width:50%;height:25%;background:linear-gradient(to top,rgba(6,6,10,.9) 0%,transparent 100%)}
 #landing .cover-vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(6,6,10,.6) 100%)}
 #landing .landing-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
