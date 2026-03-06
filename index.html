@@ -236,16 +236,16 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 div:hover > .inst-hint{opacity:1!important}
 
 /* === LANDING PAGE === */
-#landing{position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding-top:6vh;transition:transform 1.4s cubic-bezier(.4,0,.0,1),opacity 1.2s ease}
+#landing{position:fixed;inset:0;z-index:9999;display:flex;align-items:flex-start;justify-content:center;padding-top:5vh;transition:transform 1.4s cubic-bezier(.4,0,.0,1),opacity 1.2s ease}
 #landing.portal-enter{transform:scale(3.5);opacity:0;pointer-events:none}
-#landing .cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+#landing .cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
 #landing .cover-mask{display:none}
 #landing .cover-mask2{display:none}
-#landing .cover-vignette{display:none}
-#landing .landing-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
-#landing .landing-logo{width:160px;height:auto;filter:drop-shadow(0 0 30px rgba(78,205,196,.5))}
+#landing .cover-vignette{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(6,6,10,.4) 0%,transparent 50%,transparent 100%);pointer-events:none}
+#landing .landing-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px}
+#landing .landing-logo{width:140px;height:auto;filter:drop-shadow(0 0 30px rgba(78,205,196,.5))}
 #landing .landing-title{font-family:var(--head);font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:var(--bright);letter-spacing:-0.5px;line-height:1.1}
-#landing .landing-sub{font-size:13px;color:var(--dim);letter-spacing:4px;text-transform:uppercase;font-weight:400}
+#landing .landing-sub{font-size:13px;color:rgba(255,255,255,.85);letter-spacing:4px;text-transform:uppercase;font-weight:400;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 #landing .landing-divider{width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent)}
 @keyframes enter-glow{0%,100%{box-shadow:0 0 20px rgba(78,205,196,.15),inset 0 0 20px rgba(78,205,196,.05)}50%{box-shadow:0 0 40px rgba(78,205,196,.3),inset 0 0 30px rgba(78,205,196,.1)}}
 #landing .enter-btn{padding:14px 48px;border-radius:50px;border:1px solid rgba(78,205,196,.3);background:rgba(6,6,10,.5);backdrop-filter:blur(16px);color:var(--teal);font-family:var(--body);font-size:14px;font-weight:700;letter-spacing:4px;text-transform:uppercase;cursor:pointer;transition:all .4s;animation:enter-glow 3s ease-in-out infinite;position:relative;overflow:hidden}
