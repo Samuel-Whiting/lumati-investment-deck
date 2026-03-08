@@ -1012,7 +1012,7 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="margin-top:auto;display:flex;gap:10px">
             <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">82%</div><div style="font-size:9px;color:var(--dim);margin-top:3px">of 2030 Revenue</div></div>
             <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">118</div><div style="font-size:9px;color:var(--dim);margin-top:3px">Hospital Partners</div></div>
-            <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">$730M</div><div style="font-size:9px;color:var(--dim);margin-top:3px">Projected 2030</div></div>
+            <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">$731M</div><div style="font-size:9px;color:var(--dim);margin-top:3px">Projected 2030</div></div>
           </div>
         </div>
       </div>
@@ -2116,13 +2116,14 @@ div:hover > .inst-hint{opacity:1!important}
         <div class="glass anim d3" style="padding:18px;margin-top:10px">
           <h3 style="font-size:12px;margin-bottom:10px">2030 Revenue Mix</h3>
           <div style="display:flex;justify-content:center;margin-bottom:14px">
-            <div class="donut" style="width:160px;height:160px;background:conic-gradient(var(--coral) 0deg 296deg,var(--teal) 296deg 338deg,var(--gold) 338deg 343deg,var(--purple) 343deg 358deg,rgba(255,255,255,.15) 358deg)">
+            <div class="donut" style="width:160px;height:160px;background:conic-gradient(var(--coral) 0deg 296deg,var(--teal) 296deg 338deg,var(--gold) 338deg 354deg,var(--purple) 354deg 359deg,rgba(255,255,255,.15) 359deg)">
               <div class="donut-inner" style="width:90px;height:90px"><div style="font-family:var(--head);font-size:16px;font-weight:900">$890M</div><div style="font-size:8px;color:var(--dim)">Total</div></div></div></div>
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:9px">
             <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--coral);flex-shrink:0"></span>HemoDetox 82%</div>
             <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--teal);flex-shrink:0"></span>Portal 12%</div>
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--purple);flex-shrink:0"></span>Equipment 4%</div>
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--gold);flex-shrink:0"></span>Clinic 1%</div>
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--gold);flex-shrink:0"></span>Equipment 4%</div>
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--purple);flex-shrink:0"></span>Clinic 1%</div>
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:rgba(255,255,255,.3);flex-shrink:0"></span>Supplements &lt;1%</div>
           </div>
         </div>
         <!-- KPIs -->
@@ -2636,7 +2637,7 @@ function hideRingInfo(){
 function openModal(key){
   const d=MODALS[key];if(!d)return;
   let html='';
-  if(d.img){var isCircle=d.img.includes('team_')||d.img.includes('partner_stephen')||d.img.includes('partner_gary')||d.img.includes('partner_mark')||d.img.includes('partner_ben')||d.img.includes('partner_steve')||d.img.includes('partner_dr_minkoff');html+='<img src="'+d.img+'" class="'+(isCircle?'modal-img':'modal-photo')+'"/>';}
+  if(d.img){var isCircle=d.img.includes('team_')||d.img.includes('board_')||d.img.includes('partner_stephen')||d.img.includes('partner_gary')||d.img.includes('partner_mark')||d.img.includes('partner_ben')||d.img.includes('partner_steve')||d.img.includes('partner_dr_minkoff');html+='<img src="'+d.img+'" class="'+(isCircle?'modal-img':'modal-photo')+'"/>';}
   html+='<h2 style="font-size:22px;text-align:center">'+d.title+'</h2>';
   html+='<p style="text-align:center;color:var(--teal);font-size:12px;margin-top:4px;letter-spacing:1px;font-weight:700">'+d.subtitle+'</p>';
   html+='<div style="margin-top:18px;font-size:13px">'+d.body+'</div>';
