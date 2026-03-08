@@ -111,6 +111,8 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 .hs-bio{font-size:11px;color:var(--dim);margin-top:5px;line-height:1.45}
 .hs-hint{font-size:10px;color:var(--teal);margin-top:4px;opacity:0;transition:opacity .3s;letter-spacing:1px}
 .hs-wrap:hover .hs-hint{opacity:1}
+.role-badge{display:inline-block;font-size:8px;font-weight:800;letter-spacing:1.2px;padding:2px 7px;
+  border-radius:6px;margin-top:5px;text-transform:uppercase;line-height:1.3}
 
 /* === DONUT === */
 .donut{position:relative;border-radius:50%;display:flex;align-items:center;justify-content:center}
@@ -1965,25 +1967,25 @@ div:hover > .inst-hint{opacity:1!important}
   <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center">
     <div class="center" style="margin-bottom:16px"><h2 class="anim d1">Executive Team &amp; Advisors</h2></div>
     <div style="font-size:10px;color:var(--teal);font-weight:700;letter-spacing:2px;margin-bottom:10px" class="anim d2">BUSINESS LEADERSHIP</div>
-    <div class="grid-5 anim d2" style="margin-bottom:8px">
-      <div class="hs-wrap" onclick="openModal('david')"><img loading="lazy" src="img/crop/team_david_perez.png" class="hs" style="border-color:rgba(78,205,196,.3)"/><div class="hs-name">David Perez</div><div class="hs-title" style="color:var(--teal)">Co-Founder &amp; CEO</div><div class="hs-bio">45+ years founding ventures</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('ruta')"><img loading="lazy" src="img/crop/team_ruta_laukien.png" class="hs" style="border-color:rgba(251,180,91,.3)"/><div class="hs-name">Ruta Laukien</div><div class="hs-title" style="color:var(--gold)">Chairwoman</div><div class="hs-bio">GrayBella Capital, Duke JD/MBA</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('sam')"><img loading="lazy" src="img/crop/team_samuel_whiting.png" class="hs" style="border-color:rgba(167,139,250,.3)"/><div class="hs-name">Samuel Whiting</div><div class="hs-title" style="color:var(--purple)">Chief Strategy Officer</div><div class="hs-bio">WHOOP, UCLA Sports Medicine</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('gunnar')"><img loading="lazy" src="img/crop/team_gunnar_link.png" class="hs" style="border-color:rgba(255,107,107,.3)"/><div class="hs-name">Gunnar Link</div><div class="hs-title" style="color:var(--coral)">Chief Financial Officer</div><div class="hs-bio">M&amp;A, 3 company sales</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('erol')"><img loading="lazy" src="img/crop/team_erol_erturk.jpg" class="hs" style="border-color:rgba(78,205,196,.3)"/><div class="hs-name">Erol Erturk</div><div class="hs-title" style="color:var(--teal)">Chief Technology Officer</div><div class="hs-bio">10+ yrs, Purdue, AI/software</div><div class="hs-hint">TAP FOR BIO</div></div>
+    <div class="grid-5 anim anim-scale d2" style="margin-bottom:8px">
+      <div class="hs-wrap" onclick="openModal('david')"><img loading="lazy" src="img/crop/team_david_perez.png" class="hs" style="border-color:rgba(78,205,196,.3)"/><div class="hs-name">David Perez</div><div class="hs-title" style="color:var(--teal)">Co-Founder &amp; CEO</div><div class="hs-bio">45+ years founding ventures</div><div class="role-badge" style="background:var(--teal-lo);color:var(--teal)">Founder</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('ruta')"><img loading="lazy" src="img/crop/team_ruta_laukien.png" class="hs" style="border-color:rgba(251,180,91,.3)"/><div class="hs-name">Ruta Laukien</div><div class="hs-title" style="color:var(--gold)">Chairwoman</div><div class="hs-bio">GrayBella Capital, Duke JD/MBA</div><div class="role-badge" style="background:var(--gold-lo);color:var(--gold)">Governance</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('sam')"><img loading="lazy" src="img/crop/team_samuel_whiting.png" class="hs" style="border-color:rgba(167,139,250,.3)"/><div class="hs-name">Samuel Whiting</div><div class="hs-title" style="color:var(--purple)">Chief Strategy Officer</div><div class="hs-bio">WHOOP, UCLA Sports Medicine</div><div class="role-badge" style="background:var(--purple-lo);color:var(--purple)">Strategy</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('gunnar')"><img loading="lazy" src="img/crop/team_gunnar_link.png" class="hs" style="border-color:rgba(255,107,107,.3)"/><div class="hs-name">Gunnar Link</div><div class="hs-title" style="color:var(--coral)">Chief Financial Officer</div><div class="hs-bio">M&amp;A, 3 company sales</div><div class="role-badge" style="background:var(--coral-lo);color:var(--coral)">Finance</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('erol')"><img loading="lazy" src="img/crop/team_erol_erturk.jpg" class="hs" style="border-color:rgba(78,205,196,.3)"/><div class="hs-name">Erol Erturk</div><div class="hs-title" style="color:var(--teal)">Chief Technology Officer</div><div class="hs-bio">10+ yrs, Purdue, AI/software</div><div class="role-badge" style="background:var(--teal-lo);color:var(--teal)">Technology</div><div class="hs-hint">TAP FOR BIO</div></div>
     </div>
-    <div class="grid-4 anim d3" style="margin-bottom:14px">
-      <div class="hs-wrap" onclick="openModal('geylin')"><img loading="lazy" src="img/crop/team_geylin_castillo.png" class="hs"/><div class="hs-name">Geylin Castillo</div><div class="hs-title" style="color:var(--teal)">Co-Founder</div><div class="hs-bio">Hydrate Wellness 2022</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('paul')"><img loading="lazy" src="img/crop/team_paul_meek.png" class="hs"/><div class="hs-name">Paul Meek</div><div class="hs-title" style="color:var(--gold)">President Hospitality</div><div class="hs-bio">28 yrs, 200+ projects, $2B+</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('drew')"><img loading="lazy" src="img/crop/team_drew_stacy.png" class="hs"/><div class="hs-name">Drew Stacy</div><div class="hs-title" style="color:var(--purple)">EVP Operations</div><div class="hs-bio">2 decades hotel leadership</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('darrell')"><img loading="lazy" src="img/crop/team_darrell_edwards.png" class="hs"/><div class="hs-name">Darrell Edwards</div><div class="hs-title" style="color:var(--coral)">GM Patient Advocacy</div><div class="hs-bio">40+ yrs, healthcare ops exec</div><div class="hs-hint">TAP FOR BIO</div></div>
+    <div class="grid-4 anim anim-scale d3" style="margin-bottom:14px">
+      <div class="hs-wrap" onclick="openModal('geylin')"><img loading="lazy" src="img/crop/team_geylin_castillo.png" class="hs"/><div class="hs-name">Geylin Castillo</div><div class="hs-title" style="color:var(--teal)">Co-Founder</div><div class="hs-bio">Hydrate Wellness 2022</div><div class="role-badge" style="background:var(--teal-lo);color:var(--teal)">Founder</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('paul')"><img loading="lazy" src="img/crop/team_paul_meek.png" class="hs"/><div class="hs-name">Paul Meek</div><div class="hs-title" style="color:var(--gold)">President Hospitality</div><div class="hs-bio">28 yrs, 200+ projects, $2B+</div><div class="role-badge" style="background:var(--gold-lo);color:var(--gold)">Hospitality</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('drew')"><img loading="lazy" src="img/crop/team_drew_stacy.png" class="hs"/><div class="hs-name">Drew Stacy</div><div class="hs-title" style="color:var(--purple)">EVP Operations</div><div class="hs-bio">2 decades hotel leadership</div><div class="role-badge" style="background:var(--purple-lo);color:var(--purple)">Operations</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('darrell')"><img loading="lazy" src="img/crop/team_darrell_edwards.png" class="hs"/><div class="hs-name">Darrell Edwards</div><div class="hs-title" style="color:var(--coral)">GM Patient Advocacy</div><div class="hs-bio">40+ yrs, healthcare ops exec</div><div class="role-badge" style="background:var(--coral-lo);color:var(--coral)">Patient Ops</div><div class="hs-hint">TAP FOR BIO</div></div>
     </div>
     <div style="font-size:10px;color:var(--coral);font-weight:700;letter-spacing:2px;margin-bottom:10px" class="anim d4">MEDICAL LEADERSHIP</div>
-    <div class="grid-4 anim d4">
-      <div class="hs-wrap" onclick="openModal('christos')"><img loading="lazy" src="img/crop/team_dr_christos.png" class="hs" style="border-color:rgba(255,107,107,.3)"/><div class="hs-name">Dr Christos Stavropoulos</div><div class="hs-title" style="color:var(--coral)">Chronic Medical Dir.</div><div class="hs-bio">Cardiothoracic, 25+ yrs</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('roney')"><img loading="lazy" src="img/crop/team_dr_roney.png" class="hs" style="border-color:rgba(78,205,196,.3)"/><div class="hs-name">Dr Daniel Roney</div><div class="hs-title" style="color:var(--teal)">Longevity Medical Dir.</div><div class="hs-bio">25+ yrs, cancer survivor</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('gcas')"><img loading="lazy" src="img/crop/team_dr_castillo.png" class="hs" style="border-color:rgba(251,180,91,.3)"/><div class="hs-name">Dr Guillermo Castillo</div><div class="hs-title" style="color:var(--gold)">Regenerative Medical Dir.</div><div class="hs-bio">20+ yrs functional med</div><div class="hs-hint">TAP FOR BIO</div></div>
-      <div class="hs-wrap" onclick="openModal('lane')"><img loading="lazy" src="img/crop/team_dr_lane.png" class="hs" style="border-color:rgba(167,139,250,.3)"/><div class="hs-name">Dr Greg Lane</div><div class="hs-title" style="color:var(--purple)">Clinical Director</div><div class="hs-bio">Founding member, 31+ yrs</div><div class="hs-hint">TAP FOR BIO</div></div>
+    <div class="grid-4 anim anim-scale d4">
+      <div class="hs-wrap" onclick="openModal('christos')"><img loading="lazy" src="img/crop/team_dr_christos.png" class="hs" style="border-color:rgba(255,107,107,.3)"/><div class="hs-name">Dr Christos Stavropoulos</div><div class="hs-title" style="color:var(--coral)">Chronic Medical Dir.</div><div class="hs-bio">Cardiothoracic, 25+ yrs</div><div class="role-badge" style="background:var(--coral-lo);color:var(--coral)">Medical</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('roney')"><img loading="lazy" src="img/crop/team_dr_roney.png" class="hs" style="border-color:rgba(78,205,196,.3)"/><div class="hs-name">Dr Daniel Roney</div><div class="hs-title" style="color:var(--teal)">Longevity Medical Dir.</div><div class="hs-bio">25+ yrs, cancer survivor</div><div class="role-badge" style="background:var(--teal-lo);color:var(--teal)">Medical</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('gcas')"><img loading="lazy" src="img/crop/team_dr_castillo.png" class="hs" style="border-color:rgba(251,180,91,.3)"/><div class="hs-name">Dr Guillermo Castillo</div><div class="hs-title" style="color:var(--gold)">Regenerative Medical Dir.</div><div class="hs-bio">20+ yrs functional med</div><div class="role-badge" style="background:var(--gold-lo);color:var(--gold)">Medical</div><div class="hs-hint">TAP FOR BIO</div></div>
+      <div class="hs-wrap" onclick="openModal('lane')"><img loading="lazy" src="img/crop/team_dr_lane.png" class="hs" style="border-color:rgba(167,139,250,.3)"/><div class="hs-name">Dr Greg Lane</div><div class="hs-title" style="color:var(--purple)">Clinical Director</div><div class="hs-bio">Founding member, 31+ yrs</div><div class="role-badge" style="background:var(--purple-lo);color:var(--purple)">Medical</div><div class="hs-hint">TAP FOR BIO</div></div>
     </div>
   </div>
 </section>
@@ -2003,7 +2005,7 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- BOARD OF DIRECTORS -->
-    <div class="anim d2">
+    <div class="anim anim-scale d2">
       <div style="font-size:10.5px;color:var(--gold);font-weight:800;letter-spacing:2.5px;margin-bottom:8px">BOARD OF DIRECTORS</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
         <!-- Ruta Laukien — Chairwoman -->
@@ -2046,7 +2048,7 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- BOARD OF ADVISORS -->
-    <div class="anim d3">
+    <div class="anim anim-scale d3">
       <div style="font-size:10.5px;color:var(--teal);font-weight:800;letter-spacing:2.5px;margin-bottom:8px">BOARD OF ADVISORS</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
         <!-- Lucas Winthrop -->
@@ -2083,20 +2085,20 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- Bottom: Collective Stats -->
-    <div class="anim d4" style="display:flex;gap:14px;align-items:stretch">
-      <div style="flex:1;padding:10px 14px;border-radius:12px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.08);text-align:center">
+    <div class="anim anim-scale d4" style="display:flex;gap:14px;align-items:stretch">
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:var(--teal-dim);border:1px solid var(--teal-lo);text-align:center">
         <div style="font-family:var(--head);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:900;color:var(--teal)">$12B+</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;letter-spacing:1px;font-weight:600">COMBINED ENTERPRISE VALUE</div>
       </div>
-      <div style="flex:1;padding:10px 14px;border-radius:12px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.08);text-align:center">
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:var(--gold-dim);border:1px solid var(--gold-lo);text-align:center">
         <div style="font-family:var(--head);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:900;color:var(--gold)">155+</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;letter-spacing:1px;font-weight:600">COUNTRIES REACHED</div>
       </div>
-      <div style="flex:1;padding:10px 14px;border-radius:12px;background:rgba(167,139,250,.03);border:1px solid rgba(167,139,250,.08);text-align:center">
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:var(--purple-dim);border:1px solid var(--purple-lo);text-align:center">
         <div style="font-family:var(--head);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:900;color:var(--purple)">NYSE</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;letter-spacing:1px;font-weight:600">PUBLIC COMPANY LEADERSHIP</div>
       </div>
-      <div style="flex:1;padding:10px 14px;border-radius:12px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.08);text-align:center">
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:var(--coral-dim);border:1px solid var(--coral-lo);text-align:center">
         <div style="font-family:var(--head);font-size:clamp(1.2rem,2vw,1.6rem);font-weight:900;color:var(--coral)">10</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;letter-spacing:1px;font-weight:600">DIRECTORS &amp; ADVISORS</div>
       </div>
@@ -2438,7 +2440,7 @@ div:hover > .inst-hint{opacity:1!important}
 
     <div class="row" style="align-items:start;gap:24px">
       <!-- LEFT: The Ask + Use of Proceeds -->
-      <div class="col" style="flex:1.1">
+      <div class="col anim-left" style="flex:1.1">
         <div class="row anim d1" style="gap:16px;align-items:start;margin-bottom:14px">
           <!-- Amount Card -->
           <div class="glass" style="flex:1;padding:24px 28px;text-align:center;border-color:rgba(78,205,196,.15);box-shadow:0 0 50px rgba(78,205,196,.08)">
@@ -2472,7 +2474,7 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
 
       <!-- RIGHT: Investor Alignment + Return -->
-      <div class="col">
+      <div class="col anim-right">
         <!-- Value-Aligned Investor Card -->
         <div class="glass anim d2" style="padding:22px 24px;border-color:rgba(167,139,250,.15);background:linear-gradient(135deg,rgba(167,139,250,.04),rgba(78,205,196,.04))">
           <div style="font-size:10px;color:var(--purple);font-weight:700;letter-spacing:2px;margin-bottom:10px">OUR IDEAL PARTNER</div>
@@ -2538,7 +2540,7 @@ div:hover > .inst-hint{opacity:1!important}
       <div style="font-size:20px;font-weight:700;color:var(--bright)">David Perez</div>
       <div style="font-size:13px;color:var(--dim);margin-top:4px">Founder &amp; CEO</div>
       <div style="margin-top:14px;display:flex;gap:28px;justify-content:center;font-size:13px">
-        <a href="mailto:david@lumati.com" style="color:var(--text)">david@lumati.com</a>
+        <a href="mailto:david@lumati.com" style="color:var(--text);transition:color .3s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--text)'">david@lumati.com</a>
         <span style="color:var(--text)">+1 (858) 414 4811</span>
       </div>
       <div style="margin-top:12px"><a href="https://www.lumati.com" target="_blank" rel="noopener" style="font-size:12px;color:var(--teal);font-weight:700;letter-spacing:1px">www.lumati.com &#8599;</a></div>
