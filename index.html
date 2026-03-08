@@ -15,6 +15,11 @@
   --teal:#4ecdc4;--teal-g:rgba(78,205,196,.35);
   --gold:#fbb45b;--coral:#ff6b6b;--purple:#a78bfa;
   --head:'Playfair Display',Georgia,serif;--body:'Lato',sans-serif;
+  --teal-dim:rgba(78,205,196,.04);--teal-lo:rgba(78,205,196,.08);--teal-border:rgba(78,205,196,.12);--teal-hover:rgba(78,205,196,.15);
+  --coral-dim:rgba(255,107,107,.04);--coral-lo:rgba(255,107,107,.08);--coral-border:rgba(255,107,107,.12);--coral-hover:rgba(255,107,107,.15);
+  --gold-dim:rgba(251,180,91,.04);--gold-lo:rgba(251,180,91,.08);--gold-border:rgba(251,180,91,.12);--gold-hover:rgba(251,180,91,.15);
+  --purple-dim:rgba(167,139,250,.04);--purple-lo:rgba(167,139,250,.08);--purple-border:rgba(167,139,250,.12);--purple-hover:rgba(167,139,250,.15);
+  --glass-subtle:rgba(255,255,255,.02);--glass-light:rgba(255,255,255,.04);
 }
 html,body{height:100%;overflow:hidden;background:var(--bg);color:var(--text);
   font-family:var(--body);-webkit-font-smoothing:antialiased}
@@ -58,6 +63,8 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 .glass:hover{transform:translateY(-3px);border-color:var(--border-hi);box-shadow:0 12px 40px rgba(0,0,0,.3)}
 .glass-sm{background:var(--glass);border:1px solid var(--border);border-radius:12px;
   backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding:16px 20px}
+.glass-panel{background:rgba(6,6,10,.6);border:1px solid var(--border);border-radius:14px;
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:14px 16px}
 
 /* === LAYOUT === */
 .row{display:flex;gap:28px;align-items:stretch}
@@ -112,6 +119,9 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 
 /* === ANIMATIONS === */
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(-28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeRight{from{opacity:0;transform:translateX(28px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
 @keyframes glow-pulse{0%,100%{box-shadow:0 0 20px var(--teal-g)}50%{box-shadow:0 0 50px var(--teal-g),0 0 80px rgba(78,205,196,.15)}}
 @keyframes ring-rotate{to{transform:rotate(360deg)}}
@@ -134,6 +144,7 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 .anim{animation:fadeUp .65s cubic-bezier(.4,0,.2,1) both}
 .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}
 .d5{animation-delay:.45s}.d6{animation-delay:.5s}.d7{animation-delay:.55s}
+.anim-left{animation-name:fadeLeft}.anim-right{animation-name:fadeRight}.anim-scale{animation-name:scaleIn}
 
 /* === DECORATIVE ORBS === */
 .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;animation:orb-drift 12s ease-in-out infinite}
@@ -299,15 +310,15 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 .app-gallery .phone-mock.hero:hover{animation:none}
 .app-gallery .phone-mock .phone-label{text-align:center;margin-top:10px;opacity:.8;transition:opacity .3s;width:100%}
 .app-gallery .phone-mock:hover .phone-label{opacity:1}
-.app-gallery .phone-mock .phone-hint{font-size:8px;color:var(--dim);letter-spacing:1.5px;margin-top:3px;opacity:0;transition:opacity .3s;text-align:center;width:100%}
+.app-gallery .phone-mock .phone-hint{font-size:9px;color:var(--dim);letter-spacing:1.5px;margin-top:3px;opacity:0;transition:opacity .3s;text-align:center;width:100%}
 .app-gallery .phone-mock:hover .phone-hint{opacity:.6}
 /* Bottom feature strip */
 .app-features{display:flex;gap:clamp(8px,1.5vw,16px);justify-content:center;flex-wrap:wrap;align-items:stretch}
 .app-feat-card{flex:1;min-width:120px;max-width:180px;padding:10px 14px;border-radius:12px;background:rgba(255,255,255,.02);border:1px solid var(--border);backdrop-filter:blur(8px);transition:all .35s;cursor:default}
 .app-feat-card:hover{border-color:var(--border-hi);background:rgba(255,255,255,.04);transform:translateY(-2px)}
 .app-feat-card .feat-icon{font-size:16px;margin-bottom:4px}
-.app-feat-card .feat-title{font-size:10px;font-weight:800;color:var(--bright);margin-bottom:2px}
-.app-feat-card .feat-desc{font-size:10px;color:var(--dim);line-height:1.4}
+.app-feat-card .feat-title{font-size:11px;font-weight:800;color:var(--bright);margin-bottom:2px}
+.app-feat-card .feat-desc{font-size:10px;color:var(--dim);line-height:1.45}
 @media(max-width:900px){.app-gallery{gap:12px}.app-gallery .phone-mock.side{width:90px}.app-gallery .phone-mock.hero{width:120px}.app-features{gap:6px}.app-feat-card{padding:8px 10px;min-width:100px}}
 
 /* === ORBITING ECOSYSTEM NODES === */
@@ -490,7 +501,7 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- Bottom: Crisis indicators — why the urgency -->
-    <div class="anim d3">
+    <div class="anim anim-scale d3">
       <div style="font-size:11px;color:var(--coral);font-weight:800;letter-spacing:2px;margin-bottom:8px">THE CRISIS &mdash; WHY NOW</div>
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
         <div style="padding:12px;border-radius:12px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.2)';this.style.background='rgba(255,107,107,.06)'" onmouseout="this.style.borderColor='rgba(255,107,107,.06)';this.style.background='rgba(255,107,107,.03)'">
@@ -780,7 +791,7 @@ div:hover > .inst-hint{opacity:1!important}
         </div>
       </div>
       <!-- Arrow -->
-      <div style="display:flex;align-items:center;color:var(--dim);font-size:20px;opacity:.3;flex-shrink:0">&#10132;</div>
+      <div style="display:flex;align-items:center;color:var(--dim);font-size:22px;opacity:.5;flex-shrink:0">&#10132;</div>
       <!-- Step 2: WEED -->
       <div onclick="openModal('weed')" style="flex:1;border-radius:20px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;border:1px solid var(--border);transition:transform .4s,box-shadow .4s,border-color .4s;position:relative" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(255,107,107,.15)';this.style.borderColor='rgba(255,107,107,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="flex:1.2;overflow:hidden;position:relative"><img loading="lazy" src="img/crop/weed_hemodetox.png" alt="HemoDetox" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform=''"/><div style="position:absolute;top:12px;left:12px;background:var(--coral);color:var(--bg);font-size:11px;font-weight:900;padding:5px 14px;border-radius:20px;letter-spacing:1px">STEP 2</div></div>
@@ -791,7 +802,7 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="font-size:10.5px;color:var(--coral);margin-top:10px;letter-spacing:1px;font-weight:700">CLICK FOR DETAILS &#8599;</div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;color:var(--dim);font-size:20px;opacity:.3;flex-shrink:0">&#10132;</div>
+      <div style="display:flex;align-items:center;color:var(--dim);font-size:22px;opacity:.5;flex-shrink:0">&#10132;</div>
       <!-- Step 3: SEED -->
       <div onclick="openModal('seed')" style="flex:1;border-radius:20px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;border:1px solid var(--border);transition:transform .4s,box-shadow .4s,border-color .4s;position:relative" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(251,180,91,.15)';this.style.borderColor='rgba(251,180,91,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="flex:1.2;overflow:hidden;position:relative"><img loading="lazy" src="img/crop/seed_exosome.png" alt="Exosomes" style="width:100%;height:100%;object-fit:cover;transition:transform .5s" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform=''"/><div style="position:absolute;top:12px;left:12px;background:var(--gold);color:var(--bg);font-size:11px;font-weight:900;padding:5px 14px;border-radius:20px;letter-spacing:1px">STEP 3</div></div>
@@ -802,7 +813,7 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="font-size:10.5px;color:var(--gold);margin-top:10px;letter-spacing:1px;font-weight:700">CLICK FOR DETAILS &#8599;</div>
         </div>
       </div>
-      <div style="display:flex;align-items:center;color:var(--dim);font-size:20px;opacity:.3;flex-shrink:0">&#10132;</div>
+      <div style="display:flex;align-items:center;color:var(--dim);font-size:22px;opacity:.5;flex-shrink:0">&#10132;</div>
       <!-- Step 4: FEED -->
       <div onclick="openModal('feed')" style="flex:1;border-radius:20px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;border:1px solid var(--border);transition:transform .4s,box-shadow .4s,border-color .4s;position:relative" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 20px 50px rgba(167,139,250,.15)';this.style.borderColor='rgba(167,139,250,.3)'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='var(--border)'">
         <div style="flex:1.2;overflow:hidden;position:relative"><img loading="lazy" src="img/crop/feed_portal_room.jpg" alt="Recharge Portal Room" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;transition:transform .5s" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform=''"/><div style="position:absolute;top:12px;left:12px;background:var(--purple);color:var(--bg);font-size:11px;font-weight:900;padding:5px 14px;border-radius:20px;letter-spacing:1px">STEP 4</div></div>
@@ -837,16 +848,16 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- 3 Hero Stats -->
-    <div class="anim d2" style="display:flex;gap:14px">
-      <div style="flex:1;text-align:center;padding:14px 10px;border-radius:16px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.12);box-shadow:0 0 30px rgba(78,205,196,.06)">
+    <div class="anim anim-scale d2" style="display:flex;gap:14px">
+      <div style="flex:1;text-align:center;padding:14px 10px;border-radius:16px;background:var(--teal-dim);border:1px solid var(--teal-border);box-shadow:0 0 30px rgba(78,205,196,.06)">
         <div style="font-family:var(--head);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--teal)">+89%</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;line-height:1.35">Mitochondrial Energy &middot; <b style="color:var(--bright)">60 days</b></div>
       </div>
-      <div style="flex:1;text-align:center;padding:14px 10px;border-radius:16px;background:rgba(251,180,91,.04);border:1px solid rgba(251,180,91,.12);box-shadow:0 0 30px rgba(251,180,91,.06)">
+      <div style="flex:1;text-align:center;padding:14px 10px;border-radius:16px;background:var(--gold-dim);border:1px solid var(--gold-border);box-shadow:0 0 30px rgba(251,180,91,.06)">
         <div style="font-family:var(--head);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--gold)">+107%</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;line-height:1.35">Metabolic Efficiency Ratio &middot; <b style="color:var(--bright)">30 days</b></div>
       </div>
-      <div style="flex:1;text-align:center;padding:14px 10px;border-radius:16px;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.12);box-shadow:0 0 30px rgba(167,139,250,.06)">
+      <div style="flex:1;text-align:center;padding:14px 10px;border-radius:16px;background:var(--purple-dim);border:1px solid var(--purple-border);box-shadow:0 0 30px rgba(167,139,250,.06)">
         <div style="font-family:var(--head);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;color:var(--purple)">+21%</div>
         <div style="font-size:10px;color:var(--dim);margin-top:2px;line-height:1.35">Retained After <b style="color:var(--bright)">40-Day Washout</b></div>
       </div>
@@ -955,7 +966,7 @@ div:hover > .inst-hint{opacity:1!important}
 <section class="slide" id="s7">
   <div class="z1">
     <div class="center" style="margin-bottom:20px"><div class="tag anim" style="color:var(--gold)">Clinical Network</div><h2 class="anim d1" style="margin-top:8px">Three-Tier Licensing Model</h2></div>
-    <div class="grid-3 anim d2">
+    <div class="grid-3 anim anim-scale d2">
       <div class="glass" style="border-top:3px solid var(--teal);position:relative;overflow:hidden;cursor:pointer" onclick="openModal('tier1')">
         <div style="font-size:80px;font-weight:900;opacity:.04;position:absolute;top:-15px;right:8px;font-family:var(--head)">1</div>
         <div class="tag" style="color:var(--teal)">Level One &middot; Outpost</div>
@@ -1011,7 +1022,7 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- Two main cards side by side -->
-    <div style="display:flex;gap:24px;flex:1;min-height:0" class="anim d2">
+    <div style="display:flex;gap:24px;flex:1;min-height:0" class="anim anim-scale d2">
 
       <!-- ===== ORODETOX ===== -->
       <div style="flex:1;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;background:rgba(10,12,18,1);border:1px solid rgba(78,205,196,.18);box-shadow:0 4px 30px rgba(0,0,0,.4);transition:transform .4s,box-shadow .4s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(78,205,196,.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 30px rgba(0,0,0,.4)'">
@@ -1292,28 +1303,28 @@ div:hover > .inst-hint{opacity:1!important}
 
     <div style="display:flex;gap:20px;flex:1;min-height:0" class="anim d2">
       <!-- LEFT: Execution Traction -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+      <div class="anim-left" style="flex:1;display:flex;flex-direction:column;gap:10px">
         <!-- Traction KPIs -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
-          <div style="padding:16px;border-radius:14px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.12)">
+          <div style="padding:16px;border-radius:14px;background:var(--teal-dim);border:1px solid var(--teal-border)">
             <div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--teal)">$5.7M</div>
             <div style="font-size:10px;color:var(--dim);margin-top:3px">2025 Revenue (Live)</div>
-            <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(78,205,196,.1);overflow:hidden"><div style="width:100%;height:100%;background:var(--teal);border-radius:2px"></div></div>
+            <div style="margin-top:6px;height:4px;border-radius:2px;background:var(--teal-lo);overflow:hidden"><div style="width:100%;height:100%;background:var(--teal);border-radius:2px"></div></div>
           </div>
-          <div style="padding:16px;border-radius:14px;background:rgba(251,180,91,.04);border:1px solid rgba(251,180,91,.12)">
+          <div style="padding:16px;border-radius:14px;background:var(--gold-dim);border:1px solid var(--gold-border)">
             <div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--gold)">50+</div>
             <div style="font-size:10px;color:var(--dim);margin-top:3px">Clinic Pipeline</div>
-            <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(251,180,91,.1);overflow:hidden"><div style="width:65%;height:100%;background:var(--gold);border-radius:2px"></div></div>
+            <div style="margin-top:6px;height:4px;border-radius:2px;background:var(--gold-lo);overflow:hidden"><div style="width:65%;height:100%;background:var(--gold);border-radius:2px"></div></div>
           </div>
-          <div style="padding:16px;border-radius:14px;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.12)">
+          <div style="padding:16px;border-radius:14px;background:var(--purple-dim);border:1px solid var(--purple-border)">
             <div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--purple)">2,488</div>
             <div style="font-size:10px;color:var(--dim);margin-top:3px">Portal Target (2026)</div>
-            <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(167,139,250,.1);overflow:hidden"><div style="width:25%;height:100%;background:var(--purple);border-radius:2px"></div></div>
+            <div style="margin-top:6px;height:4px;border-radius:2px;background:var(--purple-lo);overflow:hidden"><div style="width:25%;height:100%;background:var(--purple);border-radius:2px"></div></div>
           </div>
-          <div style="padding:16px;border-radius:14px;background:rgba(255,107,107,.04);border:1px solid rgba(255,107,107,.12)">
+          <div style="padding:16px;border-radius:14px;background:var(--coral-dim);border:1px solid var(--coral-border)">
             <div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--coral)">200+</div>
             <div style="font-size:10px;color:var(--dim);margin-top:3px">HemoDetox Treatments</div>
-            <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(255,107,107,.1);overflow:hidden"><div style="width:40%;height:100%;background:var(--coral);border-radius:2px"></div></div>
+            <div style="margin-top:6px;height:4px;border-radius:2px;background:var(--coral-lo);overflow:hidden"><div style="width:40%;height:100%;background:var(--coral);border-radius:2px"></div></div>
           </div>
         </div>
 
@@ -1434,7 +1445,7 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
 
       <!-- RIGHT: Press + Flywheel -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+      <div class="anim-right" style="flex:1;display:flex;flex-direction:column;gap:10px">
         <!-- Press & Partnerships -->
         <div style="padding:12px 16px;border-radius:14px;background:rgba(6,6,10,.6);border:1px solid var(--border);backdrop-filter:blur(12px)">
           <div style="font-size:10.5px;color:var(--teal);font-weight:800;letter-spacing:2px;margin-bottom:8px">PRESS &amp; PARTNERSHIPS</div>
@@ -1557,7 +1568,7 @@ div:hover > .inst-hint{opacity:1!important}
     <div class="anim d2" style="display:flex;gap:24px;flex:1;min-height:0;align-items:center">
 
       <!-- LEFT: Multi-dimensional ecosystem orbit -->
-      <div style="position:relative;flex:0 0 46%;display:flex;justify-content:center;align-items:center;height:100%;perspective:900px">
+      <div class="anim-left" style="position:relative;flex:0 0 46%;display:flex;justify-content:center;align-items:center;height:100%;perspective:900px">
 
         <!-- 3D perspective wrapper — animated breathing tilt -->
         <div style="position:relative;width:400px;height:400px;transform-style:preserve-3d;animation:eco-tilt 12s ease-in-out infinite">
@@ -1680,7 +1691,7 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
 
       <!-- RIGHT: Six Moat Cards — clickable -->
-      <div class="anim d3" style="flex:1;display:flex;flex-direction:column;gap:6px;justify-content:center">
+      <div class="anim anim-right d3" style="flex:1;display:flex;flex-direction:column;gap:6px;justify-content:center">
         <div style="font-size:10px;color:var(--teal);font-weight:800;letter-spacing:2px;margin-bottom:2px">SIX POWERFUL MOATS</div>
 
         <!-- Moat 1: Proprietary Protocol IP -->
@@ -1752,42 +1763,42 @@ div:hover > .inst-hint{opacity:1!important}
         <div onclick="openModal('partner_stephen')" style="padding:8px 10px;border-radius:10px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(78,205,196,.3)';this.style.background='rgba(78,205,196,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(78,205,196,.08)';this.style.background='rgba(78,205,196,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Stephen A. Smith</div>
           <div style="font-size:9px;color:var(--teal);margin-top:2px;font-weight:600">Media &amp; Celebrity</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_brecka')" style="padding:8px 10px;border-radius:10px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(251,180,91,.3)';this.style.background='rgba(251,180,91,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(251,180,91,.08)';this.style.background='rgba(251,180,91,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Gary Brecka</div>
           <div style="font-size:9px;color:var(--gold);margin-top:2px;font-weight:600">Biohacking / 77M reach</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_hyman')" style="padding:8px 10px;border-radius:10px;background:rgba(167,139,250,.03);border:1px solid rgba(167,139,250,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(167,139,250,.3)';this.style.background='rgba(167,139,250,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(167,139,250,.08)';this.style.background='rgba(167,139,250,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Dr Mark Hyman</div>
           <div style="font-size:9px;color:var(--purple);margin-top:2px;font-weight:600">Functional Medicine KOL</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_greenfield')" style="padding:8px 10px;border-radius:10px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.3)';this.style.background='rgba(255,107,107,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,107,107,.08)';this.style.background='rgba(255,107,107,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Ben Greenfield</div>
           <div style="font-size:9px;color:var(--coral);margin-top:2px;font-weight:600">Fitness &amp; Longevity</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_harvey')" style="padding:8px 10px;border-radius:10px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(78,205,196,.3)';this.style.background='rgba(78,205,196,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(78,205,196,.08)';this.style.background='rgba(78,205,196,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Steve Harvey</div>
           <div style="font-size:9px;color:var(--teal);margin-top:2px;font-weight:600">Media &amp; Lifestyle</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_fountain')" style="padding:8px 10px;border-radius:10px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(251,180,91,.3)';this.style.background='rgba(251,180,91,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(251,180,91,.08)';this.style.background='rgba(251,180,91,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Fountain Life</div>
           <div style="font-size:9px;color:var(--gold);margin-top:2px;font-weight:600">Longevity Clinic Network</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_exthera')" style="padding:8px 10px;border-radius:10px;background:rgba(167,139,250,.03);border:1px solid rgba(167,139,250,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(167,139,250,.3)';this.style.background='rgba(167,139,250,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(167,139,250,.08)';this.style.background='rgba(167,139,250,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">ExThera Medical</div>
           <div style="font-size:9px;color:var(--purple);margin-top:2px;font-weight:600">HemoDetox Technology</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
         <div onclick="openModal('partner_minkoff')" style="padding:8px 10px;border-radius:10px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.08);text-align:center;cursor:pointer;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.3)';this.style.background='rgba(255,107,107,.08)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,107,107,.08)';this.style.background='rgba(255,107,107,.03)';this.style.transform=''">
           <div style="font-size:10px;font-weight:700;color:var(--bright)">Dr Minkoff</div>
           <div style="font-size:9px;color:var(--coral);margin-top:2px;font-weight:600">Integrative Medicine Pioneer</div>
-          <div style="font-size:8px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;letter-spacing:1px">TAP FOR BIO &#8599;</div>
         </div>
       </div>
     </div>
@@ -1809,7 +1820,7 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- Feature Matrix Table -->
-    <div class="glass anim d2" style="padding:16px 18px;border-color:rgba(78,205,196,.08);overflow:hidden">
+    <div class="glass anim anim-scale d2" style="padding:16px 18px;border-color:rgba(78,205,196,.08);overflow:hidden">
       <table style="width:100%;border-collapse:collapse;font-size:10px">
         <thead>
           <tr style="border-bottom:2px solid var(--border)">
@@ -1997,7 +2008,7 @@ div:hover > .inst-hint{opacity:1!important}
       <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
         <!-- Ruta Laukien — Chairwoman -->
         <div onclick="openModal('board_ruta')" style="padding:14px 10px;border-radius:14px;background:linear-gradient(135deg,rgba(251,180,91,.06),rgba(251,180,91,.02));border:1px solid rgba(251,180,91,.18);text-align:center;cursor:pointer;transition:all .35s;position:relative" onmouseover="this.style.borderColor='rgba(251,180,91,.4)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(251,180,91,.1)'" onmouseout="this.style.borderColor='rgba(251,180,91,.18)';this.style.transform='';this.style.boxShadow=''">
-          <div style="position:absolute;top:6px;right:8px;font-size:8px;color:var(--gold);font-weight:800;letter-spacing:1px;background:rgba(251,180,91,.12);padding:2px 6px;border-radius:4px">CHAIR</div>
+          <div style="position:absolute;top:6px;right:8px;font-size:9px;color:var(--gold);font-weight:800;letter-spacing:1px;background:rgba(251,180,91,.12);padding:2px 6px;border-radius:4px">CHAIR</div>
           <img loading="lazy" src="img/crop/team_ruta_laukien.png" style="width:56px;height:56px;border-radius:50%;object-fit:cover;margin:0 auto 6px;border:2px solid rgba(251,180,91,.3)"/>
           <div style="font-size:11px;font-weight:900;color:var(--bright)">Ruta Laukien</div>
           <div style="font-size:10px;color:var(--gold);margin-top:2px;font-weight:700">Chairwoman</div>
