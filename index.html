@@ -183,30 +183,56 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 .app-fan img:nth-child(4){transform:rotate(7deg) translateY(12px) translateX(-14px)}
 
 /* === SLIDE OVERVIEW === */
-.overview-overlay{position:fixed;inset:0;z-index:400;background:rgba(6,6,10,.92);
-  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-  opacity:0;pointer-events:none;transition:opacity .35s;overflow-y:auto;padding:40px 48px}
+.overview-overlay{position:fixed;inset:0;z-index:400;
+  background:radial-gradient(ellipse at 30% 20%,rgba(78,205,196,.04),transparent 50%),
+             radial-gradient(ellipse at 70% 80%,rgba(167,139,250,.04),transparent 50%),
+             rgba(6,6,10,.94);
+  backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);
+  opacity:0;pointer-events:none;transition:opacity .4s ease;overflow-y:auto;padding:32px 48px 48px}
 .overview-overlay.open{opacity:1;pointer-events:auto}
-.overview-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
-.overview-title{font-family:var(--head);font-size:20px;font-weight:700;color:var(--bright);letter-spacing:1px}
+.overview-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.overview-title{font-family:var(--head);font-size:22px;font-weight:800;color:var(--bright);letter-spacing:1.5px;
+  background:linear-gradient(135deg,var(--bright),var(--teal));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .overview-hint{font-size:10px;color:var(--dim);letter-spacing:1.5px}
-.overview-close{background:none;border:1px solid rgba(255,255,255,.12);color:var(--dim);font-size:16px;
-  cursor:pointer;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;
-  transition:all .25s}
-.overview-close:hover{border-color:rgba(78,205,196,.4);color:var(--teal);background:rgba(78,205,196,.08)}
-.overview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
-.overview-thumb{position:relative;border-radius:12px;overflow:hidden;cursor:pointer;aspect-ratio:16/9;
-  border:2px solid transparent;background:rgba(255,255,255,.03);
-  transition:border-color .3s,transform .3s,box-shadow .3s}
-.overview-thumb:hover{border-color:rgba(78,205,196,.4);transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(0,0,0,.4)}
-.overview-thumb.active-thumb{border-color:var(--teal);box-shadow:0 0 20px rgba(78,205,196,.15)}
-.overview-thumb-num{position:absolute;top:6px;left:8px;font-size:9px;font-weight:700;
-  color:var(--teal);background:rgba(6,6,10,.7);padding:2px 8px;border-radius:6px;
-  letter-spacing:1.5px;backdrop-filter:blur(4px)}
-.overview-thumb-label{position:absolute;bottom:0;left:0;right:0;padding:8px 10px;
-  background:linear-gradient(to top,rgba(6,6,10,.9),transparent);
-  font-size:10px;font-weight:700;color:var(--bright);letter-spacing:.5px}
+.overview-close{background:none;border:1px solid rgba(255,255,255,.1);color:var(--dim);font-size:16px;
+  cursor:pointer;width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  transition:all .3s}
+.overview-close:hover{border-color:rgba(78,205,196,.5);color:var(--teal);background:rgba(78,205,196,.1);
+  box-shadow:0 0 12px rgba(78,205,196,.15)}
+.overview-progress{height:3px;background:rgba(255,255,255,.04);border-radius:3px;margin-bottom:28px;overflow:hidden}
+.overview-progress-fill{height:100%;border-radius:3px;
+  background:linear-gradient(90deg,var(--teal),var(--purple));transition:width .5s cubic-bezier(.25,.46,.45,.94)}
+.overview-section{margin-bottom:28px}
+.overview-section-head{display:flex;align-items:center;gap:10px;margin-bottom:14px;padding-bottom:8px;
+  border-bottom:1px solid rgba(255,255,255,.04)}
+.overview-section-label{font-family:var(--head);font-size:10px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase}
+.overview-section-line{flex:1;height:1px;background:linear-gradient(90deg,rgba(255,255,255,.06),transparent)}
+.overview-section-count{font-size:9px;color:var(--dim);letter-spacing:1px}
+.overview-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.overview-thumb{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;aspect-ratio:16/9;
+  border:1.5px solid rgba(255,255,255,.06);
+  background:linear-gradient(135deg,rgba(255,255,255,.02),rgba(255,255,255,.005));
+  transition:all .35s cubic-bezier(.25,.46,.45,.94);
+  opacity:0;transform:translateY(16px) scale(.97)}
+.overview-thumb.ov-visible{opacity:1;transform:translateY(0) scale(1)}
+.overview-thumb::before{content:'';position:absolute;inset:0;border-radius:14px;
+  opacity:0;transition:opacity .35s;pointer-events:none}
+.overview-thumb:hover{border-color:rgba(78,205,196,.35);transform:translateY(-6px) scale(1.02);
+  box-shadow:0 16px 40px rgba(0,0,0,.5),0 0 20px rgba(78,205,196,.08)}
+.overview-thumb:hover::before{opacity:1}
+.overview-thumb.active-thumb{border-color:var(--teal);
+  box-shadow:0 0 24px rgba(78,205,196,.12),inset 0 0 20px rgba(78,205,196,.03)}
+.overview-thumb.active-thumb .overview-thumb-num{background:var(--teal);color:var(--bg)}
+.ov-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);
+  font-size:28px;opacity:.12;pointer-events:none;transition:opacity .3s}
+.overview-thumb:hover .ov-icon{opacity:.2}
+.overview-thumb-num{position:absolute;top:8px;left:10px;font-size:8px;font-weight:800;
+  color:var(--teal);background:rgba(6,6,10,.65);padding:3px 8px;border-radius:8px;
+  letter-spacing:2px;backdrop-filter:blur(6px);transition:all .3s}
+.overview-thumb-label{position:absolute;bottom:0;left:0;right:0;padding:10px 12px 9px;
+  background:linear-gradient(to top,rgba(6,6,10,.95) 60%,transparent);
+  font-size:10.5px;font-weight:700;color:var(--bright);letter-spacing:.3px}
+.overview-thumb-sub{font-size:8px;font-weight:400;color:var(--dim);margin-top:2px;letter-spacing:.5px}
 
 /* === RESPONSIVE === */
 @media(max-width:1100px){.slide{padding:36px 40px}.row{flex-direction:column}
@@ -317,13 +343,14 @@ div:hover > .inst-hint{opacity:1!important}
 <!-- ======================= SLIDE OVERVIEW ======================= -->
 <div class="overview-overlay" id="overview">
   <div class="overview-header">
-    <div class="overview-title">Slide Overview</div>
+    <div class="overview-title">Slide Navigator</div>
     <div style="display:flex;align-items:center;gap:16px">
-      <div class="overview-hint">PRESS G OR ESC TO CLOSE</div>
+      <div class="overview-hint">G &middot; ESC TO CLOSE</div>
       <button class="overview-close" onclick="toggleOverview()">&times;</button>
     </div>
   </div>
-  <div class="overview-grid" id="overviewGrid"></div>
+  <div class="overview-progress"><div class="overview-progress-fill" id="ovProgress"></div></div>
+  <div id="overviewGrid"></div>
 </div>
 
 <!-- ======================= MODAL ======================= -->
@@ -2145,145 +2172,176 @@ div:hover > .inst-hint{opacity:1!important}
      S16 · FINANCIALS BY DIVISION
      ============================================= -->
 <section class="slide" id="s16">
-  <div class="orb" style="width:450px;height:450px;background:rgba(78,205,196,.03);top:-10%;right:5%"></div>
-  <div class="orb" style="width:350px;height:350px;background:rgba(251,180,91,.03);bottom:-5%;left:10%;animation-delay:4s"></div>
+  <div class="orb" style="width:500px;height:500px;background:rgba(251,180,91,.04);top:-15%;right:-5%"></div>
+  <div class="orb" style="width:400px;height:400px;background:rgba(78,205,196,.03);bottom:-10%;left:5%;animation-delay:3s"></div>
+  <div class="orb" style="width:250px;height:250px;background:rgba(167,139,250,.03);top:30%;left:50%;animation-delay:6s"></div>
 
   <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:10px">
     <div class="anim">
       <div class="row" style="align-items:center;margin-bottom:0">
-        <div><div class="tag" style="color:var(--gold)">Unit Economics</div><h2 style="margin-top:6px;font-size:clamp(1.2rem,2.4vw,1.8rem)">Revenue &amp; Margin by Division</h2></div>
+        <div>
+          <div class="tag" style="color:var(--gold)">Unit Economics</div>
+          <h2 style="margin-top:6px;font-size:clamp(1.2rem,2.4vw,1.8rem)">Revenue &amp; Margin by Division</h2>
+          <div style="font-size:9px;color:var(--dim);margin-top:4px;letter-spacing:.5px">Five revenue lines &mdash; diversified margins, compounding growth</div>
+        </div>
         <div style="margin-left:auto;display:flex;gap:12px">
-          <div class="glass-sm" style="text-align:center;padding:8px 14px"><div class="sv-sm" style="color:var(--teal);font-size:clamp(1rem,1.6vw,1.4rem)">5</div><div class="sl" style="font-size:10px;margin-top:2px">Revenue Lines</div></div>
-          <div class="glass-sm" style="text-align:center;padding:8px 14px"><div class="sv-sm" style="color:var(--gold);font-size:clamp(1rem,1.6vw,1.4rem)">83%</div><div class="sl" style="font-size:10px;margin-top:2px">Best GM (Clinic)</div></div>
-          <div class="glass-sm" style="text-align:center;padding:8px 14px"><div class="sv-sm" style="color:var(--purple);font-size:clamp(1rem,1.6vw,1.4rem)">24%</div><div class="sl" style="font-size:10px;margin-top:2px">Blended GM 2030</div></div>
+          <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(78,205,196,.12)"><div class="sv-sm" style="color:var(--teal);font-size:clamp(1rem,1.6vw,1.4rem)">48x</div><div class="sl" style="font-size:9px;margin-top:2px">Revenue Growth</div></div>
+          <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(251,180,91,.12)"><div class="sv-sm" style="color:var(--gold);font-size:clamp(1rem,1.6vw,1.4rem)">83%</div><div class="sl" style="font-size:9px;margin-top:2px">Best GM</div></div>
+          <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(167,139,250,.12)"><div class="sv-sm" style="color:var(--purple);font-size:clamp(1rem,1.6vw,1.4rem)">$218M</div><div class="sl" style="font-size:9px;margin-top:2px">Gross Profit &rsquo;30</div></div>
         </div>
       </div>
     </div>
 
-    <div style="display:flex;gap:16px;flex:1;min-height:0">
-      <!-- LEFT: Revenue by Division Table -->
-      <div class="glass anim d1" style="flex:1.3;padding:14px 16px;display:flex;flex-direction:column;border-color:rgba(78,205,196,.08)">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-          <h3 style="font-size:11px;letter-spacing:1px">Revenue by Division</h3>
-          <span style="font-size:7px;color:var(--dim);letter-spacing:1px">$ IN MILLIONS</span>
+    <div style="display:flex;gap:14px;flex:1;min-height:0">
+      <!-- LEFT: Revenue Table + Stacked Chart -->
+      <div style="flex:1.4;display:flex;flex-direction:column;gap:10px;min-height:0">
+        <!-- Revenue Table -->
+        <div class="glass anim d1" style="padding:14px 16px;display:flex;flex-direction:column;border-color:rgba(78,205,196,.08)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <h3 style="font-size:11px;letter-spacing:1px">Revenue by Division</h3>
+            <span style="font-size:7px;color:var(--dim);letter-spacing:1px">$ IN MILLIONS</span>
+          </div>
+          <table style="width:100%;border-collapse:collapse;font-size:9.5px">
+            <thead>
+              <tr style="border-bottom:2px solid var(--border)">
+                <th style="text-align:left;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1.5px;font-weight:700">DIVISION</th>
+                <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2026</th>
+                <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2027</th>
+                <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2028</th>
+                <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2029</th>
+                <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2030</th>
+                <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">GM%</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+                <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--coral);margin-right:6px;vertical-align:middle"></span>HemoDetox</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$13.1</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$64.0</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$229.1</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$524.3</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$731.1</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--coral);font-weight:700">15%</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.04);background:rgba(78,205,196,.015)">
+                <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--teal);margin-right:6px;vertical-align:middle"></span>Recharge Portal</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.2</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$10.6</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$29.2</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$59.1</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$104.5</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--teal);font-weight:700">66%</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
+                <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--gold);margin-right:6px;vertical-align:middle"></span>Equipment</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$2.7</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$7.6</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$14.8</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$25.7</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$38.6</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--gold);font-weight:700">67%</td>
+              </tr>
+              <tr style="border-bottom:1px solid rgba(255,255,255,.04);background:rgba(78,205,196,.015)">
+                <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--purple);margin-right:6px;vertical-align:middle"></span>Clinic</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.7</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$2.9</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$5.3</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$8.5</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$11.7</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--purple);font-weight:700">83%</td>
+              </tr>
+              <tr style="background:rgba(78,205,196,.015)">
+                <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:rgba(255,255,255,.3);margin-right:6px;vertical-align:middle"></span>Supplements</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.03</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.3</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.8</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.8</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$3.6</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim);font-weight:700">36%</td>
+              </tr>
+              <tr style="border-top:2px solid var(--border-hi)">
+                <td style="padding:6px 6px;font-weight:900;color:var(--teal)">Total</td>
+                <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$18.6</td>
+                <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$85.4</td>
+                <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$279.2</td>
+                <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$619.4</td>
+                <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:900">$889.6</td>
+                <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">24%</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-        <table style="width:100%;border-collapse:collapse;font-size:9.5px;flex:1">
-          <thead>
-            <tr style="border-bottom:2px solid var(--border)">
-              <th style="text-align:left;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1.5px;font-weight:700">DIVISION</th>
-              <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2026</th>
-              <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2027</th>
-              <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2028</th>
-              <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2029</th>
-              <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">2030</th>
-              <th style="text-align:right;padding:5px 6px;color:var(--dim);font-size:8px;letter-spacing:1px;font-weight:700">GM%</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
-              <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--coral);margin-right:6px;vertical-align:middle"></span>HemoDetox</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$13.1</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$64.0</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$229.1</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$524.3</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$731.1</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--coral);font-weight:700">15%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.04);background:rgba(78,205,196,.015)">
-              <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--teal);margin-right:6px;vertical-align:middle"></span>Recharge Portal</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.2</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$10.6</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$29.2</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$59.1</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$104.5</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--teal);font-weight:700">66%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
-              <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--gold);margin-right:6px;vertical-align:middle"></span>Equipment</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$2.7</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$7.6</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$14.8</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$25.7</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$38.6</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--teal);font-weight:700">67%</td>
-            </tr>
-            <tr style="border-bottom:1px solid rgba(255,255,255,.04);background:rgba(78,205,196,.015)">
-              <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--purple);margin-right:6px;vertical-align:middle"></span>Clinic</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.7</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$2.9</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$5.3</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$8.5</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$11.7</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--teal);font-weight:700">83%</td>
-            </tr>
-            <tr style="background:rgba(78,205,196,.015)">
-              <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:rgba(255,255,255,.3);margin-right:6px;vertical-align:middle"></span>Supplements</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.03</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.3</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.8</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.8</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$3.6</td>
-              <td style="text-align:right;padding:5px 6px;color:var(--gold);font-weight:700">36%</td>
-            </tr>
-            <tr style="border-top:2px solid var(--border-hi)">
-              <td style="padding:6px 6px;font-weight:900;color:var(--teal)">Total</td>
-              <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$18.6</td>
-              <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$85.4</td>
-              <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$279.2</td>
-              <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">$619.4</td>
-              <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:900">$889.6</td>
-              <td style="text-align:right;padding:6px 6px;color:var(--teal);font-weight:700">24%</td>
-            </tr>
-          </tbody>
-        </table>
+
+        <!-- Stacked Revenue Bar Chart — fixed height -->
+        <div class="glass anim d2" style="flex:1;padding:14px 16px;display:flex;flex-direction:column;border-color:rgba(251,180,91,.08);min-height:160px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <h3 style="font-size:11px;letter-spacing:1px">Revenue Mix by Year</h3>
+            <div style="display:flex;gap:8px;align-items:center">
+              <span style="width:6px;height:6px;border-radius:1px;background:var(--coral)"></span><span style="font-size:7px;color:var(--dim)">HD</span>
+              <span style="width:6px;height:6px;border-radius:1px;background:var(--teal)"></span><span style="font-size:7px;color:var(--dim)">Portal</span>
+              <span style="width:6px;height:6px;border-radius:1px;background:var(--gold)"></span><span style="font-size:7px;color:var(--dim)">Equip</span>
+              <span style="width:6px;height:6px;border-radius:1px;background:var(--purple)"></span><span style="font-size:7px;color:var(--dim)">Clinic</span>
+            </div>
+          </div>
+          <div id="divRevChart" style="display:flex;align-items:flex-end;gap:12px;flex:1;justify-content:center;min-height:120px;padding-bottom:4px;position:relative"></div>
+        </div>
       </div>
 
-      <!-- RIGHT: Stacked Bar Chart + Margin Cards -->
-      <div class="anim d2" style="flex:1;display:flex;flex-direction:column;gap:10px;min-height:0">
-        <!-- Stacked Revenue Bar Chart -->
-        <div class="glass" style="flex:1;padding:14px 16px;display:flex;flex-direction:column;border-color:rgba(251,180,91,.08)">
-          <h3 style="font-size:11px;letter-spacing:1px;margin-bottom:8px">Revenue Mix by Year</h3>
-          <div id="divRevChart" style="display:flex;align-items:flex-end;gap:10px;flex:1;justify-content:center;min-height:0;padding-bottom:4px"></div>
+      <!-- RIGHT: Gross Margin + Donut -->
+      <div style="flex:0.9;display:flex;flex-direction:column;gap:10px;min-height:0">
+        <!-- Division Mix Donut -->
+        <div class="glass anim d2" style="padding:16px;border-color:rgba(251,180,91,.08)">
+          <h3 style="font-size:11px;letter-spacing:1px;margin-bottom:12px;text-align:center">2030 Revenue Mix</h3>
+          <div style="display:flex;justify-content:center;margin-bottom:10px">
+            <div class="donut" style="width:130px;height:130px;background:conic-gradient(var(--coral) 0deg 296deg,var(--teal) 296deg 338deg,var(--gold) 338deg 354deg,var(--purple) 354deg 359deg,rgba(255,255,255,.15) 359deg);box-shadow:0 0 30px rgba(78,205,196,.06)">
+              <div class="donut-inner" style="width:72px;height:72px"><div style="font-family:var(--head);font-size:14px;font-weight:900">$890M</div><div style="font-size:7px;color:var(--dim)">Total</div></div></div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;font-size:8.5px">
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:6px;height:6px;border-radius:2px;background:var(--coral);flex-shrink:0"></span>HemoDetox 82%</div>
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:6px;height:6px;border-radius:2px;background:var(--teal);flex-shrink:0"></span>Portal 12%</div>
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:6px;height:6px;border-radius:2px;background:var(--gold);flex-shrink:0"></span>Equipment 4%</div>
+            <div style="display:flex;align-items:center;gap:4px"><span style="width:6px;height:6px;border-radius:2px;background:var(--purple);flex-shrink:0"></span>Clinic 1%</div>
+          </div>
         </div>
 
-        <!-- Gross Margin by Division — Visual Bars -->
-        <div class="glass" style="padding:14px 16px;border-color:rgba(167,139,250,.08)">
-          <h3 style="font-size:11px;letter-spacing:1px;margin-bottom:10px">2030 Gross Margin by Division</h3>
-          <div style="display:flex;flex-direction:column;gap:6px">
+        <!-- Gross Margin by Division -->
+        <div class="glass anim d3" style="flex:1;padding:14px 16px;border-color:rgba(167,139,250,.08);display:flex;flex-direction:column">
+          <h3 style="font-size:11px;letter-spacing:1px;margin-bottom:10px">2030 Gross Margin</h3>
+          <div style="display:flex;flex-direction:column;gap:7px;flex:1;justify-content:center">
             <div style="display:flex;align-items:center;gap:8px">
-              <div style="width:70px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Clinic</div>
-              <div style="flex:1;height:16px;background:rgba(255,255,255,.03);border-radius:4px;overflow:hidden;position:relative">
-                <div class="gm-bar" data-w="83" style="height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,rgba(167,139,250,.3),var(--purple));transition:width 1.2s cubic-bezier(.25,.46,.45,.94)"></div>
+              <div style="width:65px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Clinic</div>
+              <div style="flex:1;height:18px;background:rgba(255,255,255,.03);border-radius:5px;overflow:hidden;position:relative">
+                <div class="gm-bar" data-w="83" style="height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,rgba(167,139,250,.2),var(--purple));transition:width 1.2s cubic-bezier(.25,.46,.45,.94);box-shadow:0 0 12px rgba(167,139,250,.15)"></div>
               </div>
-              <div style="width:32px;font-size:9px;font-weight:900;color:var(--purple);text-align:right">83%</div>
+              <div style="width:32px;font-size:10px;font-weight:900;color:var(--purple);text-align:right">83%</div>
             </div>
             <div style="display:flex;align-items:center;gap:8px">
-              <div style="width:70px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Equipment</div>
-              <div style="flex:1;height:16px;background:rgba(255,255,255,.03);border-radius:4px;overflow:hidden">
-                <div class="gm-bar" data-w="67" style="height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,rgba(251,180,91,.3),var(--gold));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .1s"></div>
+              <div style="width:65px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Equipment</div>
+              <div style="flex:1;height:18px;background:rgba(255,255,255,.03);border-radius:5px;overflow:hidden">
+                <div class="gm-bar" data-w="67" style="height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,rgba(251,180,91,.2),var(--gold));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .1s;box-shadow:0 0 12px rgba(251,180,91,.12)"></div>
               </div>
-              <div style="width:32px;font-size:9px;font-weight:900;color:var(--gold);text-align:right">67%</div>
+              <div style="width:32px;font-size:10px;font-weight:900;color:var(--gold);text-align:right">67%</div>
             </div>
             <div style="display:flex;align-items:center;gap:8px">
-              <div style="width:70px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Portal</div>
-              <div style="flex:1;height:16px;background:rgba(255,255,255,.03);border-radius:4px;overflow:hidden">
-                <div class="gm-bar" data-w="66" style="height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,rgba(78,205,196,.3),var(--teal));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .2s"></div>
+              <div style="width:65px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Portal</div>
+              <div style="flex:1;height:18px;background:rgba(255,255,255,.03);border-radius:5px;overflow:hidden">
+                <div class="gm-bar" data-w="66" style="height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,rgba(78,205,196,.2),var(--teal));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .2s;box-shadow:0 0 12px rgba(78,205,196,.12)"></div>
               </div>
-              <div style="width:32px;font-size:9px;font-weight:900;color:var(--teal);text-align:right">66%</div>
+              <div style="width:32px;font-size:10px;font-weight:900;color:var(--teal);text-align:right">66%</div>
             </div>
             <div style="display:flex;align-items:center;gap:8px">
-              <div style="width:70px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Supplements</div>
-              <div style="flex:1;height:16px;background:rgba(255,255,255,.03);border-radius:4px;overflow:hidden">
-                <div class="gm-bar" data-w="36" style="height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,rgba(255,255,255,.1),rgba(255,255,255,.3));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .3s"></div>
+              <div style="width:65px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">Supplements</div>
+              <div style="flex:1;height:18px;background:rgba(255,255,255,.03);border-radius:5px;overflow:hidden">
+                <div class="gm-bar" data-w="36" style="height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,rgba(255,255,255,.06),rgba(255,255,255,.25));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .3s"></div>
               </div>
-              <div style="width:32px;font-size:9px;font-weight:900;color:var(--dim);text-align:right">36%</div>
+              <div style="width:32px;font-size:10px;font-weight:900;color:var(--dim);text-align:right">36%</div>
             </div>
             <div style="display:flex;align-items:center;gap:8px">
-              <div style="width:70px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">HemoDetox</div>
-              <div style="flex:1;height:16px;background:rgba(255,255,255,.03);border-radius:4px;overflow:hidden">
-                <div class="gm-bar" data-w="15" style="height:100%;width:0;border-radius:4px;background:linear-gradient(90deg,rgba(255,107,107,.3),var(--coral));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .4s"></div>
+              <div style="width:65px;font-size:8.5px;color:var(--dim);text-align:right;flex-shrink:0">HemoDetox</div>
+              <div style="flex:1;height:18px;background:rgba(255,255,255,.03);border-radius:5px;overflow:hidden">
+                <div class="gm-bar" data-w="15" style="height:100%;width:0;border-radius:5px;background:linear-gradient(90deg,rgba(255,107,107,.2),var(--coral));transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .4s;box-shadow:0 0 12px rgba(255,107,107,.1)"></div>
               </div>
-              <div style="width:32px;font-size:9px;font-weight:900;color:var(--coral);text-align:right">15%</div>
+              <div style="width:32px;font-size:10px;font-weight:900;color:var(--coral);text-align:right">15%</div>
             </div>
           </div>
         </div>
@@ -2291,18 +2349,21 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
 
     <!-- Bottom: Key Insights -->
-    <div class="anim d3" style="display:flex;gap:12px">
-      <div style="flex:1;padding:10px 14px;border-radius:10px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.08);border-left:3px solid var(--teal)">
-        <div style="font-size:8px;color:var(--teal);font-weight:700;letter-spacing:1.5px">MARGIN DIVERSIFICATION</div>
-        <div style="font-size:9px;color:var(--dim);margin-top:2px;line-height:1.4">HemoDetox is <b style="color:var(--bright)">82% of revenue</b> but only <b style="color:var(--bright)">51% of gross margin</b>. Portal + Equipment + Clinic contribute the other half on just 17% of revenue.</div>
+    <div class="anim d4" style="display:flex;gap:12px">
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(78,205,196,.01));border:1px solid rgba(78,205,196,.1);position:relative;overflow:hidden">
+        <div style="position:absolute;top:-8px;right:-4px;font-size:32px;opacity:.04;font-weight:900;font-family:var(--head)">%</div>
+        <div style="font-size:8px;color:var(--teal);font-weight:800;letter-spacing:1.5px">MARGIN DIVERSIFICATION</div>
+        <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">HemoDetox is <b style="color:var(--bright)">82% of revenue</b> but only <b style="color:var(--bright)">51% of gross margin</b>. Portal + Equipment + Clinic contribute the other half on just 17% of revenue.</div>
       </div>
-      <div style="flex:1;padding:10px 14px;border-radius:10px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.08);border-left:3px solid var(--gold)">
-        <div style="font-size:8px;color:var(--gold);font-weight:700;letter-spacing:1.5px">SCALE ECONOMICS</div>
-        <div style="font-size:9px;color:var(--dim);margin-top:2px;line-height:1.4">Portal margins <b style="color:var(--bright)">improve 57%&rarr;66%</b> and Equipment <b style="color:var(--bright)">48%&rarr;67%</b> as volume scales. Clinic holds steady at <b style="color:var(--bright)">83%</b> &mdash; highest-margin line.</div>
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(251,180,91,.04),rgba(251,180,91,.01));border:1px solid rgba(251,180,91,.1);position:relative;overflow:hidden">
+        <div style="position:absolute;top:-8px;right:-4px;font-size:32px;opacity:.04;font-weight:900;font-family:var(--head)">&uarr;</div>
+        <div style="font-size:8px;color:var(--gold);font-weight:800;letter-spacing:1.5px">SCALE ECONOMICS</div>
+        <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">Portal margins <b style="color:var(--bright)">improve 57%&rarr;66%</b> and Equipment <b style="color:var(--bright)">48%&rarr;67%</b> as volume scales. Clinic holds steady at <b style="color:var(--bright)">83%</b> &mdash; highest-margin line.</div>
       </div>
-      <div style="flex:1;padding:10px 14px;border-radius:10px;background:rgba(167,139,250,.03);border:1px solid rgba(167,139,250,.08);border-left:3px solid var(--purple)">
-        <div style="font-size:8px;color:var(--purple);font-weight:700;letter-spacing:1.5px">GROSS MARGIN TRAJECTORY</div>
-        <div style="font-size:9px;color:var(--dim);margin-top:2px;line-height:1.4">2030 gross margin of <b style="color:var(--bright)">$217.6M</b> across all lines. Non-HemoDetox divisions contribute <b style="color:var(--bright)">$106M</b> in margin at <b style="color:var(--bright)">67% avg GM</b>.</div>
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(167,139,250,.04),rgba(167,139,250,.01));border:1px solid rgba(167,139,250,.1);position:relative;overflow:hidden">
+        <div style="position:absolute;top:-8px;right:-4px;font-size:32px;opacity:.04;font-weight:900;font-family:var(--head)">$</div>
+        <div style="font-size:8px;color:var(--purple);font-weight:800;letter-spacing:1.5px">GROSS MARGIN TRAJECTORY</div>
+        <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">2030 gross margin of <b style="color:var(--bright)">$218M</b> across all lines. Non-HemoDetox divisions contribute <b style="color:var(--bright)">$106M</b> in margin at <b style="color:var(--bright)">67% avg GM</b>.</div>
       </div>
     </div>
   </div>
@@ -2474,47 +2535,91 @@ div:hover > .inst-hint{opacity:1!important}
       setTimeout(()=>b.style.height=Math.max((d.v/890*80),4)+'px',300)})}
 
   function buildDivRev(){const c=document.getElementById('divRevChart');if(!c||c.dataset.b)return;c.dataset.b='1';
-    const years=[
+    var maxH=c.offsetHeight-24; // reserve space for labels
+    if(maxH<80)maxH=120; // fallback min
+    var years=[
       {y:'2026',hd:13.1,rp:1.2,eq:2.7,cl:1.7,su:0.03,t:18.6},
       {y:'2027',hd:64.0,rp:10.6,eq:7.6,cl:2.9,su:0.3,t:85.4},
       {y:'2028',hd:229.1,rp:29.2,eq:14.8,cl:5.3,su:0.8,t:279.2},
       {y:'2029',hd:524.3,rp:59.1,eq:25.7,cl:8.5,su:1.8,t:619.4},
       {y:'2030',hd:731.1,rp:104.5,eq:38.6,cl:11.7,su:3.6,t:889.6}
     ];
-    const max=890;
-    years.forEach((d,i)=>{
-      const col=document.createElement('div');col.style.cssText='flex:1;display:flex;flex-direction:column;align-items:center;gap:3px';
-      const lbl=document.createElement('div');lbl.style.cssText='font-size:8px;font-weight:700;color:var(--bright);min-height:12px';lbl.textContent='$'+Math.round(d.t)+'M';
-      const stack=document.createElement('div');stack.style.cssText='width:100%;display:flex;flex-direction:column-reverse;height:0;transition:height 1.4s cubic-bezier(.25,.46,.45,.94) '+(i*100)+'ms;border-radius:4px 4px 0 0;overflow:hidden';
-      const segs=[{v:d.hd,c:'var(--coral)'},{v:d.rp,c:'var(--teal)'},{v:d.eq,c:'var(--gold)'},{v:d.cl,c:'var(--purple)'},{v:d.su,c:'rgba(255,255,255,.2)'}];
-      segs.forEach(s=>{const seg=document.createElement('div');const pct=(s.v/d.t*100);seg.style.cssText='width:100%;height:'+pct+'%;background:'+s.c+';min-height:'+(pct>1?'0':'0')+'px';seg.title=Math.round(s.v)+'M';stack.appendChild(seg)});
-      const yr=document.createElement('div');yr.style.cssText='font-size:8px;color:var(--dim)';yr.textContent=d.y;
+    var maxVal=890;
+    // Grid lines
+    [200,400,600,800].forEach(function(v){
+      var line=document.createElement('div');
+      line.style.cssText='position:absolute;left:0;right:0;bottom:'+(v/maxVal*maxH+12)+'px;border-bottom:1px dashed rgba(255,255,255,.04);pointer-events:none';
+      var lbl=document.createElement('div');
+      lbl.style.cssText='position:absolute;right:0;bottom:'+(v/maxVal*maxH+14)+'px;font-size:6px;color:rgba(255,255,255,.15);pointer-events:none';
+      lbl.textContent='$'+v+'M';
+      c.appendChild(line);c.appendChild(lbl);
+    });
+    years.forEach(function(d,i){
+      var col=document.createElement('div');col.style.cssText='flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;position:relative';
+      var lbl=document.createElement('div');lbl.style.cssText='font-size:8px;font-weight:800;color:var(--bright);min-height:12px;opacity:0;transition:opacity .6s '+(300+i*120)+'ms';lbl.textContent='$'+Math.round(d.t)+'M';
+      var barH=Math.max(d.t/maxVal*maxH,6);
+      var stack=document.createElement('div');stack.style.cssText='width:100%;display:flex;flex-direction:column-reverse;height:0;transition:height 1.2s cubic-bezier(.16,1,.3,1) '+(200+i*120)+'ms;border-radius:5px 5px 0 0;overflow:hidden;box-shadow:0 -4px 16px rgba(0,0,0,.2)';
+      var segs=[{v:d.hd,c:'var(--coral)',n:'HemoDetox'},{v:d.rp,c:'var(--teal)',n:'Portal'},{v:d.eq,c:'var(--gold)',n:'Equipment'},{v:d.cl,c:'var(--purple)',n:'Clinic'},{v:d.su,c:'rgba(255,255,255,.15)',n:'Suppl'}];
+      segs.forEach(function(s){var seg=document.createElement('div');var pct=(s.v/d.t*100);seg.style.cssText='width:100%;height:'+pct+'%;background:'+s.c+';min-height:0;position:relative';seg.title=s.n+': $'+s.v.toFixed(1)+'M';stack.appendChild(seg)});
+      var yr=document.createElement('div');yr.style.cssText='font-size:8px;color:var(--dim);font-weight:700;letter-spacing:1px';yr.textContent=d.y;
       col.appendChild(lbl);col.appendChild(stack);col.appendChild(yr);c.appendChild(col);
-      setTimeout(()=>stack.style.height=Math.max((d.t/max*100),8)+'%',300)});
+      setTimeout(function(){stack.style.height=barH+'px';lbl.style.opacity='1'},100);
+    });
     // Animate GM bars
-    c.closest('.slide').querySelectorAll('.gm-bar').forEach(b=>setTimeout(()=>b.style.width=b.dataset.w+'%',500))}
+    c.closest('.slide').querySelectorAll('.gm-bar').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},500)})}
 
   // Slide overview
   const SLIDE_NAMES=['Cover','Problem & Opportunity','Vision & Ecosystem','The Science','Clinical Framework','Clinical Evidence','Licensing Model','Subtractive Medicine','Lumi App','Lumati Institute','GTM & Traction','Competitive Moat','Competitive Comparison','Team','Board & Advisors','Financials','Revenue by Division','The Ask','Close','Disclaimer'];
+  const SLIDE_SUBS=['','$840B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','5-year projections','Unit economics','$40M Series A','','Legal'];
+  const SLIDE_ICONS=['\u25C6','\u26A1','\u25CE','\u2B21','\u25B3','\u2726','\u229E','\u2193','\u25EB','\u23E3','\u2197','\u2B22','\u2630','\u25C9','\u25C8','\u25C7','\u25A6','\u2295','\u2727','\u25A1'];
+  const SLIDE_SECTIONS=[
+    {label:'Introduction',color:'var(--teal)',from:0,to:2},
+    {label:'Science & Protocol',color:'var(--purple)',from:2,to:6},
+    {label:'Business Model',color:'var(--gold)',from:6,to:11},
+    {label:'Competitive Edge',color:'var(--coral)',from:11,to:13},
+    {label:'Team & Governance',color:'var(--teal)',from:13,to:15},
+    {label:'Financials',color:'var(--gold)',from:15,to:17},
+    {label:'Close',color:'var(--dim)',from:17,to:20}
+  ];
   const ovEl=document.getElementById('overview'),ovGrid=document.getElementById('overviewGrid');
   let ovOpen=false;
   function buildOverview(){
     ovGrid.innerHTML='';
-    slides.forEach((s,i)=>{
-      const th=document.createElement('div');th.className='overview-thumb'+(i===cur?' active-thumb':'');
-      // Capture slide content as mini preview using first heading text
-      const h=s.querySelector('h2,h1');
-      const tagEl=s.querySelector('.tag');
-      const accent=tagEl?getComputedStyle(tagEl).color:'var(--teal)';
-      const bgColors=['rgba(78,205,196,.06)','rgba(251,180,91,.06)','rgba(167,139,250,.06)','rgba(255,107,107,.06)'];
-      th.style.background=bgColors[i%4];
-      th.innerHTML='<div class="overview-thumb-num">'+String(i+1).padStart(2,'0')+'</div>'+
-        '<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:24px 14px 20px;text-align:center">'+
-        '<div style="font-family:var(--head);font-size:12px;font-weight:700;color:var(--dim);line-height:1.3">'+(SLIDE_NAMES[i]||'Slide '+(i+1))+'</div></div>'+
-        '<div class="overview-thumb-label">'+(SLIDE_NAMES[i]||'Slide '+(i+1))+'</div>';
-      th.addEventListener('click',()=>{go(i);toggleOverview()});
-      ovGrid.appendChild(th)
-    })
+    // Progress bar
+    var pct=((cur+1)/slides.length*100).toFixed(0);
+    document.getElementById('ovProgress').style.width=pct+'%';
+    var delay=0;
+    SLIDE_SECTIONS.forEach(function(sec){
+      // Section header
+      var sh=document.createElement('div');sh.className='overview-section';
+      var head=document.createElement('div');head.className='overview-section-head';
+      head.innerHTML='<div class="overview-section-label" style="color:'+sec.color+'">'+sec.label+'</div>'+
+        '<div class="overview-section-line"></div>'+
+        '<div class="overview-section-count">'+(sec.to-sec.from)+' slides</div>';
+      sh.appendChild(head);
+      var grid=document.createElement('div');grid.className='overview-grid';
+      for(var i=sec.from;i<sec.to&&i<slides.length;i++){
+        (function(idx,d){
+          var th=document.createElement('div');
+          th.className='overview-thumb'+(idx===cur?' active-thumb':'');
+          // Accent-tinted background
+          var rgb=sec.color==='var(--teal)'?'78,205,196':sec.color==='var(--purple)'?'167,139,250':sec.color==='var(--gold)'?'251,180,91':sec.color==='var(--coral)'?'255,107,107':'180,180,180';
+          th.style.background='linear-gradient(135deg,rgba('+rgb+',.07),rgba('+rgb+',.01))';
+          th.style.setProperty('--accent','rgba('+rgb+',.3)');
+          th.innerHTML='<div class="ov-icon">'+SLIDE_ICONS[idx]+'</div>'+
+            '<div class="overview-thumb-num">'+String(idx+1).padStart(2,'0')+'</div>'+
+            '<div class="overview-thumb-label">'+(SLIDE_NAMES[idx]||'Slide '+(idx+1))+
+            (SLIDE_SUBS[idx]?'<div class="overview-thumb-sub">'+SLIDE_SUBS[idx]+'</div>':'')+
+            '</div>';
+          th.addEventListener('click',function(){go(idx);toggleOverview()});
+          // Staggered entrance
+          setTimeout(function(){th.classList.add('ov-visible')},40+d*50);
+          grid.appendChild(th);
+        })(i,delay++);
+      }
+      sh.appendChild(grid);
+      ovGrid.appendChild(sh);
+    });
   }
   window.toggleOverview=function(){
     ovOpen=!ovOpen;
