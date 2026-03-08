@@ -2222,6 +2222,121 @@ div:hover > .inst-hint{opacity:1!important}
 </section>
 
 <!-- =============================================
+     S15b · REVENUE BRIDGE
+     ============================================= -->
+<section class="slide" id="s15b">
+  <div class="orb" style="width:550px;height:550px;background:rgba(78,205,196,.04);top:-15%;left:-5%"></div>
+  <div class="orb" style="width:400px;height:400px;background:rgba(167,139,250,.03);bottom:-10%;right:10%;animation-delay:5s"></div>
+
+  <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:10px">
+    <!-- Header -->
+    <div class="anim">
+      <div class="tag" style="color:var(--teal)">Growth Trajectory</div>
+      <h2 style="margin-top:6px;font-size:clamp(1.3rem,2.6vw,2rem)">The Bridge to <span class="grad-text">$890M</span></h2>
+      <p style="font-size:11px;color:var(--dim);margin-top:4px">Four compounding growth engines transform a $5.7M base into a $890M revenue platform by 2030</p>
+    </div>
+
+    <div style="display:flex;gap:16px;flex:1;min-height:0;align-items:stretch">
+      <!-- LEFT: Today → 2030 + Bridge Chart -->
+      <div style="flex:1.3;display:flex;flex-direction:column;gap:10px">
+        <!-- Today vs 2030 -->
+        <div style="display:flex;gap:10px;align-items:stretch">
+          <div class="glass anim d1" style="flex:1;padding:14px;text-align:center;border-color:rgba(255,255,255,.08)">
+            <div style="font-size:9px;color:var(--dim);letter-spacing:2px;font-weight:700">TODAY (2025)</div>
+            <div style="font-family:var(--head);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--bright);margin-top:4px">$5.7M</div>
+            <div style="display:flex;gap:14px;justify-content:center;margin-top:6px">
+              <div><div style="font-size:15px;font-weight:900;color:var(--teal)">12</div><div style="font-size:8px;color:var(--dim)">Clinics</div></div>
+              <div><div style="font-size:15px;font-weight:900;color:var(--gold)">450</div><div style="font-size:8px;color:var(--dim)">Patients</div></div>
+              <div><div style="font-size:15px;font-weight:900;color:var(--purple)">1</div><div style="font-size:8px;color:var(--dim)">Hospital</div></div>
+            </div>
+          </div>
+          <!-- Arrow -->
+          <div style="display:flex;align-items:center;flex-shrink:0;padding:0 2px">
+            <div style="font-size:11px;color:var(--teal);font-weight:900;letter-spacing:2px;writing-mode:horizontal-tb">157x &#8594;</div>
+          </div>
+          <!-- 2030 -->
+          <div class="glass anim d2" style="flex:1;padding:14px;text-align:center;border-color:rgba(78,205,196,.2);box-shadow:0 0 30px rgba(78,205,196,.06)">
+            <div style="font-size:9px;color:var(--teal);letter-spacing:2px;font-weight:700">2030 TARGET</div>
+            <div style="font-family:var(--head);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;margin-top:4px"><span class="grad-text">$890M</span></div>
+            <div style="display:flex;gap:14px;justify-content:center;margin-top:6px">
+              <div><div style="font-size:15px;font-weight:900;color:var(--teal)">371</div><div style="font-size:8px;color:var(--dim)">Clinics</div></div>
+              <div><div style="font-size:15px;font-weight:900;color:var(--gold)">131K</div><div style="font-size:8px;color:var(--dim)">Patients</div></div>
+              <div><div style="font-size:15px;font-weight:900;color:var(--purple)">118</div><div style="font-size:8px;color:var(--dim)">Hospitals</div></div>
+            </div>
+          </div>
+        </div>
+        <!-- Bridge Waterfall Chart -->
+        <div class="glass anim d3" style="flex:1;padding:14px 16px;display:flex;flex-direction:column;min-height:0;border-color:rgba(78,205,196,.08)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <h3 style="font-size:11px;letter-spacing:1px">Revenue Bridge — Year-Over-Year Growth</h3>
+            <div style="display:flex;gap:8px;font-size:9px;color:var(--dim)">
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:6px;height:6px;border-radius:1px;background:var(--coral)"></span>HD</span>
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:6px;height:6px;border-radius:1px;background:var(--teal)"></span>Portal</span>
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:6px;height:6px;border-radius:1px;background:var(--gold)"></span>Equip</span>
+              <span style="display:flex;align-items:center;gap:3px"><span style="width:6px;height:6px;border-radius:1px;background:var(--purple)"></span>Clinic</span>
+            </div>
+          </div>
+          <div id="bridgeChart" style="flex:1;display:flex;align-items:flex-end;justify-content:center;gap:6px;min-height:100px;padding-bottom:4px;position:relative"></div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Growth Engines -->
+      <div style="flex:0.85;display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:9px;color:var(--teal);font-weight:800;letter-spacing:2px" class="anim d2">GROWTH ENGINES</div>
+        <!-- Engine 1: HemoDetox -->
+        <div class="glass-sm anim d2" style="padding:12px 14px;border-color:rgba(255,107,107,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+            <div style="width:8px;height:8px;border-radius:2px;background:var(--coral);flex-shrink:0"></div>
+            <div style="font-size:11px;font-weight:800;color:var(--bright)">HemoDetox Network</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--coral)">$731M</div>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.45">Scale proprietary blood filtration across <b style="color:var(--bright)">371 clinics</b>. Revenue-per-clinic ~$2M. Largest line by volume at 15% GM with margin expansion as equipment amortizes.</div>
+          <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(255,107,107,.08);overflow:hidden"><div class="bridge-bar" data-w="82" style="height:100%;width:0;border-radius:2px;background:var(--coral);transition:width 1.2s cubic-bezier(.25,.46,.45,.94)"></div></div>
+          <div style="font-size:8px;color:var(--dim);margin-top:2px">82% of 2030 revenue</div>
+        </div>
+        <!-- Engine 2: Portal SaaS -->
+        <div class="glass-sm anim d3" style="padding:12px 14px;border-color:rgba(78,205,196,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+            <div style="width:8px;height:8px;border-radius:2px;background:var(--teal);flex-shrink:0"></div>
+            <div style="font-size:11px;font-weight:800;color:var(--bright)">Recharge Portal SaaS</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--teal)">$105M</div>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.45">Deploy <b style="color:var(--bright)">2,488 portals</b> as recurring SaaS. ~$42K/portal/yr. <b style="color:var(--teal)">66% gross margin</b> &mdash; highest-margin recurring engine. Software + data flywheel.</div>
+          <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(78,205,196,.08);overflow:hidden"><div class="bridge-bar" data-w="12" style="height:100%;width:0;border-radius:2px;background:var(--teal);transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .15s"></div></div>
+          <div style="font-size:8px;color:var(--dim);margin-top:2px">12% of revenue &middot; 49% of non-HD gross margin</div>
+        </div>
+        <!-- Engine 3: Equipment -->
+        <div class="glass-sm anim d4" style="padding:12px 14px;border-color:rgba(251,180,91,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+            <div style="width:8px;height:8px;border-radius:2px;background:var(--gold);flex-shrink:0"></div>
+            <div style="font-size:11px;font-weight:800;color:var(--bright)">Equipment &amp; Supplies</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--gold)">$39M</div>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.45">Capital equipment to clinics and portals. <b style="color:var(--gold)">67% gross margin</b>. Margins improve <b style="color:var(--bright)">48% &rarr; 67%</b> as manufacturing volume scales.</div>
+        </div>
+        <!-- Engine 4: Clinic + Supplements -->
+        <div class="glass-sm anim d5" style="padding:12px 14px;border-color:rgba(167,139,250,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+            <div style="width:8px;height:8px;border-radius:2px;background:var(--purple);flex-shrink:0"></div>
+            <div style="font-size:11px;font-weight:800;color:var(--bright)">Clinic &amp; Supplements</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--purple)">$15M</div>
+          </div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.45">Flagship clinic at <b style="color:var(--purple)">83% GM</b> &mdash; highest-margin line. Supplements add recurring consumer revenue at 36% GM.</div>
+        </div>
+        <!-- Margin insight -->
+        <div class="anim d6" style="padding:8px 12px;border-radius:10px;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(167,139,250,.04));border:1px solid rgba(78,205,196,.08)">
+          <div style="font-size:10px;color:var(--dim);line-height:1.4"><span style="color:var(--teal);font-weight:800">KEY:</span> Non-HD lines contribute <b style="color:var(--bright)">49% of gross margin</b> on just <b style="color:var(--bright)">18% of revenue</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="anim d7" style="text-align:right;margin-top:2px">
+      <span style="font-size:9px;color:rgba(255,255,255,.25);font-style:italic">*Based on contracted pipeline, clinic rollout schedule, and conservative patient volume assumptions.</span>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
      S16 · FINANCIALS BY DIVISION
      ============================================= -->
 <section class="slide" id="s16">
@@ -2578,7 +2693,40 @@ div:hover > .inst-hint{opacity:1!important}
   function ui(){prog.style.width=((cur+1)/total*100)+'%';num.textContent=String(cur+1).padStart(2,'0')+' / '+total}
   function go(n){if(n<0||n>=total||n===cur||busy)return;busy=true;slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');ui();anim(slides[cur]);setTimeout(()=>busy=false,650)}
   window.navPrev=function(){go(cur-1)};window.navNext=function(){go(cur+1)};window.goSlide=go;
-  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*220)+'px'),300);if(s.id==='s15')buildRev5yr();if(s.id==='s16')buildDivRev()}
+  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*220)+'px'),300);if(s.id==='s15')buildRev5yr();if(s.id==='s15b')buildBridgeChart();if(s.id==='s16')buildDivRev()}
+  function buildBridgeChart(){const c=document.getElementById('bridgeChart');if(!c||c.dataset.b)return;c.dataset.b='1';
+    const maxH=c.offsetHeight-24||140;
+    const data=[
+      {y:'2025',t:5.7,hd:5.7,rp:0,eq:0,cl:0,su:0,grow:''},
+      {y:'2026',t:18.6,hd:13.1,rp:1.2,eq:2.7,cl:1.7,su:0.03,grow:'+226%'},
+      {y:'2027',t:85.4,hd:64.0,rp:10.6,eq:7.6,cl:2.9,su:0.3,grow:'+359%'},
+      {y:'2028',t:279.2,hd:229.1,rp:29.2,eq:14.8,cl:5.3,su:0.8,grow:'+227%'},
+      {y:'2029',t:619.4,hd:524.3,rp:59.1,eq:25.7,cl:8.5,su:1.8,grow:'+122%'},
+      {y:'2030',t:889.6,hd:731.1,rp:104.5,eq:38.6,cl:11.7,su:3.6,grow:'+44%'}
+    ];
+    // Grid lines
+    [200,400,600,800].forEach(function(v){
+      var line=document.createElement('div');line.style.cssText='position:absolute;left:0;right:0;bottom:'+(v/890*maxH+12)+'px;border-bottom:1px dashed rgba(255,255,255,.04);pointer-events:none';
+      var lbl=document.createElement('div');lbl.style.cssText='position:absolute;left:0;bottom:'+(v/890*maxH+14)+'px;font-size:8px;color:rgba(255,255,255,.12);pointer-events:none';lbl.textContent='$'+v+'M';
+      c.appendChild(line);c.appendChild(lbl)});
+    data.forEach(function(d,i){
+      var col=document.createElement('div');col.style.cssText='flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;position:relative';
+      // Growth label
+      var gl=document.createElement('div');gl.style.cssText='font-size:9px;font-weight:800;color:var(--teal);min-height:12px;opacity:0;transition:opacity .6s '+(400+i*150)+'ms';gl.textContent=d.grow;
+      // Value label
+      var lbl=document.createElement('div');lbl.style.cssText='font-size:10px;font-weight:800;color:var(--bright);min-height:12px;opacity:0;transition:opacity .6s '+(300+i*120)+'ms';lbl.textContent=d.t>=100?'$'+Math.round(d.t)+'M':'$'+d.t+'M';
+      // Stacked bar
+      var barH=Math.max(d.t/890*maxH,6);
+      var stack=document.createElement('div');stack.style.cssText='width:100%;display:flex;flex-direction:column-reverse;height:0;transition:height 1.2s cubic-bezier(.16,1,.3,1) '+(200+i*120)+'ms;border-radius:5px 5px 0 0;overflow:hidden;box-shadow:0 -4px 16px rgba(0,0,0,.2)'+(i===5?';box-shadow:0 -4px 20px rgba(78,205,196,.15),0 0 30px rgba(78,205,196,.08)':'');
+      var segs=[{v:d.hd,c:'var(--coral)'},{v:d.rp,c:'var(--teal)'},{v:d.eq,c:'var(--gold)'},{v:d.cl,c:'var(--purple)'}];
+      segs.forEach(function(s){var seg=document.createElement('div');var pct=(s.v/d.t*100);seg.style.cssText='width:100%;height:'+pct+'%;background:'+s.c+';min-height:0';stack.appendChild(seg)});
+      // Year label
+      var yr=document.createElement('div');yr.style.cssText='font-size:10px;color:var(--dim);font-weight:700;letter-spacing:1px';yr.textContent=d.y;
+      col.appendChild(gl);col.appendChild(lbl);col.appendChild(stack);col.appendChild(yr);c.appendChild(col);
+      setTimeout(function(){stack.style.height=barH+'px';lbl.style.opacity='1';gl.style.opacity='1'},100)});
+    // Animate bridge-bar progress bars
+    c.closest('.slide').querySelectorAll('.bridge-bar').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},600)})}
+
   function buildRev5yr(){const c=document.getElementById('revChart5yr');if(!c||c.dataset.b)return;c.dataset.b='1';
     const data=[{y:'2025',v:5.7,c:'var(--coral)'},{y:'2026',v:18.6,c:'rgba(78,205,196,.6)'},{y:'2027',v:85.4,c:'rgba(78,205,196,.7)'},{y:'2028',v:279.2,c:'rgba(78,205,196,.8)'},{y:'2029',v:619.4,c:'rgba(78,205,196,.9)'},{y:'2030',v:889.6,c:'var(--teal)'}];
     data.forEach((d,i)=>{const w=document.createElement('div');w.style.cssText='flex:1;display:flex;flex-direction:column;align-items:center;gap:4px';
@@ -2623,17 +2771,17 @@ div:hover > .inst-hint{opacity:1!important}
     c.closest('.slide').querySelectorAll('.gm-bar').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},500)})}
 
   // Slide overview
-  const SLIDE_NAMES=['Cover','Problem & Opportunity','Vision & Ecosystem','The Science','Clinical Framework','Clinical Evidence','Licensing Model','Subtractive Medicine','Lumi App','Lumati Institute','GTM & Traction','Competitive Moat','Competitive Comparison','Team','Board & Advisors','Financials','Revenue by Division','The Ask','Close','Disclaimer'];
-  const SLIDE_SUBS=['','$840B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','5-year projections','Unit economics','$40M Series A','','Legal'];
-  const SLIDE_ICONS=['\u25C6','\u26A1','\u25CE','\u2B21','\u25B3','\u2726','\u229E','\u2193','\u25EB','\u23E3','\u2197','\u2B22','\u2630','\u25C9','\u25C8','\u25C7','\u25A6','\u2295','\u2727','\u25A1'];
+  const SLIDE_NAMES=['Cover','Problem & Opportunity','Vision & Ecosystem','The Science','Clinical Framework','Clinical Evidence','Licensing Model','Subtractive Medicine','Lumi App','Lumati Institute','GTM & Traction','Competitive Moat','Competitive Comparison','Team','Board & Advisors','Financials','Revenue Bridge','Revenue by Division','The Ask','Close','Disclaimer'];
+  const SLIDE_SUBS=['','$840B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','5-year projections','Growth drivers','Unit economics','$40M Series A','','Legal'];
+  const SLIDE_ICONS=['\u25C6','\u26A1','\u25CE','\u2B21','\u25B3','\u2726','\u229E','\u2193','\u25EB','\u23E3','\u2197','\u2B22','\u2630','\u25C9','\u25C8','\u25C7','\u2588','\u25A6','\u2295','\u2727','\u25A1'];
   const SLIDE_SECTIONS=[
     {label:'Introduction',color:'var(--teal)',from:0,to:2},
     {label:'Science & Protocol',color:'var(--purple)',from:2,to:6},
     {label:'Business Model',color:'var(--gold)',from:6,to:11},
     {label:'Competitive Edge',color:'var(--coral)',from:11,to:13},
     {label:'Team & Governance',color:'var(--teal)',from:13,to:15},
-    {label:'Financials',color:'var(--gold)',from:15,to:17},
-    {label:'Close',color:'var(--dim)',from:17,to:20}
+    {label:'Financials',color:'var(--gold)',from:15,to:18},
+    {label:'Close',color:'var(--dim)',from:18,to:21}
   ];
   const ovEl=document.getElementById('overview'),ovGrid=document.getElementById('overviewGrid');
   let ovOpen=false;
