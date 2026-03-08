@@ -2111,164 +2111,59 @@ div:hover > .inst-hint{opacity:1!important}
 </section>
 
 <!-- =============================================
-     S15 · FINANCIALS
+     S15 · FINANCIALS — REVENUE BRIDGE
      ============================================= -->
 <section class="slide" id="s15">
-  <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center">
-    <div class="row anim" style="align-items:center;margin-bottom:16px">
-      <div><div class="tag" style="color:var(--teal)">Financials</div><h2 style="margin-top:6px">5-Year Income Statement</h2></div>
-      <div style="margin-left:auto;display:flex;gap:16px">
-        <div class="glass-sm" style="text-align:center;padding:10px 18px"><div class="sv-sm" style="color:var(--teal)">$5.7M</div><div class="sl">2025 Revenue</div></div>
-        <div class="glass-sm" style="text-align:center;padding:10px 18px"><div class="sv-sm" style="color:var(--gold)">$890M</div><div class="sl">2030 Target</div></div>
-        <div class="glass-sm" style="text-align:center;padding:10px 18px"><div class="sv-sm" style="color:var(--purple)">157x</div><div class="sl">Revenue Growth</div></div>
-      </div>
-    </div>
-    <div class="row" style="gap:20px;align-items:start">
-      <div class="col" style="flex:1.6">
-        <!-- Full Income Statement Table -->
-        <div class="glass anim d1" style="padding:18px 20px;cursor:pointer" onclick="openModal('financials')">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
-            <h3 style="font-size:13px">Lumati Holdings Inc. &mdash; Projected Income Statement</h3>
-            <span style="font-size:10px;color:var(--teal);letter-spacing:1px;font-weight:700">CLICK FOR DETAIL &#8599;</span>
-          </div>
-          <table class="fin-table" style="font-size:11.5px">
-            <thead><tr><th></th><th>2025</th><th>2026*</th><th>2027*</th><th>2028*</th><th>2029*</th><th>2030*</th></tr></thead>
-            <tbody>
-              <tr class="hl"><td>Total Revenue</td><td>$5.7M</td><td>$18.6M</td><td>$85.4M</td><td>$279.2M</td><td>$619.4M</td><td>$889.6M</td></tr>
-              <tr><td>Total COGS</td><td>$3.0M</td><td>$9.0M</td><td>$41.5M</td><td>$162.5M</td><td>$403.1M</td><td>$672.0M</td></tr>
-              <tr class="hl" style="border-top:2px solid var(--border-hi)"><td style="color:var(--teal)">Gross Margin</td><td style="color:var(--teal)">$2.7M</td><td style="color:var(--teal)">$9.6M</td><td style="color:var(--teal)">$43.9M</td><td style="color:var(--teal)">$116.7M</td><td style="color:var(--teal)">$216.3M</td><td style="color:var(--teal)">$217.6M</td></tr>
-              <tr><td>Payroll &amp; Professional</td><td>$2.4M</td><td>$1.3M</td><td>$4.1M</td><td>$12.1M</td><td>$26.1M</td><td>$37.4M</td></tr>
-              <tr><td>Rent, General, Travel</td><td>$0.9M</td><td>$0.9M</td><td>$1.4M</td><td>$2.1M</td><td>$2.9M</td><td>$3.7M</td></tr>
-              <tr><td>Other Operating</td><td>$0.8M</td><td>$7.6M</td><td>$14.7M</td><td>$25.5M</td><td>$41.6M</td><td>$55.0M</td></tr>
-              <tr class="hl" style="border-top:2px solid var(--border-hi)"><td style="color:var(--gold)">EBITDA</td><td style="color:var(--coral)">($1.4M)</td><td style="color:var(--coral)">($135K)</td><td style="color:var(--gold)">$23.7M</td><td style="color:var(--gold)">$76.9M</td><td style="color:var(--gold)">$145.7M</td><td style="color:var(--gold)">$121.5M</td></tr>
-              <tr><td>Book Depreciation</td><td>$0.5M</td><td>$0.7M</td><td>$4.5M</td><td>$10.7M</td><td>$19.2M</td><td>$30.4M</td></tr>
-              <tr><td>Interest Expense</td><td>$58K</td><td>$152K</td><td>$841K</td><td>$2.3M</td><td>$4.5M</td><td>$7.3M</td></tr>
-              <tr><td>Tax Expense</td><td>$0</td><td>$0</td><td>$5.1M</td><td>$18.8M</td><td>$35.9M</td><td>$24.6M</td></tr>
-              <tr class="hl" style="border-top:2px solid var(--border-hi)"><td style="color:var(--purple)">Net Income</td><td style="color:var(--coral)">($2.0M)</td><td style="color:var(--coral)">($1.0M)</td><td style="color:var(--purple)">$13.2M</td><td style="color:var(--purple)">$45.1M</td><td style="color:var(--purple)">$86.1M</td><td style="color:var(--purple)">$59.2M</td></tr>
-            </tbody>
-          </table>
-          <div style="display:flex;justify-content:space-between;margin-top:10px;font-size:10.5px;color:var(--dim)"><span>* Projected</span><span>Source: Lumati Holdings Inc.</span></div>
-        </div>
-        <!-- Revenue bar chart below table -->
-        <div class="glass anim d3" style="margin-top:10px;padding:16px 20px">
-          <div style="margin-bottom:8px">
-            <h3 style="font-size:12px;margin-bottom:2px">Revenue Trajectory</h3>
-            <span style="font-size:10.5px;color:var(--dim)">Annual total revenue</span>
-          </div>
-          <div id="revChart5yr" style="display:flex;align-items:flex-end;gap:8px;height:80px;justify-content:center"></div>
-        </div>
-      </div>
-      <div class="col">
-        <!-- Margin Analysis -->
-        <div class="glass anim d2" style="padding:18px">
-          <h3 style="font-size:12px;margin-bottom:12px">Margin Profile</h3>
-          <div style="display:flex;flex-direction:column;gap:10px">
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:4px"><span style="color:var(--dim)">Gross Margin %</span></div>
-              <div style="display:flex;gap:4px;align-items:center">
-                <div style="flex:1;height:8px;border-radius:4px;background:var(--glass);overflow:hidden"><div style="width:47%;height:100%;border-radius:4px;background:var(--teal);transition:width 1.5s"></div></div>
-                <span style="font-size:10px;font-weight:700;color:var(--teal);min-width:32px;text-align:right">47.6%</span>
-              </div>
-              <div style="font-size:10px;color:var(--dim);margin-top:2px">2025 &bull; Grows to 51% by 2027</div>
-            </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:4px"><span style="color:var(--dim)">EBITDA Margin %</span></div>
-              <div style="display:flex;gap:4px;align-items:center">
-                <div style="flex:1;height:8px;border-radius:4px;background:var(--glass);overflow:hidden"><div style="width:28%;height:100%;border-radius:4px;background:var(--gold);transition:width 1.5s"></div></div>
-                <span style="font-size:10px;font-weight:700;color:var(--gold);min-width:32px;text-align:right">27.8%</span>
-              </div>
-              <div style="font-size:10px;color:var(--dim);margin-top:2px">2027 &bull; Peaks 27.5% in 2028</div>
-            </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-size:10px;margin-bottom:4px"><span style="color:var(--dim)">Net Income Margin %</span></div>
-              <div style="display:flex;gap:4px;align-items:center">
-                <div style="flex:1;height:8px;border-radius:4px;background:var(--glass);overflow:hidden"><div style="width:16%;height:100%;border-radius:4px;background:var(--purple);transition:width 1.5s"></div></div>
-                <span style="font-size:10px;font-weight:700;color:var(--purple);min-width:32px;text-align:right">16.2%</span>
-              </div>
-              <div style="font-size:10px;color:var(--dim);margin-top:2px">2028 peak &bull; Positive from 2027</div>
-            </div>
-          </div>
-        </div>
-        <!-- 2030 Revenue Mix donut -->
-        <div class="glass anim d3" style="padding:18px;margin-top:10px">
-          <h3 style="font-size:12px;margin-bottom:10px">2030 Revenue Mix</h3>
-          <div style="display:flex;justify-content:center;margin-bottom:14px">
-            <div class="donut" style="width:160px;height:160px;background:conic-gradient(var(--coral) 0deg 296deg,var(--teal) 296deg 338deg,var(--gold) 338deg 354deg,var(--purple) 354deg 359deg,rgba(255,255,255,.15) 359deg)">
-              <div class="donut-inner" style="width:90px;height:90px"><div style="font-family:var(--head);font-size:16px;font-weight:900">$890M</div><div style="font-size:10px;color:var(--dim)">Total</div></div></div></div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:10.5px">
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--coral);flex-shrink:0"></span>HemoDetox 82%</div>
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--teal);flex-shrink:0"></span>Portal 12%</div>
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--gold);flex-shrink:0"></span>Equipment 4%</div>
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:var(--purple);flex-shrink:0"></span>Clinic 1%</div>
-            <div style="display:flex;align-items:center;gap:4px"><span style="width:7px;height:7px;border-radius:2px;background:rgba(255,255,255,.3);flex-shrink:0"></span>Supplements &lt;1%</div>
-          </div>
-        </div>
-        <!-- KPIs -->
-        <div class="glass anim d4" style="padding:18px;margin-top:10px">
-          <h3 style="font-size:12px;margin-bottom:10px">Growth KPIs (2025 &rarr; 2030)</h3>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <div style="display:flex;justify-content:space-between;font-size:10px;padding-bottom:6px;border-bottom:1px solid var(--border)"><span style="color:var(--dim)">Clinics</span><span>12 <span style="color:var(--teal);font-weight:700">&rarr; 371</span></span></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;padding-bottom:6px;border-bottom:1px solid var(--border)"><span style="color:var(--dim)">Portals</span><span>12 <span style="color:var(--teal);font-weight:700">&rarr; 2,488</span></span></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px;padding-bottom:6px;border-bottom:1px solid var(--border)"><span style="color:var(--dim)">Patients</span><span>450 <span style="color:var(--gold);font-weight:700">&rarr; 131K</span></span></div>
-            <div style="display:flex;justify-content:space-between;font-size:10px"><span style="color:var(--dim)">Hospitals</span><span>1 <span style="color:var(--purple);font-weight:700">&rarr; 118</span></span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="anim d5" style="text-align:right;margin-top:4px">
-      <span style="font-size:9px;color:rgba(255,255,255,.25);font-style:italic">*Projections based on contracted pipeline, clinic rollout schedule, and conservative patient volume assumptions. See data room for full model.</span>
-    </div>
-  </div>
-</section>
-
-<!-- =============================================
-     S15b · REVENUE BRIDGE
-     ============================================= -->
-<section class="slide" id="s15b">
   <div class="orb" style="width:550px;height:550px;background:rgba(78,205,196,.04);top:-15%;left:-5%"></div>
   <div class="orb" style="width:400px;height:400px;background:rgba(167,139,250,.03);bottom:-10%;right:10%;animation-delay:5s"></div>
 
   <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:10px">
-    <!-- Header -->
-    <div class="anim">
-      <div class="tag" style="color:var(--teal)">Growth Trajectory</div>
-      <h2 style="margin-top:6px;font-size:clamp(1.3rem,2.6vw,2rem)">The Bridge to <span class="grad-text">$890M</span></h2>
-      <p style="font-size:11px;color:var(--dim);margin-top:4px">Four compounding growth engines transform a $5.7M base into a $890M revenue platform by 2030</p>
+    <!-- Header row with tag/title left + hero stats right -->
+    <div class="anim" style="display:flex;align-items:center;justify-content:space-between">
+      <div>
+        <div class="tag" style="color:var(--teal)">Financials</div>
+        <h2 style="margin-top:6px;font-size:clamp(1.3rem,2.6vw,2rem)">The Bridge to <span class="grad-text">$890M</span></h2>
+      </div>
+      <div style="display:flex;gap:10px">
+        <div class="glass-sm" style="text-align:center;padding:8px 14px;border-color:rgba(78,205,196,.12)"><div class="sv-sm" style="color:var(--teal);font-size:clamp(.9rem,1.4vw,1.2rem)">157x</div><div style="font-size:9px;color:var(--dim);margin-top:2px">Revenue Growth</div></div>
+        <div class="glass-sm" style="text-align:center;padding:8px 14px;border-color:rgba(251,180,91,.12)"><div class="sv-sm" style="color:var(--gold);font-size:clamp(.9rem,1.4vw,1.2rem)">$218M</div><div style="font-size:9px;color:var(--dim);margin-top:2px">2030 Gross Profit</div></div>
+        <div class="glass-sm" style="text-align:center;padding:8px 14px;border-color:rgba(167,139,250,.12)"><div class="sv-sm" style="color:var(--purple);font-size:clamp(.9rem,1.4vw,1.2rem)">2027</div><div style="font-size:9px;color:var(--dim);margin-top:2px">Profitable</div></div>
+      </div>
     </div>
 
-    <div style="display:flex;gap:16px;flex:1;min-height:0;align-items:stretch">
-      <!-- LEFT: Today → 2030 + Bridge Chart -->
-      <div style="flex:1.3;display:flex;flex-direction:column;gap:10px">
+    <div style="display:flex;gap:14px;flex:1;min-height:0;align-items:stretch">
+      <!-- LEFT: Today → 2030 + Bridge Chart + Deep Dive -->
+      <div style="flex:1.3;display:flex;flex-direction:column;gap:8px">
         <!-- Today vs 2030 -->
-        <div style="display:flex;gap:10px;align-items:stretch">
-          <div class="glass anim d1" style="flex:1;padding:14px;text-align:center;border-color:rgba(255,255,255,.08)">
+        <div style="display:flex;gap:8px;align-items:stretch">
+          <div class="glass anim d1" style="flex:1;padding:12px;text-align:center;border-color:rgba(255,255,255,.08)">
             <div style="font-size:9px;color:var(--dim);letter-spacing:2px;font-weight:700">TODAY (2025)</div>
-            <div style="font-family:var(--head);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;color:var(--bright);margin-top:4px">$5.7M</div>
-            <div style="display:flex;gap:14px;justify-content:center;margin-top:6px">
-              <div><div style="font-size:15px;font-weight:900;color:var(--teal)">12</div><div style="font-size:8px;color:var(--dim)">Clinics</div></div>
-              <div><div style="font-size:15px;font-weight:900;color:var(--gold)">450</div><div style="font-size:8px;color:var(--dim)">Patients</div></div>
-              <div><div style="font-size:15px;font-weight:900;color:var(--purple)">1</div><div style="font-size:8px;color:var(--dim)">Hospital</div></div>
+            <div style="font-family:var(--head);font-size:clamp(1.3rem,2.2vw,1.8rem);font-weight:900;color:var(--bright);margin-top:3px">$5.7M</div>
+            <div style="display:flex;gap:12px;justify-content:center;margin-top:5px">
+              <div><div style="font-size:14px;font-weight:900;color:var(--teal)">12</div><div style="font-size:8px;color:var(--dim)">Clinics</div></div>
+              <div><div style="font-size:14px;font-weight:900;color:var(--gold)">450</div><div style="font-size:8px;color:var(--dim)">Patients</div></div>
+              <div><div style="font-size:14px;font-weight:900;color:var(--purple)">1</div><div style="font-size:8px;color:var(--dim)">Hospital</div></div>
             </div>
           </div>
           <!-- Arrow -->
           <div style="display:flex;align-items:center;flex-shrink:0;padding:0 2px">
-            <div style="font-size:11px;color:var(--teal);font-weight:900;letter-spacing:2px;writing-mode:horizontal-tb">157x &#8594;</div>
+            <div style="font-size:11px;color:var(--teal);font-weight:900;letter-spacing:2px">&#8594;</div>
           </div>
           <!-- 2030 -->
-          <div class="glass anim d2" style="flex:1;padding:14px;text-align:center;border-color:rgba(78,205,196,.2);box-shadow:0 0 30px rgba(78,205,196,.06)">
+          <div class="glass anim d2" style="flex:1;padding:12px;text-align:center;border-color:rgba(78,205,196,.2);box-shadow:0 0 30px rgba(78,205,196,.06);animation:glow-pulse 6s ease-in-out infinite">
             <div style="font-size:9px;color:var(--teal);letter-spacing:2px;font-weight:700">2030 TARGET</div>
-            <div style="font-family:var(--head);font-size:clamp(1.4rem,2.5vw,2rem);font-weight:900;margin-top:4px"><span class="grad-text">$890M</span></div>
-            <div style="display:flex;gap:14px;justify-content:center;margin-top:6px">
-              <div><div style="font-size:15px;font-weight:900;color:var(--teal)">371</div><div style="font-size:8px;color:var(--dim)">Clinics</div></div>
-              <div><div style="font-size:15px;font-weight:900;color:var(--gold)">131K</div><div style="font-size:8px;color:var(--dim)">Patients</div></div>
-              <div><div style="font-size:15px;font-weight:900;color:var(--purple)">118</div><div style="font-size:8px;color:var(--dim)">Hospitals</div></div>
+            <div style="font-family:var(--head);font-size:clamp(1.3rem,2.2vw,1.8rem);font-weight:900;margin-top:3px"><span class="grad-text">$890M</span></div>
+            <div style="display:flex;gap:12px;justify-content:center;margin-top:5px">
+              <div><div style="font-size:14px;font-weight:900;color:var(--teal)">371</div><div style="font-size:8px;color:var(--dim)">Clinics</div></div>
+              <div><div style="font-size:14px;font-weight:900;color:var(--gold)">131K</div><div style="font-size:8px;color:var(--dim)">Patients</div></div>
+              <div><div style="font-size:14px;font-weight:900;color:var(--purple)">118</div><div style="font-size:8px;color:var(--dim)">Hospitals</div></div>
             </div>
           </div>
         </div>
         <!-- Bridge Waterfall Chart -->
         <div class="glass anim d3" style="flex:1;padding:14px 16px;display:flex;flex-direction:column;min-height:0;border-color:rgba(78,205,196,.08)">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-            <h3 style="font-size:11px;letter-spacing:1px">Revenue Bridge — Year-Over-Year Growth</h3>
+            <h3 style="font-size:11px;letter-spacing:1px">Revenue Bridge &mdash; Year-Over-Year</h3>
             <div style="display:flex;gap:8px;font-size:9px;color:var(--dim)">
               <span style="display:flex;align-items:center;gap:3px"><span style="width:6px;height:6px;border-radius:1px;background:var(--coral)"></span>HD</span>
               <span style="display:flex;align-items:center;gap:3px"><span style="width:6px;height:6px;border-radius:1px;background:var(--teal)"></span>Portal</span>
@@ -2278,54 +2173,67 @@ div:hover > .inst-hint{opacity:1!important}
           </div>
           <div id="bridgeChart" style="flex:1;display:flex;align-items:flex-end;justify-content:center;gap:6px;min-height:100px;padding-bottom:4px;position:relative"></div>
         </div>
+        <!-- Deep Dive CTAs -->
+        <div style="display:flex;gap:8px" class="anim d4">
+          <div onclick="openModal('financials')" style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(78,205,196,.01));border:1px solid rgba(78,205,196,.12);cursor:pointer;transition:all .35s;display:flex;align-items:center;gap:10px" onmouseover="this.style.borderColor='rgba(78,205,196,.35)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(78,205,196,.08)'" onmouseout="this.style.borderColor='rgba(78,205,196,.12)';this.style.transform='';this.style.boxShadow=''">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(78,205,196,.08);border:1px solid rgba(78,205,196,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">&#9783;</div>
+            <div><div style="font-size:10.5px;font-weight:800;color:var(--bright)">Full Income Statement</div><div style="font-size:9px;color:var(--dim);margin-top:1px">5-year P&amp;L with EBITDA &amp; net income</div></div>
+            <div style="margin-left:auto;font-size:12px;color:var(--teal);font-weight:700">&#8599;</div>
+          </div>
+          <div onclick="openModal('margin_profile')" style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(167,139,250,.04),rgba(167,139,250,.01));border:1px solid rgba(167,139,250,.12);cursor:pointer;transition:all .35s;display:flex;align-items:center;gap:10px" onmouseover="this.style.borderColor='rgba(167,139,250,.35)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(167,139,250,.08)'" onmouseout="this.style.borderColor='rgba(167,139,250,.12)';this.style.transform='';this.style.boxShadow=''">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(167,139,250,.08);border:1px solid rgba(167,139,250,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">&#9650;</div>
+            <div><div style="font-size:10.5px;font-weight:800;color:var(--bright)">Margin Profile</div><div style="font-size:9px;color:var(--dim);margin-top:1px">GM%, EBITDA%, net income trajectory</div></div>
+            <div style="margin-left:auto;font-size:12px;color:var(--purple);font-weight:700">&#8599;</div>
+          </div>
+        </div>
       </div>
 
       <!-- RIGHT: Growth Engines -->
-      <div style="flex:0.85;display:flex;flex-direction:column;gap:8px">
+      <div style="flex:0.8;display:flex;flex-direction:column;gap:7px">
         <div style="font-size:9px;color:var(--teal);font-weight:800;letter-spacing:2px" class="anim d2">GROWTH ENGINES</div>
         <!-- Engine 1: HemoDetox -->
-        <div class="glass-sm anim d2" style="padding:12px 14px;border-color:rgba(255,107,107,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <div class="glass-sm anim d2" style="padding:11px 13px;border-color:rgba(255,107,107,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
             <div style="width:8px;height:8px;border-radius:2px;background:var(--coral);flex-shrink:0"></div>
-            <div style="font-size:11px;font-weight:800;color:var(--bright)">HemoDetox Network</div>
-            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--coral)">$731M</div>
+            <div style="font-size:10.5px;font-weight:800;color:var(--bright)">HemoDetox Network</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:13px;font-weight:900;color:var(--coral)">$731M</div>
           </div>
-          <div style="font-size:10px;color:var(--dim);line-height:1.45">Scale proprietary blood filtration across <b style="color:var(--bright)">371 clinics</b>. Revenue-per-clinic ~$2M. Largest line by volume at 15% GM with margin expansion as equipment amortizes.</div>
-          <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(255,107,107,.08);overflow:hidden"><div class="bridge-bar" data-w="82" style="height:100%;width:0;border-radius:2px;background:var(--coral);transition:width 1.2s cubic-bezier(.25,.46,.45,.94)"></div></div>
+          <div style="font-size:9.5px;color:var(--dim);line-height:1.45">Scale blood filtration across <b style="color:var(--bright)">371 clinics</b>. ~$2M/clinic. 15% GM with expansion as equipment amortizes.</div>
+          <div style="margin-top:5px;height:3px;border-radius:2px;background:rgba(255,107,107,.08);overflow:hidden"><div class="bridge-bar" data-w="82" style="height:100%;width:0;border-radius:2px;background:var(--coral);transition:width 1.2s cubic-bezier(.25,.46,.45,.94)"></div></div>
           <div style="font-size:8px;color:var(--dim);margin-top:2px">82% of 2030 revenue</div>
         </div>
         <!-- Engine 2: Portal SaaS -->
-        <div class="glass-sm anim d3" style="padding:12px 14px;border-color:rgba(78,205,196,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <div class="glass-sm anim d3" style="padding:11px 13px;border-color:rgba(78,205,196,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
             <div style="width:8px;height:8px;border-radius:2px;background:var(--teal);flex-shrink:0"></div>
-            <div style="font-size:11px;font-weight:800;color:var(--bright)">Recharge Portal SaaS</div>
-            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--teal)">$105M</div>
+            <div style="font-size:10.5px;font-weight:800;color:var(--bright)">Recharge Portal SaaS</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:13px;font-weight:900;color:var(--teal)">$105M</div>
           </div>
-          <div style="font-size:10px;color:var(--dim);line-height:1.45">Deploy <b style="color:var(--bright)">2,488 portals</b> as recurring SaaS. ~$42K/portal/yr. <b style="color:var(--teal)">66% gross margin</b> &mdash; highest-margin recurring engine. Software + data flywheel.</div>
-          <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(78,205,196,.08);overflow:hidden"><div class="bridge-bar" data-w="12" style="height:100%;width:0;border-radius:2px;background:var(--teal);transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .15s"></div></div>
+          <div style="font-size:9.5px;color:var(--dim);line-height:1.45">Deploy <b style="color:var(--bright)">2,488 portals</b> at ~$42K/yr. <b style="color:var(--teal)">66% GM</b> &mdash; highest-margin recurring engine.</div>
+          <div style="margin-top:5px;height:3px;border-radius:2px;background:rgba(78,205,196,.08);overflow:hidden"><div class="bridge-bar" data-w="12" style="height:100%;width:0;border-radius:2px;background:var(--teal);transition:width 1.2s cubic-bezier(.25,.46,.45,.94) .15s"></div></div>
           <div style="font-size:8px;color:var(--dim);margin-top:2px">12% of revenue &middot; 49% of non-HD gross margin</div>
         </div>
         <!-- Engine 3: Equipment -->
-        <div class="glass-sm anim d4" style="padding:12px 14px;border-color:rgba(251,180,91,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <div class="glass-sm anim d4" style="padding:11px 13px;border-color:rgba(251,180,91,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
             <div style="width:8px;height:8px;border-radius:2px;background:var(--gold);flex-shrink:0"></div>
-            <div style="font-size:11px;font-weight:800;color:var(--bright)">Equipment &amp; Supplies</div>
-            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--gold)">$39M</div>
+            <div style="font-size:10.5px;font-weight:800;color:var(--bright)">Equipment &amp; Supplies</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:13px;font-weight:900;color:var(--gold)">$39M</div>
           </div>
-          <div style="font-size:10px;color:var(--dim);line-height:1.45">Capital equipment to clinics and portals. <b style="color:var(--gold)">67% gross margin</b>. Margins improve <b style="color:var(--bright)">48% &rarr; 67%</b> as manufacturing volume scales.</div>
+          <div style="font-size:9.5px;color:var(--dim);line-height:1.45">Capital equipment to network. <b style="color:var(--gold)">67% GM</b>. Margins improve <b style="color:var(--bright)">48% &rarr; 67%</b> at scale.</div>
         </div>
         <!-- Engine 4: Clinic + Supplements -->
-        <div class="glass-sm anim d5" style="padding:12px 14px;border-color:rgba(167,139,250,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
-          <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+        <div class="glass-sm anim d5" style="padding:11px 13px;border-color:rgba(167,139,250,.12);flex:1;display:flex;flex-direction:column;justify-content:center">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:3px">
             <div style="width:8px;height:8px;border-radius:2px;background:var(--purple);flex-shrink:0"></div>
-            <div style="font-size:11px;font-weight:800;color:var(--bright)">Clinic &amp; Supplements</div>
-            <div style="margin-left:auto;font-family:var(--head);font-size:14px;font-weight:900;color:var(--purple)">$15M</div>
+            <div style="font-size:10.5px;font-weight:800;color:var(--bright)">Clinic &amp; Supplements</div>
+            <div style="margin-left:auto;font-family:var(--head);font-size:13px;font-weight:900;color:var(--purple)">$15M</div>
           </div>
-          <div style="font-size:10px;color:var(--dim);line-height:1.45">Flagship clinic at <b style="color:var(--purple)">83% GM</b> &mdash; highest-margin line. Supplements add recurring consumer revenue at 36% GM.</div>
+          <div style="font-size:9.5px;color:var(--dim);line-height:1.45">Flagship clinic at <b style="color:var(--purple)">83% GM</b> &mdash; highest-margin line. Supplements add recurring consumer revenue.</div>
         </div>
         <!-- Margin insight -->
-        <div class="anim d6" style="padding:8px 12px;border-radius:10px;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(167,139,250,.04));border:1px solid rgba(78,205,196,.08)">
-          <div style="font-size:10px;color:var(--dim);line-height:1.4"><span style="color:var(--teal);font-weight:800">KEY:</span> Non-HD lines contribute <b style="color:var(--bright)">49% of gross margin</b> on just <b style="color:var(--bright)">18% of revenue</b></div>
+        <div class="anim d6" style="padding:8px 12px;border-radius:10px;background:linear-gradient(135deg,rgba(78,205,196,.05),rgba(167,139,250,.05));border:1px solid rgba(78,205,196,.1)">
+          <div style="font-size:9.5px;color:var(--dim);line-height:1.4"><span style="color:var(--teal);font-weight:800">KEY:</span> Non-HD lines contribute <b style="color:var(--bright)">49% of gross margin</b> on just <b style="color:var(--bright)">18% of revenue</b></div>
         </div>
       </div>
     </div>
@@ -2693,7 +2601,7 @@ div:hover > .inst-hint{opacity:1!important}
   function ui(){prog.style.width=((cur+1)/total*100)+'%';num.textContent=String(cur+1).padStart(2,'0')+' / '+total}
   function go(n){if(n<0||n>=total||n===cur||busy)return;busy=true;slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');ui();anim(slides[cur]);setTimeout(()=>busy=false,650)}
   window.navPrev=function(){go(cur-1)};window.navNext=function(){go(cur+1)};window.goSlide=go;
-  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*220)+'px'),300);if(s.id==='s15')buildRev5yr();if(s.id==='s15b')buildBridgeChart();if(s.id==='s16')buildDivRev()}
+  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*220)+'px'),300);if(s.id==='s15')buildBridgeChart();if(s.id==='s16')buildDivRev()}
   function buildBridgeChart(){const c=document.getElementById('bridgeChart');if(!c||c.dataset.b)return;c.dataset.b='1';
     const maxH=c.offsetHeight-24||140;
     const data=[
@@ -2726,15 +2634,6 @@ div:hover > .inst-hint{opacity:1!important}
       setTimeout(function(){stack.style.height=barH+'px';lbl.style.opacity='1';gl.style.opacity='1'},100)});
     // Animate bridge-bar progress bars
     c.closest('.slide').querySelectorAll('.bridge-bar').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},600)})}
-
-  function buildRev5yr(){const c=document.getElementById('revChart5yr');if(!c||c.dataset.b)return;c.dataset.b='1';
-    const data=[{y:'2025',v:5.7,c:'var(--coral)'},{y:'2026',v:18.6,c:'rgba(78,205,196,.6)'},{y:'2027',v:85.4,c:'rgba(78,205,196,.7)'},{y:'2028',v:279.2,c:'rgba(78,205,196,.8)'},{y:'2029',v:619.4,c:'rgba(78,205,196,.9)'},{y:'2030',v:889.6,c:'var(--teal)'}];
-    data.forEach((d,i)=>{const w=document.createElement('div');w.style.cssText='flex:1;display:flex;flex-direction:column;align-items:center;gap:4px';
-      const b=document.createElement('div');b.style.cssText='width:100%;height:0;border-radius:6px 6px 0 0;transition:height 1.4s cubic-bezier(.25,.46,.45,.94) '+(i*120)+'ms;background:linear-gradient(to top,rgba(78,205,196,.08),'+d.c+');'+(i===5?'box-shadow:0 0 20px var(--teal-g)':'');
-      const lv=document.createElement('div');lv.style.cssText='font-size:10.5px;font-weight:700;color:var(--bright);min-height:14px';lv.textContent=d.v>=100?'$'+Math.round(d.v)+'M':'$'+d.v+'M';
-      const ly=document.createElement('div');ly.style.cssText='font-size:10px;color:var(--dim)';ly.textContent=d.y;
-      w.appendChild(lv);w.appendChild(b);w.appendChild(ly);c.appendChild(w);
-      setTimeout(()=>b.style.height=Math.max((d.v/890*80),4)+'px',300)})}
 
   function buildDivRev(){const c=document.getElementById('divRevChart');if(!c||c.dataset.b)return;c.dataset.b='1';
     var maxH=c.offsetHeight-24; // reserve space for labels
@@ -2771,17 +2670,17 @@ div:hover > .inst-hint{opacity:1!important}
     c.closest('.slide').querySelectorAll('.gm-bar').forEach(function(b){setTimeout(function(){b.style.width=b.dataset.w+'%'},500)})}
 
   // Slide overview
-  const SLIDE_NAMES=['Cover','Problem & Opportunity','Vision & Ecosystem','The Science','Clinical Framework','Clinical Evidence','Licensing Model','Subtractive Medicine','Lumi App','Lumati Institute','GTM & Traction','Competitive Moat','Competitive Comparison','Team','Board & Advisors','Financials','Revenue Bridge','Revenue by Division','The Ask','Close','Disclaimer'];
-  const SLIDE_SUBS=['','$840B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','5-year projections','Growth drivers','Unit economics','$40M Series A','','Legal'];
-  const SLIDE_ICONS=['\u25C6','\u26A1','\u25CE','\u2B21','\u25B3','\u2726','\u229E','\u2193','\u25EB','\u23E3','\u2197','\u2B22','\u2630','\u25C9','\u25C8','\u25C7','\u2588','\u25A6','\u2295','\u2727','\u25A1'];
+  const SLIDE_NAMES=['Cover','Problem & Opportunity','Vision & Ecosystem','The Science','Clinical Framework','Clinical Evidence','Licensing Model','Subtractive Medicine','Lumi App','Lumati Institute','GTM & Traction','Competitive Moat','Competitive Comparison','Team','Board & Advisors','Revenue Bridge','Revenue by Division','The Ask','Close','Disclaimer'];
+  const SLIDE_SUBS=['','$840B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','Growth drivers','Unit economics','$40M Series A','','Legal'];
+  const SLIDE_ICONS=['\u25C6','\u26A1','\u25CE','\u2B21','\u25B3','\u2726','\u229E','\u2193','\u25EB','\u23E3','\u2197','\u2B22','\u2630','\u25C9','\u25C8','\u25C7','\u25A6','\u2295','\u2727','\u25A1'];
   const SLIDE_SECTIONS=[
     {label:'Introduction',color:'var(--teal)',from:0,to:2},
     {label:'Science & Protocol',color:'var(--purple)',from:2,to:6},
     {label:'Business Model',color:'var(--gold)',from:6,to:11},
     {label:'Competitive Edge',color:'var(--coral)',from:11,to:13},
     {label:'Team & Governance',color:'var(--teal)',from:13,to:15},
-    {label:'Financials',color:'var(--gold)',from:15,to:18},
-    {label:'Close',color:'var(--dim)',from:18,to:21}
+    {label:'Financials',color:'var(--gold)',from:15,to:17},
+    {label:'Close',color:'var(--dim)',from:17,to:20}
   ];
   const ovEl=document.getElementById('overview'),ovGrid=document.getElementById('overviewGrid');
   let ovOpen=false;
@@ -2921,6 +2820,7 @@ const MODALS={
   partner_fountain:{title:'Fountain Life',subtitle:'Precision Diagnostics &amp; Longevity &middot; Diamandis / Robbins',img:'img/crop/partner_fountain_life.png',body:'<p style="color:var(--dim);line-height:1.8;font-size:13px;margin-bottom:16px">Founded in 2020 by <b style="color:var(--bright)">Peter Diamandis</b>, <b style="color:var(--bright)">Tony Robbins</b>, and <b style="color:var(--bright)">Dr. Bill Kapp</b>, Fountain Life is a pioneering precision diagnostics and longevity company that uses AI-driven imaging, genomics, and advanced biomarker analysis to detect disease years before symptoms appear.</p><p style="color:var(--dim);line-height:1.8;font-size:13px;margin-bottom:16px">The company operates a growing network of U.S. centers in <b style="color:var(--gold)">Naples, Orlando, Dallas, New York, and Houston</b>, offering membership-based preventive health programs combining full-body MRI, coronary CT, and regenerative therapies.</p><div style="padding:14px;border-radius:12px;background:rgba(251,180,91,.05);border:1px solid rgba(251,180,91,.12)"><div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">PARTNERSHIP VALUE</div><p style="color:var(--dim);line-height:1.7;font-size:12px">Fountain Life sits at the forefront of the longevity medicine market. Their diagnostics-first model is complementary to Lumati&rsquo;s treatment-first protocol &mdash; together they cover the full patient journey from detection to restoration.</p></div>'},
   partner_exthera:{title:'ExThera Medical',subtitle:'Blood Filtration Technology &middot; FDA EUA &amp; CE Mark',img:'img/crop/partner_exthera.png',body:'<p style="color:var(--dim);line-height:1.8;font-size:13px;margin-bottom:16px">ExThera Medical is a Martinez, California-based medical device company founded in 2007 that develops extracorporeal blood filtration technology. Their flagship product, the <b style="color:var(--bright)">Seraph 100 Microbind Affinity Blood Filter</b>, uses heparin-coated polyethylene beads that biomimetically capture viruses, bacteria, and fungi during hemoperfusion.</p><p style="color:var(--dim);line-height:1.8;font-size:13px;margin-bottom:16px">The Seraph 100 received <b style="color:var(--purple)">CE Mark clearance</b> in Europe (2019) and <b style="color:var(--purple)">FDA Emergency Use Authorization</b> in the U.S. (2020) for adjunctive treatment of bloodstream infections.</p><div style="padding:14px;border-radius:12px;background:rgba(167,139,250,.05);border:1px solid rgba(167,139,250,.12)"><div style="font-size:10px;color:var(--purple);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">PARTNERSHIP VALUE</div><p style="color:var(--dim);line-height:1.7;font-size:12px">ExThera is expanding into oncology with the ONCObind Blood Filter for removing circulating tumor cells. Their FDA-authorized blood filtration technology is a core component of Lumati&rsquo;s HemoDetox protocol &mdash; providing the defensible IP backbone for Lumati&rsquo;s largest revenue driver.</p></div>'},
   partner_minkoff:{title:'Dr. David Minkoff, MD',subtitle:'LifeWorks Wellness Center &middot; Integrative Medicine Pioneer',img:'img/crop/partner_dr_minkoff.jpg',body:'<p style="color:var(--dim);line-height:1.8;font-size:13px;margin-bottom:16px">Dr. David Minkoff is the co-founder of <b style="color:var(--bright)">LifeWorks Wellness Center</b> in Clearwater, Florida &mdash; one of the largest and most advanced integrative medical clinics in the United States.</p><p style="color:var(--dim);line-height:1.8;font-size:13px;margin-bottom:16px">A graduate of the University of Wisconsin Medical School and elected to <b style="color:var(--bright)">Alpha Omega Alpha Honors Medical Fraternity</b>, he completed his Pediatric Residency and Fellowship in Infectious Disease at UC San Diego before transitioning to integrative medicine. With over <b style="color:var(--coral)">28 years of clinical practice</b>, he has developed proprietary treatment protocols for complex chronic conditions including Lyme disease, autoimmune disorders, and integrative oncology.</p><div style="padding:14px;border-radius:12px;background:rgba(255,107,107,.05);border:1px solid rgba(255,107,107,.12)"><div style="font-size:10px;color:var(--coral);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">WHY HE MATTERS TO LUMATI</div><p style="color:var(--dim);line-height:1.7;font-size:12px">Dr. Minkoff is a recognized leader in integrative medicine with Amazon bestselling books and extensive speaking credentials. His clinical expertise and LifeWorks&rsquo; proven model directly validates Lumati&rsquo;s integrative approach to chronic disease treatment.</p></div>'},
+  margin_profile:{title:'Margin Profile',subtitle:'Gross, EBITDA & Net Income Trajectory',body:'<div style="display:flex;flex-direction:column;gap:20px"><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:13px;font-weight:700;color:var(--bright)">Gross Margin %</span><span style="font-size:14px;font-weight:900;color:var(--teal)">47.6%</span></div><div style="height:12px;border-radius:6px;background:rgba(255,255,255,.04);overflow:hidden"><div style="width:47.6%;height:100%;border-radius:6px;background:linear-gradient(90deg,rgba(78,205,196,.3),var(--teal))"></div></div><div style="font-size:11px;color:var(--dim);margin-top:4px">2025 baseline &bull; Grows to <b style="color:var(--bright)">51.4%</b> by 2027 as Portal and Equipment margins expand</div></div><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:13px;font-weight:700;color:var(--bright)">EBITDA Margin %</span><span style="font-size:14px;font-weight:900;color:var(--gold)">27.8%</span></div><div style="height:12px;border-radius:6px;background:rgba(255,255,255,.04);overflow:hidden"><div style="width:27.8%;height:100%;border-radius:6px;background:linear-gradient(90deg,rgba(251,180,91,.3),var(--gold))"></div></div><div style="font-size:11px;color:var(--dim);margin-top:4px">First positive 2027 ($23.7M) &bull; Peaks <b style="color:var(--bright)">27.5%</b> in 2028 ($76.9M) &bull; 2030: $121.5M</div></div><div><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><span style="font-size:13px;font-weight:700;color:var(--bright)">Net Income Margin %</span><span style="font-size:14px;font-weight:900;color:var(--purple)">16.2%</span></div><div style="height:12px;border-radius:6px;background:rgba(255,255,255,.04);overflow:hidden"><div style="width:16.2%;height:100%;border-radius:6px;background:linear-gradient(90deg,rgba(167,139,250,.3),var(--purple))"></div></div><div style="font-size:11px;color:var(--dim);margin-top:4px">Positive from 2027 ($13.2M) &bull; Peak <b style="color:var(--bright)">$86.1M</b> in 2029 &bull; 2030: $59.2M</div></div><div style="padding:14px;border-radius:12px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.1)"><div style="font-size:10px;color:var(--teal);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">PATH TO PROFITABILITY</div><div style="font-size:12px;color:var(--dim);line-height:1.6">2025&ndash;2026: Investment phase (EBITDA negative, building clinic network)<br/>2027: <b style="color:var(--bright)">Breakeven + $23.7M EBITDA</b> as 85+ clinics generate recurring revenue<br/>2028&ndash;2029: <b style="color:var(--bright)">Scale phase</b> &mdash; margins expand as fixed costs spread across growing network<br/>2030: Mature operations with <b style="color:var(--bright)">$121.5M EBITDA</b> and <b style="color:var(--bright)">$59.2M net income</b></div></div><div style="padding:14px;border-radius:12px;background:rgba(251,180,91,.04);border:1px solid rgba(251,180,91,.1)"><div style="font-size:10px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">2030 REVENUE MIX</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:12px"><div style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:var(--coral)"></span><span style="color:var(--dim)">HemoDetox <b style="color:var(--bright)">82%</b></span></div><div style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:var(--teal)"></span><span style="color:var(--dim)">Portal <b style="color:var(--bright)">12%</b></span></div><div style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:var(--gold)"></span><span style="color:var(--dim)">Equipment <b style="color:var(--bright)">4%</b></span></div><div style="display:flex;align-items:center;gap:6px"><span style="width:8px;height:8px;border-radius:2px;background:var(--purple)"></span><span style="color:var(--dim)">Clinic <b style="color:var(--bright)">1%</b></span></div></div></div></div>'},
   financials:{title:'Full Financial Breakdown',subtitle:'Lumati Holdings Inc. &mdash; 5-Year Income Statement',body:'<table class="fin-table" style="font-size:12.5px"><thead><tr><th></th><th>2025</th><th>2026*</th><th>2027*</th><th>2028*</th><th>2029*</th><th>2030*</th></tr></thead><tbody><tr class="hl"><td>Total Revenue</td><td>$5,668,411</td><td>$18,649,471</td><td>$85,410,660</td><td>$279,179,040</td><td>$619,384,384</td><td>$889,591,324</td></tr><tr><td>Total COGS</td><td>$2,972,994</td><td>$9,010,540</td><td>$41,473,470</td><td>$162,508,361</td><td>$403,067,252</td><td>$671,978,066</td></tr><tr class="hl"><td style="color:var(--teal)">Gross Margin</td><td style="color:var(--teal)">$2,695,416</td><td style="color:var(--teal)">$9,638,931</td><td style="color:var(--teal)">$43,937,190</td><td style="color:var(--teal)">$116,670,679</td><td style="color:var(--teal)">$216,317,132</td><td style="color:var(--teal)">$217,613,258</td></tr><tr><td>Payroll &amp; Professional</td><td>$2,366,157</td><td>$1,274,704</td><td>$4,059,449</td><td>$12,101,144</td><td>$26,141,963</td><td>$37,424,681</td></tr><tr><td>Rent, General, Travel</td><td>$909,514</td><td>$871,970</td><td>$1,443,075</td><td>$2,139,918</td><td>$2,870,584</td><td>$3,678,810</td></tr><tr><td>Other Operating</td><td>$791,799</td><td>$7,627,478</td><td>$14,714,942</td><td>$25,526,652</td><td>$41,572,036</td><td>$55,037,599</td></tr><tr class="hl"><td style="color:var(--gold)">EBITDA</td><td style="color:var(--coral)">($1,372,054)</td><td style="color:var(--coral)">($135,222)</td><td style="color:var(--gold)">$23,719,724</td><td style="color:var(--gold)">$76,902,966</td><td style="color:var(--gold)">$145,732,549</td><td style="color:var(--gold)">$121,472,169</td></tr><tr><td>Book Depreciation</td><td>$548,960</td><td>$723,342</td><td>$4,494,307</td><td>$10,700,229</td><td>$19,247,414</td><td>$30,396,661</td></tr><tr class="hl"><td>EBIT</td><td style="color:var(--coral)">($1,921,014)</td><td style="color:var(--coral)">($858,564)</td><td>$19,225,417</td><td>$66,202,737</td><td>$126,485,134</td><td>$91,075,508</td></tr><tr><td>Interest Expense</td><td>$57,786</td><td>$152,397</td><td>$840,687</td><td>$2,304,557</td><td>$4,483,636</td><td>$7,349,699</td></tr><tr><td>Earnings before Taxes</td><td style="color:var(--coral)">($1,978,800)</td><td style="color:var(--coral)">($1,010,961)</td><td>$18,384,730</td><td>$63,898,181</td><td>$122,001,498</td><td>$83,725,809</td></tr><tr><td>Tax Expense</td><td>$0</td><td>$0</td><td>$5,149,918</td><td>$18,771,109</td><td>$35,904,647</td><td>$24,550,170</td></tr><tr class="hl"><td style="color:var(--purple)">Net Income</td><td style="color:var(--coral)">($1,978,800)</td><td style="color:var(--coral)">($1,010,961)</td><td style="color:var(--purple)">$13,234,812</td><td style="color:var(--purple)">$45,127,072</td><td style="color:var(--purple)">$86,096,851</td><td style="color:var(--purple)">$59,175,640</td></tr></tbody></table><p style="font-size:10px;color:var(--dim);margin-top:12px">* Projected. Revenue by division: HemoDetox (largest driver from 2028), Recharge Portal, Clinic Licensing, Equipment Sales, Supplements.</p>'}
 };
 
