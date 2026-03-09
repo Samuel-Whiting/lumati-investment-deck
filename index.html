@@ -1338,7 +1338,7 @@ div:hover > .inst-hint{opacity:1!important}
     <div class="anim" style="text-align:center">
       <div class="tag" style="color:var(--gold)">Consumer Ecosystem</div>
       <h2 style="margin-top:4px;font-size:clamp(1.3rem,2.6vw,2rem)">Lumati <span class="grad-text">Home</span></h2>
-      <p class="sub" style="max-width:620px;margin:6px auto 0;font-size:11.5px;line-height:1.5">Bring the clinic home. Clinical-grade products, app-connected protocols, and on-demand education &mdash; so every day between visits compounds your results.</p>
+      <p class="sub" style="max-width:560px;margin:4px auto 0;font-size:11px;line-height:1.5;letter-spacing:.2px">Clinical-grade products &amp; app-connected protocols &mdash; compounding results between clinic visits.</p>
     </div>
 
     <!-- Bento Product Showcase — clickable cards with modals -->
@@ -1356,8 +1356,8 @@ div:hover > .inst-hint{opacity:1!important}
           <span style="font-size:8px;padding:3px 10px;border-radius:20px;background:rgba(255,107,107,.12);border:1px solid rgba(255,107,107,.2);color:var(--coral);font-weight:800;letter-spacing:1.5px">SUPPLEMENTS</span>
         </div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:18px 20px">
-          <div style="font-size:16px;font-weight:900;color:var(--bright);line-height:1.2;margin-bottom:6px">Lumati Red &middot; Green &middot; Gold</div>
-          <div style="font-size:10.5px;color:var(--dim);line-height:1.5;margin-bottom:10px">Clinical-grade nutraceuticals &mdash; curcumin, beta-glucan &amp; our proprietary gold blend. Prescribed in-clinic, delivered monthly.</div>
+          <div style="font-size:15px;font-weight:900;color:var(--bright);line-height:1.2;margin-bottom:5px">Lumati Red &middot; Green &middot; Gold</div>
+          <div style="font-size:10px;color:var(--dim);line-height:1.5;margin-bottom:8px">Clinical-grade nutraceuticals &mdash; curcumin, beta-glucan &amp; proprietary gold blend. Prescribed in-clinic, delivered monthly.</div>
           <div style="display:flex;gap:6px;flex-wrap:wrap">
             <span style="font-size:8px;padding:3px 9px;border-radius:6px;background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.15);color:var(--coral);font-weight:700">Recurring Revenue</span>
             <span style="font-size:8px;padding:3px 9px;border-radius:6px;background:rgba(251,180,91,.1);border:1px solid rgba(251,180,91,.15);color:var(--gold);font-weight:700">83% Gross Margin</span>
@@ -1366,16 +1366,16 @@ div:hover > .inst-hint{opacity:1!important}
         <div style="position:absolute;top:14px;right:14px;font-size:14px;opacity:.4;transition:opacity .3s">&#8599;</div>
       </div>
 
-      <!-- RED LIGHT+ FACE MASK -->
+      <!-- RED LIGHT+ THERAPY -->
       <div onclick="openModal('home_redlight')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(78,205,196,.15)" onmouseover="this.style.borderColor='rgba(78,205,196,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(78,205,196,.15)'" onmouseout="this.style.borderColor='rgba(78,205,196,.15)';this.style.transform='';this.style.boxShadow=''">
-        <img loading="lazy" src="img/crop/home_redlight_hd.png" alt="Red Light+" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.95) 0%,rgba(6,6,10,.25) 55%,transparent 100%)"></div>
+        <img loading="lazy" src="img/crop/home_redlight_portal_hd.png" alt="Red Light+ Therapy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.92) 0%,rgba(6,6,10,.2) 50%,transparent 100%)"></div>
         <div style="position:absolute;top:10px;left:12px">
           <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:rgba(78,205,196,.12);border:1px solid rgba(78,205,196,.2);color:var(--teal);font-weight:800;letter-spacing:1.5px">DEVICES</span>
         </div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px">
-          <div style="font-size:13px;font-weight:800;color:var(--bright)">Red Light+ Face Mask</div>
-          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">630nm + 850nm &middot; 10 min, 3&ndash;4x/week</div>
+          <div style="font-size:13px;font-weight:800;color:var(--bright)">Red Light+ Therapy</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">630nm + 850nm &middot; PBM panels &amp; portal sessions</div>
         </div>
         <div style="position:absolute;top:10px;right:12px;font-size:12px;opacity:.35">&#8599;</div>
       </div>
@@ -1394,29 +1394,30 @@ div:hover > .inst-hint{opacity:1!important}
         <div style="position:absolute;top:10px;right:12px;font-size:12px;opacity:.35">&#8599;</div>
       </div>
 
-      <!-- MICROPLASTIC DETECT -->
-      <div onclick="openModal('home_detect')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(167,139,250,.15);background:linear-gradient(145deg,rgba(167,139,250,.08),rgba(6,6,10,.95) 70%)" onmouseover="this.style.borderColor='rgba(167,139,250,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(167,139,250,.15)'" onmouseout="this.style.borderColor='rgba(167,139,250,.15)';this.style.transform='';this.style.boxShadow=''">
-        <div style="position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,.1),transparent 70%);pointer-events:none"></div>
-        <div style="position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(78,205,196,.06),transparent 70%);pointer-events:none"></div>
-        <div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:16px 18px;position:relative">
-          <div style="font-size:30px;margin-bottom:8px;filter:drop-shadow(0 0 8px rgba(167,139,250,.3))">&#9878;</div>
-          <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);color:var(--purple);font-weight:800;letter-spacing:1.5px;display:inline-block;width:fit-content;margin-bottom:6px">DIAGNOSTICS</span>
-          <div style="font-size:13px;font-weight:800;color:var(--bright)">Microplastic Detect</div>
-          <div style="font-size:9px;color:var(--dim);margin-top:4px;line-height:1.5">At-home saliva test kit. Quantify your toxic burden &mdash; results sync to Lumi.</div>
+      <!-- LUMATI DETECT — DIAGNOSTICS -->
+      <div onclick="openModal('home_detect')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(167,139,250,.15)" onmouseover="this.style.borderColor='rgba(167,139,250,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(167,139,250,.15)'" onmouseout="this.style.borderColor='rgba(167,139,250,.15)';this.style.transform='';this.style.boxShadow=''">
+        <img loading="lazy" src="img/crop/tech_nls_scan.png" alt="Lumati Detect" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.92) 0%,rgba(6,6,10,.3) 50%,rgba(167,139,250,.06) 100%)"></div>
+        <div style="position:absolute;top:10px;left:12px">
+          <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);color:var(--purple);font-weight:800;letter-spacing:1.5px">DIAGNOSTICS</span>
+        </div>
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px">
+          <div style="font-size:13px;font-weight:800;color:var(--bright)">Lumati Detect</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">NLS scanning &amp; at-home test kits &middot; syncs to Lumi</div>
         </div>
         <div style="position:absolute;top:10px;right:12px;font-size:12px;opacity:.35">&#8599;</div>
       </div>
 
-      <!-- LUMI APP -->
+      <!-- LUMI APP — CONNECTED ECOSYSTEM -->
       <div onclick="openModal('home_app')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(78,205,196,.12)" onmouseover="this.style.borderColor='rgba(78,205,196,.35)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(78,205,196,.12)'" onmouseout="this.style.borderColor='rgba(78,205,196,.12)';this.style.transform='';this.style.boxShadow=''">
-        <img loading="lazy" src="img/crop/app_v2_nutrition.png" alt="Lumi App" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:top"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.95) 0%,rgba(6,6,10,.35) 55%,transparent 100%)"></div>
+        <img loading="lazy" src="img/crop/phone_modalities.png" alt="Lumi App — Connected Ecosystem" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 25%"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.88) 0%,rgba(6,6,10,.15) 55%,transparent 100%)"></div>
         <div style="position:absolute;top:10px;left:12px">
           <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:linear-gradient(90deg,rgba(78,205,196,.12),rgba(167,139,250,.12));border:1px solid rgba(78,205,196,.2);color:var(--teal);font-weight:800;letter-spacing:1.5px">CONNECTED ECOSYSTEM</span>
         </div>
         <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px">
           <div style="font-size:13px;font-weight:800;color:var(--bright)">Lumi App</div>
-          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">Protocols &middot; Marketplace &middot; Education &middot; Biomarkers</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">BioMetrics &middot; BioReset &middot; BioRecharge &middot; Marketplace</div>
         </div>
         <div style="position:absolute;top:10px;right:12px;font-size:12px;opacity:.35">&#8599;</div>
       </div>
