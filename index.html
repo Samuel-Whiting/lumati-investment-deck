@@ -928,12 +928,12 @@ div:hover > .inst-hint{opacity:1!important}
     <!-- Main 2-Column -->
     <div style="display:flex;gap:16px;flex:1;min-height:0">
       <!-- LEFT: Mitochondria Chart + Key Finding -->
-      <div class="glass anim d3" style="flex:1.05;padding:18px 16px 14px;display:flex;flex-direction:column;border-color:rgba(78,205,196,.08)">
+      <div class="glass anim d3" style="flex:1.05;padding:18px 16px 14px;display:flex;flex-direction:column;border-color:rgba(78,205,196,.08);overflow:visible">
         <div class="center" style="margin-bottom:10px">
           <div style="font-size:11px;font-weight:700;color:var(--dim);letter-spacing:1.5px">MITOCHONDRIA ENERGY SCORE</div>
           <div style="font-size:10px;color:var(--dim);margin-top:2px">3x/week Recharge Portal Sessions</div>
         </div>
-        <div id="mitoChart" style="display:flex;align-items:flex-end;gap:14px;flex:1;justify-content:center;min-height:0;padding-bottom:0">
+        <div id="mitoChart" style="display:flex;align-items:flex-end;gap:14px;flex:1;justify-content:center;min-height:0;padding-bottom:8px;overflow:visible">
           <!-- Bar 1: Day 0 -->
           <div style="display:flex;flex-direction:column;align-items:center;width:64px">
             <span style="font-family:var(--head);font-size:24px;font-weight:900;color:var(--bright);margin-bottom:4px">38</span>
@@ -3013,7 +3013,7 @@ div:hover > .inst-hint{opacity:1!important}
   function ui(){prog.style.width=((cur+1)/total*100)+'%';num.textContent=String(cur+1).padStart(2,'0')+' / '+total}
   function go(n){if(n<0||n>=total||n===cur||busy)return;busy=true;slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');ui();anim(slides[cur]);setTimeout(()=>busy=false,650)}
   window.navPrev=function(){go(cur-1)};window.navNext=function(){go(cur+1)};window.goSlide=go;
-  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*220)+'px'),300);if(s.id==='s15')buildBridgeChart();if(s.id==='s16')buildDivRev()}
+  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*160)+'px'),300);if(s.id==='s15')buildBridgeChart();if(s.id==='s16')buildDivRev()}
   function buildBridgeChart(){const c=document.getElementById('bridgeChart');if(!c||c.dataset.b)return;c.dataset.b='1';
     const maxH=c.offsetHeight-52||120;
     const data=[
