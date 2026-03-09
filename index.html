@@ -1345,15 +1345,16 @@ div:hover > .inst-hint{opacity:1!important}
     <div class="anim d1" style="display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:1fr 1fr;gap:10px;flex:1;min-height:0">
 
       <!-- SUPPLEMENTS — Hero card spanning 2 rows -->
-      <div onclick="openModal('home_supplements')" style="grid-row:1/3;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(255,107,107,.15);background:linear-gradient(170deg,rgba(18,18,24,1) 0%,rgba(255,107,107,.03) 50%,rgba(18,18,24,1) 100%)" onmouseover="this.style.borderColor='rgba(255,107,107,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(255,107,107,.15)'" onmouseout="this.style.borderColor='rgba(255,107,107,.15)';this.style.transform='';this.style.boxShadow=''">
-        <!-- Full product lineup on light stage -->
-        <div style="position:absolute;top:4%;left:50%;transform:translateX(-50%);width:86%;bottom:36%;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(255,255,255,.95) 0%,rgba(248,246,242,.92) 55%,rgba(230,228,225,.6) 78%,transparent 100%);border-radius:14px">
-          <img loading="lazy" src="img/crop/supp_stack.jpg" alt="Lumati Green, Red &amp; Gold" style="max-width:92%;max-height:92%;object-fit:contain;filter:drop-shadow(0 8px 20px rgba(0,0,0,.1))"/>
+      <div onclick="openModal('home_supplements')" style="grid-row:1/3;border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(255,107,107,.15)" onmouseover="this.style.borderColor='rgba(255,107,107,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(255,107,107,.15)'" onmouseout="this.style.borderColor='rgba(255,107,107,.15)';this.style.transform='';this.style.boxShadow=''">
+        <!-- Full product image flush -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:34%;background:#eaeae7;display:flex;align-items:center;justify-content:center">
+          <img loading="lazy" src="img/crop/supp_stack.jpg" alt="Lumati Green, Red &amp; Gold" style="width:100%;height:100%;object-fit:cover"/>
         </div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:34%;background:linear-gradient(to top,rgba(12,12,16,.6) 0%,transparent 40%);pointer-events:none"></div>
         <div style="position:absolute;top:14px;left:16px;z-index:1">
           <span style="font-size:8px;padding:3px 10px;border-radius:20px;background:rgba(255,107,107,.25);border:1px solid rgba(255,107,107,.4);color:#ff8a8a;font-weight:800;letter-spacing:1.5px">SUPPLEMENTS</span>
         </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:16px 18px">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:14px 18px;background:linear-gradient(to top,rgba(10,10,14,1) 60%,rgba(10,10,14,.95) 80%,rgba(10,10,14,.85) 100%)">
           <div style="font-size:15px;font-weight:900;color:var(--bright);line-height:1.2;margin-bottom:4px">Lumati Red &middot; Green &middot; Gold</div>
           <div style="font-size:10px;color:var(--dim);line-height:1.5;margin-bottom:6px">Clinical-grade nutraceuticals prescribed in-clinic, delivered monthly via auto-ship subscription.</div>
           <div style="display:flex;gap:6px;flex-wrap:wrap">
@@ -1365,15 +1366,16 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
 
       <!-- RED LIGHT+ LED FACE MASK -->
-      <div onclick="openModal('home_redlight')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(78,205,196,.15);background:linear-gradient(170deg,rgba(18,18,24,1) 0%,rgba(78,205,196,.03) 50%,rgba(18,18,24,1) 100%)" onmouseover="this.style.borderColor='rgba(78,205,196,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(78,205,196,.15)'" onmouseout="this.style.borderColor='rgba(78,205,196,.15)';this.style.transform='';this.style.boxShadow=''">
-        <!-- Product on light stage -->
-        <div style="position:absolute;top:4%;left:50%;transform:translateX(-50%);width:88%;bottom:32%;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(255,255,255,.92) 0%,rgba(245,243,240,.85) 55%,rgba(220,218,215,.5) 78%,transparent 100%);border-radius:14px">
-          <img loading="lazy" src="img/crop/home_facemask_product.jpg" alt="Lumati Red Light+ LED Face Mask" style="max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 6px 18px rgba(0,0,0,.1))"/>
+      <div onclick="openModal('home_redlight')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(78,205,196,.15)" onmouseover="this.style.borderColor='rgba(78,205,196,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(78,205,196,.15)'" onmouseout="this.style.borderColor='rgba(78,205,196,.15)';this.style.transform='';this.style.boxShadow=''">
+        <!-- Full product image flush -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:30%;background:#e8e8e8;display:flex;align-items:center;justify-content:center">
+          <img loading="lazy" src="img/crop/home_facemask_product.jpg" alt="Lumati Red Light+ LED Face Mask" style="width:100%;height:100%;object-fit:cover"/>
         </div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:30%;background:linear-gradient(to top,rgba(12,12,16,.5) 0%,transparent 35%);pointer-events:none"></div>
         <div style="position:absolute;top:10px;left:12px;z-index:1">
           <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:rgba(78,205,196,.25);border:1px solid rgba(78,205,196,.4);color:#6ee0d8;font-weight:800;letter-spacing:1.5px">DEVICES</span>
         </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(10,10,14,1) 55%,rgba(10,10,14,.9) 80%,rgba(10,10,14,.7) 100%)">
           <div style="font-size:13px;font-weight:800;color:var(--bright)">Red Light+ Face Mask</div>
           <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">630nm + 850nm &middot; LED photobiomodulation</div>
         </div>
@@ -1382,8 +1384,8 @@ div:hover > .inst-hint{opacity:1!important}
 
       <!-- MOLECULAR HYDROGEN -->
       <div onclick="openModal('home_h2')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(251,180,91,.15)" onmouseover="this.style.borderColor='rgba(251,180,91,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(251,180,91,.15)'" onmouseout="this.style.borderColor='rgba(251,180,91,.15)';this.style.transform='';this.style.boxShadow=''">
-        <img loading="lazy" src="img/crop/home_h2_bath_hd.png" alt="Molecular Hydrogen" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%"/>
-        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.9) 0%,rgba(6,6,10,.15) 45%,transparent 100%)"></div>
+        <img loading="lazy" src="img/crop/home_h2_bath_hd.png" alt="Molecular Hydrogen" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.85) 0%,rgba(6,6,10,.1) 40%,transparent 100%)"></div>
         <div style="position:absolute;top:10px;left:12px">
           <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:rgba(251,180,91,.25);border:1px solid rgba(251,180,91,.4);color:#fcc77d;font-weight:800;letter-spacing:1.5px">DEVICES</span>
         </div>
@@ -1395,15 +1397,16 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
 
       <!-- LUMATI DETECT — DIAGNOSTICS -->
-      <div onclick="openModal('home_detect')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(167,139,250,.15);background:linear-gradient(170deg,rgba(18,18,24,1) 0%,rgba(167,139,250,.03) 50%,rgba(18,18,24,1) 100%)" onmouseover="this.style.borderColor='rgba(167,139,250,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(167,139,250,.15)'" onmouseout="this.style.borderColor='rgba(167,139,250,.15)';this.style.transform='';this.style.boxShadow=''">
-        <!-- Product on light stage -->
-        <div style="position:absolute;top:4%;left:50%;transform:translateX(-50%);width:88%;bottom:32%;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at center,rgba(255,255,255,.92) 0%,rgba(245,243,240,.85) 55%,rgba(220,218,215,.5) 78%,transparent 100%);border-radius:14px">
-          <img loading="lazy" src="img/crop/home_detect_product.webp" alt="Lumati Detect Microplastics Test Kit" style="max-width:90%;max-height:90%;object-fit:contain;filter:drop-shadow(0 6px 18px rgba(0,0,0,.1))"/>
+      <div onclick="openModal('home_detect')" style="border-radius:16px;overflow:hidden;position:relative;cursor:pointer;transition:all .35s ease;border:1px solid rgba(167,139,250,.15)" onmouseover="this.style.borderColor='rgba(167,139,250,.4)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 14px 35px rgba(167,139,250,.15)'" onmouseout="this.style.borderColor='rgba(167,139,250,.15)';this.style.transform='';this.style.boxShadow=''">
+        <!-- Full product image flush -->
+        <div style="position:absolute;top:0;left:0;right:0;bottom:30%;background:#ffffff;display:flex;align-items:center;justify-content:center">
+          <img loading="lazy" src="img/crop/home_detect_product.webp" alt="Lumati Detect Microplastics Test Kit" style="width:100%;height:100%;object-fit:cover"/>
         </div>
+        <div style="position:absolute;top:0;left:0;right:0;bottom:30%;background:linear-gradient(to top,rgba(12,12,16,.5) 0%,transparent 35%);pointer-events:none"></div>
         <div style="position:absolute;top:10px;left:12px;z-index:1">
           <span style="font-size:7.5px;padding:2px 8px;border-radius:20px;background:rgba(167,139,250,.25);border:1px solid rgba(167,139,250,.4);color:#bba4fc;font-weight:800;letter-spacing:1.5px">DIAGNOSTICS</span>
         </div>
-        <div style="position:absolute;bottom:0;left:0;right:0;padding:12px 14px">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:10px 14px;background:linear-gradient(to top,rgba(10,10,14,1) 55%,rgba(10,10,14,.9) 80%,rgba(10,10,14,.7) 100%)">
           <div style="font-size:13px;font-weight:800;color:var(--bright)">Lumati Detect</div>
           <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.4">At-home saliva test kit &middot; results sync to Lumi</div>
         </div>
