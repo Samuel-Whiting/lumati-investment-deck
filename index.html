@@ -304,10 +304,10 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 /* Phone gallery */
 .app-gallery{display:flex;align-items:center;justify-content:center;gap:clamp(20px,3vw,50px);perspective:1800px;position:relative;flex:1 1 0;min-height:0;overflow:visible}
 .app-gallery .phone-mock{position:relative;flex-shrink:0;cursor:pointer;transition:transform .6s cubic-bezier(.25,.46,.45,.94),filter .5s;max-height:100%}
-.app-gallery .phone-mock img{width:100%;height:auto;display:block;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6));max-height:clamp(220px,32vh,340px)}
+.app-gallery .phone-mock img{width:100%;height:auto;display:block;filter:drop-shadow(0 20px 40px rgba(0,0,0,.6));max-height:clamp(250px,38vh,380px)}
 .app-gallery .phone-mock.side{width:clamp(100px,11vw,155px);transform:perspective(1800px) rotateY(var(--ry)) translateY(8px) scale(.88);filter:brightness(.8);z-index:2}
 .app-gallery .phone-mock.hero{width:clamp(130px,14vw,195px);z-index:5;animation:float 6s ease-in-out infinite}
-.app-gallery .phone-mock.hero img{filter:drop-shadow(0 30px 60px rgba(0,0,0,.7)) drop-shadow(0 0 40px rgba(167,139,250,.08));max-height:clamp(260px,38vh,380px)}
+.app-gallery .phone-mock.hero img{filter:drop-shadow(0 30px 60px rgba(0,0,0,.7)) drop-shadow(0 0 40px rgba(167,139,250,.08));max-height:clamp(290px,44vh,440px)}
 .app-gallery .phone-mock:hover{transform:translateY(-14px) scale(1.05)!important;filter:brightness(1)!important;z-index:10!important}
 .app-gallery .phone-mock.hero:hover{animation:none}
 .app-gallery .phone-mock .phone-label{text-align:center;margin-top:10px;opacity:.8;transition:opacity .3s;width:100%}
@@ -1052,12 +1052,12 @@ div:hover > .inst-hint{opacity:1!important}
   <div class="orb" style="width:450px;height:450px;background:rgba(255,107,107,.04);bottom:-12%;left:-5%"></div>
   <div class="orb" style="width:350px;height:350px;background:rgba(78,205,196,.03);top:-8%;right:10%;animation-delay:5s"></div>
 
-  <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:16px">
+  <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:10px">
     <!-- Header -->
     <div class="center">
       <div class="tag anim" style="color:var(--coral)">Subtractive Medicine</div>
-      <h2 class="anim d1" style="margin-top:6px;font-size:clamp(1.4rem,2.8vw,2.2rem)">Remove Before You Restore</h2>
-      <p class="anim d1" style="font-size:12.5px;color:var(--dim);margin-top:6px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.6">While others focus on <em>adding</em> &mdash; supplements, hormones, stem cells &mdash; Lumati leads the <b style="color:var(--bright)">subtractive medicine movement</b>: clearing the body&rsquo;s terrain first.</p>
+      <h2 class="anim d1" style="margin-top:4px;font-size:clamp(1.3rem,2.6vw,2rem)">Remove Before You Restore</h2>
+      <p class="anim d1" style="font-size:11.5px;color:var(--dim);margin-top:4px;max-width:640px;margin-left:auto;margin-right:auto;line-height:1.5">While others focus on <em>adding</em> &mdash; supplements, hormones, stem cells &mdash; Lumati leads the <b style="color:var(--bright)">subtractive medicine movement</b>: clearing the body&rsquo;s terrain first.</p>
     </div>
 
     <!-- Two main cards side by side -->
@@ -1066,7 +1066,7 @@ div:hover > .inst-hint{opacity:1!important}
       <!-- ===== ORODETOX ===== -->
       <div style="flex:1;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;background:rgba(10,12,18,1);border:1px solid rgba(78,205,196,.18);box-shadow:0 4px 30px rgba(0,0,0,.4);transition:transform .4s,box-shadow .4s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(78,205,196,.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 30px rgba(0,0,0,.4)'">
         <!-- Image with dark tint overlay -->
-        <div style="height:160px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
+        <div style="height:120px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
           <img loading="lazy" src="img/crop/orodetox_dental.png" alt="OroDetox Procedure" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(.55) contrast(1.15) saturate(1.1);transition:filter .5s,transform .5s" onmouseover="this.style.filter='brightness(.65) contrast(1.1) saturate(1.1)';this.style.transform='scale(1.03)'" onmouseout="this.style.filter='brightness(.55) contrast(1.15) saturate(1.1)';this.style.transform=''"/>
           <!-- Color tint -->
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(78,205,196,.12) 0%,transparent 60%);pointer-events:none"></div>
@@ -1076,21 +1076,21 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="position:absolute;top:14px;left:14px;z-index:2"><span style="font-size:11px;padding:6px 16px;border-radius:10px;background:rgba(78,205,196,.15);backdrop-filter:blur(12px);border:1px solid rgba(78,205,196,.4);color:var(--teal);font-weight:900;letter-spacing:2.5px;text-shadow:0 0 20px rgba(78,205,196,.5)">ORODETOX</span></div>
         </div>
         <!-- Title -->
-        <div style="padding:12px 20px 0">
-          <h3 style="font-size:20px;color:var(--bright);margin:0;font-family:var(--head)">Cleaning the Mouth</h3>
-          <p style="font-size:12px;color:var(--dim);margin-top:4px;line-height:1.5">Hidden oral infections silently driving heart disease, cancer &amp; autoimmune conditions</p>
+        <div style="padding:8px 16px 0">
+          <h3 style="font-size:16px;color:var(--bright);margin:0;font-family:var(--head)">Cleaning the Mouth</h3>
+          <p style="font-size:11px;color:var(--dim);margin-top:3px;line-height:1.4">Hidden oral infections driving heart disease, cancer &amp; autoimmune conditions</p>
         </div>
         <!-- Content -->
-        <div style="flex:1;padding:12px 20px 16px;display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">Cavitation Surgery</b> &mdash; remove necrotic jawbone &amp; hidden infections</span></div>
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">Safe Extraction</b> &mdash; mercury amalgam &amp; root canal removal</span></div>
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">Cone-Beam CT</b> &mdash; 3D imaging reveals what X-rays miss</span></div>
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">Systemic Integration</b> &mdash; dental + functional medicine</span></div>
+        <div style="flex:1;padding:8px 16px 12px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">Cavitation Surgery</b> &mdash; remove necrotic jawbone &amp; hidden infections</span></div>
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">Safe Extraction</b> &mdash; mercury amalgam &amp; root canal removal</span></div>
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">Cone-Beam CT</b> &mdash; 3D imaging reveals what X-rays miss</span></div>
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--teal);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">Systemic Integration</b> &mdash; dental + functional medicine</span></div>
           </div>
-          <div style="margin-top:auto;padding:12px 14px;border-radius:12px;background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.12)">
-            <div style="font-size:10.5px;color:var(--teal);font-weight:700;letter-spacing:1.5px;margin-bottom:4px">WHY IT MATTERS</div>
-            <div style="font-size:12px;color:var(--dim);line-height:1.55">Oral bacteria enter the bloodstream 24/7. Studies link dental infections to <b style="color:var(--bright)">94% of chronic disease patients</b>.</div>
+          <div style="margin-top:auto;padding:8px 12px;border-radius:10px;background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.12)">
+            <div style="font-size:9.5px;color:var(--teal);font-weight:700;letter-spacing:1.5px;margin-bottom:2px">WHY IT MATTERS</div>
+            <div style="font-size:10.5px;color:var(--dim);line-height:1.45">Oral bacteria enter the bloodstream 24/7. Studies link dental infections to <b style="color:var(--bright)">94% of chronic disease patients</b>.</div>
           </div>
         </div>
       </div>
@@ -1098,7 +1098,7 @@ div:hover > .inst-hint{opacity:1!important}
       <!-- ===== HEMODETOX ===== -->
       <div style="flex:1;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;background:rgba(10,12,18,1);border:1px solid rgba(255,107,107,.18);box-shadow:0 4px 30px rgba(0,0,0,.4);transition:transform .4s,box-shadow .4s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(255,107,107,.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 30px rgba(0,0,0,.4)'">
         <!-- Image with dark tint overlay -->
-        <div style="height:160px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
+        <div style="height:120px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
           <img loading="lazy" src="img/crop/hemodetox_patient.png" alt="HemoDetox Treatment" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.55) contrast(1.15) saturate(1.1);transition:filter .5s,transform .5s" onmouseover="this.style.filter='brightness(.65) contrast(1.1) saturate(1.1)';this.style.transform='scale(1.03)'" onmouseout="this.style.filter='brightness(.55) contrast(1.15) saturate(1.1)';this.style.transform=''"/>
           <!-- Color tint -->
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,107,.1) 0%,transparent 60%);pointer-events:none"></div>
@@ -1110,37 +1110,37 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="position:absolute;top:14px;right:14px;z-index:2"><span style="font-size:10.5px;padding:5px 12px;border-radius:8px;background:rgba(255,107,107,.15);backdrop-filter:blur(12px);border:1px solid rgba(255,107,107,.35);color:var(--coral);font-weight:800;letter-spacing:1.5px">#1 REVENUE DRIVER</span></div>
         </div>
         <!-- Title -->
-        <div style="padding:12px 20px 0">
-          <h3 style="font-size:20px;color:var(--bright);margin:0;font-family:var(--head)">Cleaning the Blood</h3>
-          <p style="font-size:12px;color:var(--dim);margin-top:4px;line-height:1.5">Advanced blood filtration &mdash; IP-backed &amp; scalable across hospital networks</p>
+        <div style="padding:8px 16px 0">
+          <h3 style="font-size:16px;color:var(--bright);margin:0;font-family:var(--head)">Cleaning the Blood</h3>
+          <p style="font-size:11px;color:var(--dim);margin-top:3px;line-height:1.4">Advanced blood filtration &mdash; IP-backed &amp; scalable across hospital networks</p>
         </div>
         <!-- Content -->
-        <div style="flex:1;padding:12px 20px 16px;display:flex;flex-direction:column;gap:10px">
-          <div style="display:flex;flex-direction:column;gap:8px">
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">Dual-Target Filtration</b> &mdash; metals, PFAS, microplastics + pathogens, CTCs</span></div>
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">200+ Treatments</b> &mdash; autoimmune, chronic infections &amp; performance</span></div>
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">Clinical Trials</b> &mdash; Long COVID &amp; Lyme, USA hospital launch</span></div>
-            <div style="font-size:12.5px;color:var(--dim);display:flex;gap:8px;align-items:start;line-height:1.45"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:13px">&#10003;</span><span><b style="color:var(--text)">IP Strategy</b> &mdash; proprietary filter tech for defensible moat</span></div>
+        <div style="flex:1;padding:8px 16px 12px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;flex-direction:column;gap:5px">
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">Dual-Target Filtration</b> &mdash; metals, PFAS, microplastics + pathogens, CTCs</span></div>
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">200+ Treatments</b> &mdash; autoimmune, chronic infections &amp; performance</span></div>
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">Clinical Trials</b> &mdash; Long COVID &amp; Lyme, USA hospital launch</span></div>
+            <div style="font-size:11px;color:var(--dim);display:flex;gap:6px;align-items:start;line-height:1.4"><span style="color:var(--coral);font-weight:700;flex-shrink:0;font-size:11px">&#10003;</span><span><b style="color:var(--text)">IP Strategy</b> &mdash; proprietary filter tech for defensible moat</span></div>
           </div>
           <!-- Revenue stats -->
-          <div style="margin-top:auto;display:flex;gap:10px">
-            <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">82%</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">of 2030 Revenue</div></div>
-            <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">118</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Hospital Partners</div></div>
-            <div style="flex:1;padding:10px;border-radius:12px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:22px;font-weight:900;color:var(--coral)">$731M</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Projected 2030</div></div>
+          <div style="margin-top:auto;display:flex;gap:8px">
+            <div style="flex:1;padding:8px;border-radius:10px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:18px;font-weight:900;color:var(--coral)">82%</div><div style="font-size:9.5px;color:var(--dim);margin-top:2px">of 2030 Revenue</div></div>
+            <div style="flex:1;padding:8px;border-radius:10px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:18px;font-weight:900;color:var(--coral)">118</div><div style="font-size:9.5px;color:var(--dim);margin-top:2px">Hospitals</div></div>
+            <div style="flex:1;padding:8px;border-radius:10px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:18px;font-weight:900;color:var(--coral)">$731M</div><div style="font-size:9.5px;color:var(--dim);margin-top:2px">2030 Rev</div></div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Bottom: Silent Burden + TAM -->
-    <div class="anim d4" style="display:flex;gap:16px;align-items:center">
-      <div style="flex:1;padding:12px 16px;border-radius:12px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.1);border-left:3px solid var(--coral)">
-        <div style="font-size:10.5px;color:var(--coral);font-weight:700;letter-spacing:1.5px">THE SILENT BURDEN</div>
-        <div style="font-size:12px;color:var(--dim);margin-top:4px;line-height:1.55">Everyday exposure to toxins, plastics &amp; pathogens accelerates aging. <b style="color:var(--bright)">The body cannot clear these alone.</b></div>
+    <div class="anim d4" style="display:flex;gap:12px;align-items:center">
+      <div style="flex:1;padding:8px 14px;border-radius:10px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.1);border-left:3px solid var(--coral)">
+        <div style="font-size:9.5px;color:var(--coral);font-weight:700;letter-spacing:1.5px">THE SILENT BURDEN</div>
+        <div style="font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.45">Everyday exposure to toxins, plastics &amp; pathogens accelerates aging. <b style="color:var(--bright)">The body cannot clear these alone.</b></div>
       </div>
-      <div style="display:flex;gap:12px;flex-shrink:0">
-        <div style="padding:12px 20px;border-radius:12px;background:rgba(255,107,107,.05);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:24px;font-weight:900;color:var(--coral)">$89B</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Blood Purification TAM</div></div>
-        <div style="padding:12px 20px;border-radius:12px;background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.14);text-align:center"><div style="font-family:var(--head);font-size:24px;font-weight:900;color:var(--teal)">133M</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Chronic Disease (US)</div></div>
+      <div style="display:flex;gap:10px;flex-shrink:0">
+        <div style="padding:8px 16px;border-radius:10px;background:rgba(255,107,107,.05);border:1px solid rgba(255,107,107,.14);text-align:center"><div style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--coral)">$89B</div><div style="font-size:9.5px;color:var(--dim);margin-top:2px">Blood Purification TAM</div></div>
+        <div style="padding:8px 16px;border-radius:10px;background:rgba(78,205,196,.05);border:1px solid rgba(78,205,196,.14);text-align:center"><div style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--teal)">133M</div><div style="font-size:9.5px;color:var(--dim);margin-top:2px">Chronic Disease (US)</div></div>
       </div>
     </div>
   </div>
@@ -1345,54 +1345,54 @@ div:hover > .inst-hint{opacity:1!important}
     <div class="anim d1" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;flex:1;min-height:0;overflow:hidden">
 
       <!-- COL 1: Supplements -->
-      <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;flex-direction:column;gap:8px;min-height:0">
         <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:var(--coral);text-align:center">SUPPLEMENTS</div>
-        <div style="flex:1;border-radius:16px;overflow:hidden;position:relative;border:1px solid rgba(255,107,107,.12);display:flex;flex-direction:column">
-          <div style="flex:1;min-height:0;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,107,107,.03),transparent)">
+        <div style="flex:1;border-radius:16px;overflow:hidden;position:relative;border:1px solid rgba(255,107,107,.12);display:flex;flex-direction:column;min-height:0">
+          <div style="min-height:140px;position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(255,107,107,.03),transparent)">
             <img loading="lazy" src="img/crop/home_supplements.png" alt="Lumati Supplements" style="width:100%;height:100%;object-fit:cover"/>
             <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.95) 0%,rgba(6,6,10,.2) 50%,transparent 100%)"></div>
-            <div style="position:absolute;bottom:12px;left:14px;right:14px">
-              <div style="font-size:13px;font-weight:800;color:var(--bright)">Lumati Red &middot; Green &middot; Gold</div>
-              <div style="font-size:10px;color:var(--dim);margin-top:3px;line-height:1.45">Clinical-grade nutraceuticals &mdash; curcumin, beta-glucan, and our proprietary gold blend targeting inflammation, immunity, and cellular repair.</div>
+            <div style="position:absolute;bottom:10px;left:12px;right:12px">
+              <div style="font-size:12px;font-weight:800;color:var(--bright)">Lumati Red &middot; Green &middot; Gold</div>
+              <div style="font-size:9.5px;color:var(--dim);margin-top:2px;line-height:1.4">Clinical-grade nutraceuticals &mdash; curcumin, beta-glucan, and our proprietary gold blend.</div>
             </div>
           </div>
-          <div style="padding:10px 14px;background:var(--glass);border-top:1px solid var(--border)">
-            <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px">
+          <div style="padding:8px 12px;background:var(--glass);border-top:1px solid var(--border)">
+            <div style="display:flex;align-items:center;gap:6px;margin-bottom:4px">
               <div style="width:7px;height:7px;border-radius:50%;background:var(--coral)"></div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--bright)">Ultimate Stack</div>
+              <div style="font-size:10px;font-weight:800;color:var(--bright)">Ultimate Stack</div>
             </div>
-            <div style="font-size:9.5px;color:var(--dim);line-height:1.45">All three formulations bundled &mdash; the same protocol prescribed in-clinic, delivered monthly to your door.</div>
-            <div style="display:flex;gap:6px;margin-top:6px;flex-wrap:wrap">
-              <span style="font-size:9px;padding:3px 8px;border-radius:5px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.1);color:var(--coral)">Recurring Revenue</span>
-              <span style="font-size:9px;padding:3px 8px;border-radius:5px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.1);color:var(--gold)">83% GM</span>
+            <div style="font-size:9px;color:var(--dim);line-height:1.4">All three formulations bundled &mdash; prescribed in-clinic, delivered monthly.</div>
+            <div style="display:flex;gap:5px;margin-top:5px;flex-wrap:wrap">
+              <span style="font-size:8.5px;padding:2px 7px;border-radius:5px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.1);color:var(--coral)">Recurring Revenue</span>
+              <span style="font-size:8.5px;padding:2px 7px;border-radius:5px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.1);color:var(--gold)">83% GM</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- COL 2: Devices -->
-      <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;flex-direction:column;gap:8px;min-height:0">
         <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:var(--teal);text-align:center">DEVICES</div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;min-height:0">
           <!-- Red Light+ -->
-          <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid rgba(78,205,196,.12);display:flex;flex-direction:column;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(78,205,196,.01))">
-            <div style="flex:1;min-height:0;position:relative;overflow:hidden">
+          <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid rgba(78,205,196,.12);display:flex;flex-direction:column;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(78,205,196,.01));min-height:0">
+            <div style="flex:1;min-height:80px;position:relative;overflow:hidden">
               <img loading="lazy" src="img/crop/tech_redlight.png" alt="Red Light+ Face Mask" style="width:100%;height:100%;object-fit:cover"/>
               <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.9) 0%,transparent 60%)"></div>
-              <div style="position:absolute;bottom:10px;left:12px;right:12px">
-                <div style="font-size:12px;font-weight:800;color:var(--bright)">Red Light+ Face Mask</div>
-                <div style="font-size:9.5px;color:var(--dim);margin-top:2px">630nm + 850nm &middot; 10 min, 3&ndash;4x/week</div>
+              <div style="position:absolute;bottom:8px;left:10px;right:10px">
+                <div style="font-size:11px;font-weight:800;color:var(--bright)">Red Light+ Face Mask</div>
+                <div style="font-size:9px;color:var(--dim);margin-top:2px">630nm + 850nm &middot; 10 min, 3&ndash;4x/week</div>
               </div>
             </div>
           </div>
           <!-- Molecular Hydrogen -->
-          <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid rgba(78,205,196,.12);display:flex;flex-direction:column;background:linear-gradient(135deg,rgba(78,205,196,.03),transparent)">
-            <div style="flex:1;min-height:0;position:relative;overflow:hidden">
+          <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid rgba(78,205,196,.12);display:flex;flex-direction:column;background:linear-gradient(135deg,rgba(78,205,196,.03),transparent);min-height:0">
+            <div style="flex:1;min-height:80px;position:relative;overflow:hidden">
               <img loading="lazy" src="img/crop/home_h2_machine.png" alt="Molecular Hydrogen" style="width:100%;height:100%;object-fit:cover"/>
               <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.9) 0%,transparent 60%)"></div>
-              <div style="position:absolute;bottom:10px;left:12px;right:12px">
-                <div style="font-size:12px;font-weight:800;color:var(--bright)">Molecular Hydrogen</div>
-                <div style="font-size:9.5px;color:var(--dim);margin-top:2px">Water bottles, inhalation &amp; immersion therapy</div>
+              <div style="position:absolute;bottom:8px;left:10px;right:10px">
+                <div style="font-size:11px;font-weight:800;color:var(--bright)">Molecular Hydrogen</div>
+                <div style="font-size:9px;color:var(--dim);margin-top:2px">Water bottles, inhalation &amp; immersion therapy</div>
               </div>
             </div>
           </div>
@@ -1400,32 +1400,32 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
 
       <!-- COL 3: Diagnostics & App -->
-      <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;flex-direction:column;gap:8px;min-height:0">
         <div style="font-size:10px;font-weight:800;letter-spacing:2px;color:var(--purple);text-align:center">DIAGNOSTICS &amp; APP</div>
-        <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px;min-height:0">
           <!-- Microplastic Detect -->
-          <div style="flex:0.5;border-radius:14px;padding:14px 16px;border:1px solid rgba(167,139,250,.12);background:linear-gradient(135deg,rgba(167,139,250,.05),rgba(167,139,250,.01));display:flex;flex-direction:column;justify-content:center">
-            <div style="display:flex;align-items:center;gap:8px;margin-bottom:5px">
-              <div style="font-size:18px">&#9878;</div>
+          <div style="flex-shrink:0;border-radius:14px;padding:10px 14px;border:1px solid rgba(167,139,250,.12);background:linear-gradient(135deg,rgba(167,139,250,.05),rgba(167,139,250,.01));display:flex;flex-direction:column;justify-content:center">
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px">
+              <div style="font-size:16px">&#9878;</div>
               <div>
-                <div style="font-size:12px;font-weight:800;color:var(--bright)">Microplastic Detect</div>
-                <div style="font-size:9.5px;color:var(--dim)">At-home saliva test kit</div>
+                <div style="font-size:11px;font-weight:800;color:var(--bright)">Microplastic Detect</div>
+                <div style="font-size:9px;color:var(--dim)">At-home saliva test kit</div>
               </div>
             </div>
-            <div style="font-size:9.5px;color:var(--dim);line-height:1.45">Quantify microplastic burden from home. Results feed your Lumi health profile for personalized detox protocol adjustments.</div>
+            <div style="font-size:9px;color:var(--dim);line-height:1.4">Quantify microplastic burden from home. Results feed your Lumi health profile.</div>
           </div>
           <!-- Lumi App Connectivity -->
-          <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid rgba(167,139,250,.15);position:relative;display:flex;flex-direction:column">
-            <div style="flex:1;min-height:0;position:relative;overflow:hidden">
+          <div style="flex:1;border-radius:14px;overflow:hidden;border:1px solid rgba(167,139,250,.15);position:relative;display:flex;flex-direction:column;min-height:0">
+            <div style="flex:1;min-height:80px;position:relative;overflow:hidden">
               <img loading="lazy" src="img/crop/app_commerce.png" alt="Lumi App Commerce" style="width:100%;height:100%;object-fit:cover;object-position:top"/>
               <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,.95) 0%,rgba(6,6,10,.3) 50%,transparent 80%)"></div>
-              <div style="position:absolute;bottom:10px;left:12px;right:12px">
-                <div style="font-size:12px;font-weight:800;color:var(--bright)">Lumi App</div>
-                <div style="font-size:9.5px;color:var(--dim);margin-top:2px;line-height:1.4">Protocol compliance &middot; Supplement marketplace &middot; Education library &middot; Biomarker tracking</div>
+              <div style="position:absolute;bottom:8px;left:10px;right:10px">
+                <div style="font-size:11px;font-weight:800;color:var(--bright)">Lumi App</div>
+                <div style="font-size:9px;color:var(--dim);margin-top:2px;line-height:1.35">Protocol compliance &middot; Marketplace &middot; Education &middot; Biomarkers</div>
               </div>
             </div>
-            <div style="padding:8px 12px;background:var(--glass);border-top:1px solid var(--border)">
-              <div style="font-size:9.5px;color:var(--dim);line-height:1.4"><span style="color:var(--purple);font-weight:700">Connected ecosystem</span> &mdash; every product syncs to your health profile. The app becomes the retention engine that keeps patients engaged between clinic visits.</div>
+            <div style="padding:6px 10px;background:var(--glass);border-top:1px solid var(--border)">
+              <div style="font-size:9px;color:var(--dim);line-height:1.35"><span style="color:var(--purple);font-weight:700">Connected ecosystem</span> &mdash; every product syncs to your health profile. The retention engine between clinic visits.</div>
             </div>
           </div>
         </div>
@@ -1618,20 +1618,20 @@ div:hover > .inst-hint{opacity:1!important}
       <!-- RIGHT: Press + Flywheel -->
       <div class="anim-right" style="flex:1;display:flex;flex-direction:column;gap:10px">
         <!-- Press & Partnerships -->
-        <div style="padding:12px 16px;border-radius:14px;background:rgba(6,6,10,.6);border:1px solid var(--border);backdrop-filter:blur(12px)">
-          <div style="font-size:10.5px;color:var(--teal);font-weight:800;letter-spacing:2px;margin-bottom:8px">PRESS &amp; PARTNERSHIPS</div>
-          <div style="display:flex;flex-direction:column;gap:6px">
-            <a href="https://insider.fitt.co/press-release/lumati-launches-lumati-detect-the-worlds-first-microplastic-saliva-test-and-advanced-detox-protocol/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.1);border-left:3px solid var(--teal);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(78,205,196,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(78,205,196,.04)';this.style.transform=''">
-              <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--bright)">Lumati Detect &mdash; World&rsquo;s First</div><div style="font-size:10px;color:var(--dim);margin-top:2px">Microplastic saliva test &amp; detox protocol &middot; Fitt Insider</div></div><span style="color:var(--teal);font-size:14px;font-weight:700">&#8599;</span>
+        <div style="padding:10px 14px;border-radius:14px;background:rgba(6,6,10,.6);border:1px solid var(--border);backdrop-filter:blur(12px)">
+          <div style="font-size:9.5px;color:var(--teal);font-weight:800;letter-spacing:2px;margin-bottom:6px">PRESS &amp; PARTNERSHIPS</div>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <a href="https://insider.fitt.co/press-release/lumati-launches-lumati-detect-the-worlds-first-microplastic-saliva-test-and-advanced-detox-protocol/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.1);border-left:3px solid var(--teal);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(78,205,196,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(78,205,196,.04)';this.style.transform=''">
+              <div style="flex:1"><div style="font-size:10.5px;font-weight:700;color:var(--bright)">Lumati Detect &mdash; World&rsquo;s First</div><div style="font-size:9px;color:var(--dim);margin-top:1px">Microplastic saliva test &middot; Fitt Insider</div></div><span style="color:var(--teal);font-size:12px;font-weight:700">&#8599;</span>
             </a>
-            <a href="https://www.lumati.com/post/lumati-partners-with-smart-fit-method" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(251,180,91,.04);border:1px solid rgba(251,180,91,.1);border-left:3px solid var(--gold);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(251,180,91,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(251,180,91,.04)';this.style.transform=''">
-              <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--bright)">Smart Fit Method &mdash; Park City</div><div style="font-size:10px;color:var(--dim);margin-top:2px">XPRIZE partner &middot; Recharge deployment</div></div><span style="color:var(--gold);font-size:14px;font-weight:700">&#8599;</span>
+            <a href="https://www.lumati.com/post/lumati-partners-with-smart-fit-method" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;background:rgba(251,180,91,.04);border:1px solid rgba(251,180,91,.1);border-left:3px solid var(--gold);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(251,180,91,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(251,180,91,.04)';this.style.transform=''">
+              <div style="flex:1"><div style="font-size:10.5px;font-weight:700;color:var(--bright)">Smart Fit Method &mdash; Park City</div><div style="font-size:9px;color:var(--dim);margin-top:1px">XPRIZE partner &middot; Recharge deployment</div></div><span style="color:var(--gold);font-size:12px;font-weight:700">&#8599;</span>
             </a>
-            <a href="https://www.spabusiness.com/wellness-news/Alila-Marea-Beach-Resort-introduces-Lumati-Recharge-Portal-for-stackable-longevity-treatments/362112" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.1);border-left:3px solid var(--purple);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(167,139,250,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(167,139,250,.04)';this.style.transform=''">
-              <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--bright)">Alila Marea Resort &mdash; Encinitas</div><div style="font-size:10px;color:var(--dim);margin-top:2px">Recharge Portal longevity treatments &middot; Spa Business</div></div><span style="color:var(--purple);font-size:14px;font-weight:700">&#8599;</span>
+            <a href="https://www.spabusiness.com/wellness-news/Alila-Marea-Beach-Resort-introduces-Lumati-Recharge-Portal-for-stackable-longevity-treatments/362112" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.1);border-left:3px solid var(--purple);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(167,139,250,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(167,139,250,.04)';this.style.transform=''">
+              <div style="flex:1"><div style="font-size:10.5px;font-weight:700;color:var(--bright)">Alila Marea Resort &mdash; Encinitas</div><div style="font-size:9px;color:var(--dim);margin-top:1px">Recharge Portal &middot; Spa Business</div></div><span style="color:var(--purple);font-size:12px;font-weight:700">&#8599;</span>
             </a>
-            <a href="https://www.sandiegouniontribune.com/2026/02/16/newly-opened-verde-spa-at-la-valle-coastal-club-features-infrared-saunas-cold-plunges-and-longevity-treatments/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;background:rgba(255,107,107,.04);border:1px solid rgba(255,107,107,.1);border-left:3px solid var(--coral);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(255,107,107,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(255,107,107,.04)';this.style.transform=''">
-              <div style="flex:1"><div style="font-size:12px;font-weight:700;color:var(--bright)">La Valle Coastal Club &mdash; Verde Spa</div><div style="font-size:10px;color:var(--dim);margin-top:2px">Longevity treatments &middot; San Diego Union-Tribune</div></div><span style="color:var(--coral);font-size:14px;font-weight:700">&#8599;</span>
+            <a href="https://www.sandiegouniontribune.com/2026/02/16/newly-opened-verde-spa-at-la-valle-coastal-club-features-infrared-saunas-cold-plunges-and-longevity-treatments/" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:8px;background:rgba(255,107,107,.04);border:1px solid rgba(255,107,107,.1);border-left:3px solid var(--coral);text-decoration:none;transition:all .3s" onmouseover="this.style.background='rgba(255,107,107,.08)';this.style.transform='translateX(3px)'" onmouseout="this.style.background='rgba(255,107,107,.04)';this.style.transform=''">
+              <div style="flex:1"><div style="font-size:10.5px;font-weight:700;color:var(--bright)">La Valle Coastal Club &mdash; Verde Spa</div><div style="font-size:9px;color:var(--dim);margin-top:1px">Longevity treatments &middot; SD Union-Tribune</div></div><span style="color:var(--coral);font-size:12px;font-weight:700">&#8599;</span>
             </a>
           </div>
         </div>
@@ -1642,26 +1642,26 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="position:absolute;left:50%;top:55%;width:180px;height:180px;margin:-90px 0 0 -90px;border-radius:50%;border:1px solid rgba(78,205,196,.05);animation:ring-rotate 40s linear infinite;pointer-events:none"></div>
           <div style="position:absolute;left:50%;top:55%;width:240px;height:240px;margin:-120px 0 0 -120px;border-radius:50%;border:1px dashed rgba(251,180,91,.04);animation:ring-rotate 60s linear infinite reverse;pointer-events:none"></div>
 
-          <div style="font-size:10.5px;color:var(--gold);font-weight:800;letter-spacing:2px;margin-bottom:10px;position:relative;z-index:1">NETWORK FLYWHEEL</div>
+          <div style="font-size:9.5px;color:var(--gold);font-weight:800;letter-spacing:2px;margin-bottom:6px;position:relative;z-index:1">NETWORK FLYWHEEL</div>
 
           <!-- Row 1: Deploy → Treat → Data -->
           <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:0;margin-bottom:0;position:relative;z-index:1">
-            <div style="text-align:center;padding:10px 6px;border-radius:10px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);--fw-c:rgba(78,205,196,.5);animation:fw-glow 4s .15s infinite ease-in-out">
-              <div style="font-size:15px;margin-bottom:2px">&#128640;</div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--teal)">DEPLOY</div>
-              <div style="font-size:9px;color:var(--dim);margin-top:1px;line-height:1.3">Portals &amp; Clinics</div>
+            <div style="text-align:center;padding:8px 4px;border-radius:8px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.15);--fw-c:rgba(78,205,196,.5);animation:fw-glow 4s .15s infinite ease-in-out">
+              <div style="font-size:13px;margin-bottom:1px">&#128640;</div>
+              <div style="font-size:9.5px;font-weight:800;color:var(--teal)">DEPLOY</div>
+              <div style="font-size:8px;color:var(--dim);margin-top:1px;line-height:1.3">Portals &amp; Clinics</div>
             </div>
             <svg width="28" height="16" viewBox="0 0 28 16" style="display:block;margin:0 -2px"><path d="M0,8 L20,8" stroke="rgba(78,205,196,.4)" stroke-width="1.5" stroke-dasharray="4,3" fill="none" style="animation:fw-flow 1.2s linear infinite"/><polygon points="24,8 18,4 18,12" fill="rgba(78,205,196,.35)"/></svg>
-            <div style="text-align:center;padding:10px 6px;border-radius:10px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.15);--fw-c:rgba(251,180,91,.5);animation:fw-glow 4s .3s infinite ease-in-out">
-              <div style="font-size:15px;margin-bottom:2px">&#129657;</div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--gold)">TREAT</div>
-              <div style="font-size:9px;color:var(--dim);margin-top:1px;line-height:1.3">Patients &amp; Outcomes</div>
+            <div style="text-align:center;padding:8px 4px;border-radius:8px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.15);--fw-c:rgba(251,180,91,.5);animation:fw-glow 4s .3s infinite ease-in-out">
+              <div style="font-size:13px;margin-bottom:1px">&#129657;</div>
+              <div style="font-size:9.5px;font-weight:800;color:var(--gold)">TREAT</div>
+              <div style="font-size:8px;color:var(--dim);margin-top:1px;line-height:1.3">Patients &amp; Outcomes</div>
             </div>
             <svg width="28" height="16" viewBox="0 0 28 16" style="display:block;margin:0 -2px"><path d="M0,8 L20,8" stroke="rgba(251,180,91,.4)" stroke-width="1.5" stroke-dasharray="4,3" fill="none" style="animation:fw-flow 1.2s linear infinite"/><polygon points="24,8 18,4 18,12" fill="rgba(251,180,91,.35)"/></svg>
-            <div style="text-align:center;padding:10px 6px;border-radius:10px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.15);--fw-c:rgba(167,139,250,.5);animation:fw-glow 4s .45s infinite ease-in-out">
-              <div style="font-size:15px;margin-bottom:2px">&#129504;</div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--purple)">DATA</div>
-              <div style="font-size:9px;color:var(--dim);margin-top:1px;line-height:1.3">AI Gets Smarter</div>
+            <div style="text-align:center;padding:8px 4px;border-radius:8px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.15);--fw-c:rgba(167,139,250,.5);animation:fw-glow 4s .45s infinite ease-in-out">
+              <div style="font-size:13px;margin-bottom:1px">&#129504;</div>
+              <div style="font-size:9.5px;font-weight:800;color:var(--purple)">DATA</div>
+              <div style="font-size:8px;color:var(--dim);margin-top:1px;line-height:1.3">AI Gets Smarter</div>
             </div>
           </div>
 
@@ -1678,26 +1678,26 @@ div:hover > .inst-hint{opacity:1!important}
 
           <!-- Row 2: Refer ← eComm ← App (reversed for clockwise circuit) -->
           <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:0;position:relative;z-index:1">
-            <div style="text-align:center;padding:10px 6px;border-radius:10px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.15);--fw-c:rgba(251,180,91,.5);animation:fw-glow 4s .9s infinite ease-in-out">
-              <div style="font-size:15px;margin-bottom:2px">&#128200;</div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--gold)">REFER</div>
-              <div style="font-size:9px;color:var(--dim);margin-top:1px;line-height:1.3">Network Grows</div>
+            <div style="text-align:center;padding:8px 4px;border-radius:8px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.15);--fw-c:rgba(251,180,91,.5);animation:fw-glow 4s .9s infinite ease-in-out">
+              <div style="font-size:13px;margin-bottom:1px">&#128200;</div>
+              <div style="font-size:9.5px;font-weight:800;color:var(--gold)">REFER</div>
+              <div style="font-size:8px;color:var(--dim);margin-top:1px;line-height:1.3">Network Grows</div>
             </div>
             <svg width="28" height="16" viewBox="0 0 28 16" style="display:block;margin:0 -2px;transform:scaleX(-1)"><path d="M0,8 L20,8" stroke="rgba(255,107,107,.4)" stroke-width="1.5" stroke-dasharray="4,3" fill="none" style="animation:fw-flow 1.2s linear infinite"/><polygon points="24,8 18,4 18,12" fill="rgba(255,107,107,.35)"/></svg>
-            <div style="text-align:center;padding:10px 6px;border-radius:10px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.15);--fw-c:rgba(255,107,107,.5);animation:fw-glow 4s .75s infinite ease-in-out">
-              <div style="font-size:15px;margin-bottom:2px">&#128722;</div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--coral)">eCOMM</div>
-              <div style="font-size:9px;color:var(--dim);margin-top:1px;line-height:1.3">Supplements &amp; Home</div>
+            <div style="text-align:center;padding:8px 4px;border-radius:8px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.15);--fw-c:rgba(255,107,107,.5);animation:fw-glow 4s .75s infinite ease-in-out">
+              <div style="font-size:13px;margin-bottom:1px">&#128722;</div>
+              <div style="font-size:9.5px;font-weight:800;color:var(--coral)">eCOMM</div>
+              <div style="font-size:8px;color:var(--dim);margin-top:1px;line-height:1.3">Supplements &amp; Home</div>
             </div>
             <svg width="28" height="16" viewBox="0 0 28 16" style="display:block;margin:0 -2px;transform:scaleX(-1)"><path d="M0,8 L20,8" stroke="rgba(78,205,196,.4)" stroke-width="1.5" stroke-dasharray="4,3" fill="none" style="animation:fw-flow 1.2s linear infinite"/><polygon points="24,8 18,4 18,12" fill="rgba(78,205,196,.35)"/></svg>
-            <div style="text-align:center;padding:10px 6px;border-radius:10px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.1);--fw-c:rgba(78,205,196,.4);animation:fw-glow 4s .6s infinite ease-in-out">
-              <div style="font-size:15px;margin-bottom:2px">&#128241;</div>
-              <div style="font-size:10.5px;font-weight:800;color:var(--teal)">APP</div>
-              <div style="font-size:9px;color:var(--dim);margin-top:1px;line-height:1.3">Lumi Engagement</div>
+            <div style="text-align:center;padding:8px 4px;border-radius:8px;background:rgba(78,205,196,.04);border:1px solid rgba(78,205,196,.1);--fw-c:rgba(78,205,196,.4);animation:fw-glow 4s .6s infinite ease-in-out">
+              <div style="font-size:13px;margin-bottom:1px">&#128241;</div>
+              <div style="font-size:9.5px;font-weight:800;color:var(--teal)">APP</div>
+              <div style="font-size:8px;color:var(--dim);margin-top:1px;line-height:1.3">Lumi Engagement</div>
             </div>
           </div>
 
-          <div style="text-align:center;margin-top:10px;font-size:10px;color:var(--dim);position:relative;z-index:1">&#8635; <span style="color:var(--gold);font-weight:700">Each cycle accelerates the next</span> &mdash; compounding impact across every channel</div>
+          <div style="text-align:center;margin-top:6px;font-size:9px;color:var(--dim);position:relative;z-index:1">&#8635; <span style="color:var(--gold);font-weight:700">Each cycle accelerates the next</span> &mdash; compounding impact across every channel</div>
         </div>
       </div>
     </div>
