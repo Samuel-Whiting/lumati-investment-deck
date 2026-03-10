@@ -446,158 +446,150 @@ div:hover > .inst-hint{opacity:1!important}
   <div class="orb" style="width:600px;height:600px;background:rgba(255,107,107,.04);top:-20%;right:-10%"></div>
   <div class="orb" style="width:400px;height:400px;background:rgba(251,180,91,.03);bottom:-10%;left:-5%;animation-delay:5s"></div>
 
-  <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:12px">
+  <div class="z1" style="height:100%;display:flex;flex-direction:column;justify-content:center;gap:10px">
 
     <!-- Top: headline + subtitle -->
     <div>
       <div class="tag anim" style="color:var(--coral);font-size:12px">The Opportunity</div>
-      <h1 class="anim d1" style="margin-top:10px;font-size:clamp(2.2rem,5vw,3.6rem);line-height:1.1">Modern Life Is Making Us <span style="background:linear-gradient(135deg,var(--coral),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Sicker</span></h1>
-      <p class="sub anim d2" style="margin-top:12px;max-width:750px;font-size:15px;line-height:1.6">
+      <h1 class="anim d1" style="margin-top:8px;font-size:clamp(2rem,4.5vw,3.2rem);line-height:1.1">Modern Life Is Making Us <span style="background:linear-gradient(135deg,var(--coral),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent">Sicker</span></h1>
+      <p class="sub anim d2" style="margin-top:10px;max-width:750px;font-size:14px;line-height:1.5">
         Chronic disease is accelerating globally. The population over 50 has grown 400% since 1970,
         yet healthcare remains reactive &mdash; treating symptoms instead of root causes. The longevity market is exploding.
       </p>
     </div>
 
     <!-- Middle: 3 hero stat cards in a row -->
-    <div class="anim d2" style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px">
+    <div class="anim d2" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
       <!-- Card 1: Global aging population -->
-      <div onclick="openModal('opp_aging')" style="padding:20px;border-radius:16px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(255,107,107,.3)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 14px 35px rgba(255,107,107,.1)'" onmouseout="this.style.borderColor='rgba(255,107,107,.1)';this.style.transform='';this.style.boxShadow=''">
-        <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,107,.06),transparent 70%);pointer-events:none"></div>
-        <div style="font-size:13px;color:var(--coral);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">GLOBAL AGING</div>
-        <div style="font-size:clamp(2.4rem,4vw,3.2rem);font-weight:900;color:var(--coral);font-family:'Playfair Display',serif;line-height:1">1.8B+</div>
-        <div style="font-size:13px;color:var(--bright);margin-top:8px;font-weight:600">People aged 50+ globally</div>
-        <div style="font-size:11px;color:var(--dim);margin-top:4px;line-height:1.5">400% increase since 1970. By 2050, 2.1B &mdash; one in five humans.</div>
-        <div style="margin-top:12px;display:flex;align-items:center;gap:6px">
-          <div style="flex:1;height:5px;border-radius:2px;background:rgba(255,107,107,.08);overflow:hidden"><div style="width:78%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--coral),rgba(255,107,107,.4))"></div></div>
-          <span style="font-size:10px;color:var(--coral);font-weight:700">+400%</span>
+      <div onclick="openModal('opp_aging')" style="padding:14px 16px;border-radius:14px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(255,107,107,.3)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 25px rgba(255,107,107,.1)'" onmouseout="this.style.borderColor='rgba(255,107,107,.1)';this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:11px;color:var(--coral);font-weight:700;letter-spacing:1.5px;margin-bottom:4px">GLOBAL AGING</div>
+        <div style="font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;color:var(--coral);font-family:'Playfair Display',serif;line-height:1">1.8B+</div>
+        <div style="font-size:12px;color:var(--bright);margin-top:6px;font-weight:600">People aged 50+ globally</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:3px;line-height:1.4">400% increase since 1970. By 2050, 2.1B.</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+          <div style="flex:1;height:4px;border-radius:2px;background:rgba(255,107,107,.08);overflow:hidden"><div style="width:78%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--coral),rgba(255,107,107,.4))"></div></div>
+          <span style="font-size:9px;color:var(--coral);font-weight:700">+400%</span>
         </div>
-        <div style="font-size:10.5px;color:var(--coral);margin-top:10px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
+        <div style="font-size:9.5px;color:var(--coral);margin-top:8px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
       </div>
 
       <!-- Card 2: US market -->
-      <div onclick="openModal('opp_us')" style="padding:20px;border-radius:16px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(251,180,91,.3)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 14px 35px rgba(251,180,91,.1)'" onmouseout="this.style.borderColor='rgba(251,180,91,.1)';this.style.transform='';this.style.boxShadow=''">
-        <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(251,180,91,.06),transparent 70%);pointer-events:none"></div>
-        <div style="font-size:13px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">US MARKET</div>
-        <div style="font-size:clamp(2.4rem,4vw,3.2rem);font-weight:900;color:var(--gold);font-family:'Playfair Display',serif;line-height:1">120M+</div>
-        <div style="font-size:13px;color:var(--bright);margin-top:8px;font-weight:600">Americans over 50</div>
-        <div style="font-size:11px;color:var(--dim);margin-top:4px;line-height:1.5">Fastest-growing demographic. $7.6T annual spending power. Actively seeking longevity solutions.</div>
-        <div style="margin-top:12px;display:flex;align-items:center;gap:6px">
-          <div style="flex:1;height:5px;border-radius:2px;background:rgba(251,180,91,.08);overflow:hidden"><div style="width:65%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold),rgba(251,180,91,.4))"></div></div>
-          <span style="font-size:10px;color:var(--gold);font-weight:700">36% of US</span>
+      <div onclick="openModal('opp_us')" style="padding:14px 16px;border-radius:14px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(251,180,91,.3)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 25px rgba(251,180,91,.1)'" onmouseout="this.style.borderColor='rgba(251,180,91,.1)';this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:11px;color:var(--gold);font-weight:700;letter-spacing:1.5px;margin-bottom:4px">US MARKET</div>
+        <div style="font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;color:var(--gold);font-family:'Playfair Display',serif;line-height:1">120M+</div>
+        <div style="font-size:12px;color:var(--bright);margin-top:6px;font-weight:600">Americans over 50</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:3px;line-height:1.4">$7.6T spending power. Seeking longevity solutions.</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+          <div style="flex:1;height:4px;border-radius:2px;background:rgba(251,180,91,.08);overflow:hidden"><div style="width:65%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--gold),rgba(251,180,91,.4))"></div></div>
+          <span style="font-size:9px;color:var(--gold);font-weight:700">36% of US</span>
         </div>
-        <div style="font-size:10.5px;color:var(--gold);margin-top:10px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
+        <div style="font-size:9.5px;color:var(--gold);margin-top:8px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
       </div>
 
       <!-- Card 3: Market size -->
-      <div onclick="openModal('opp_market')" style="padding:20px;border-radius:16px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(78,205,196,.3)';this.style.transform='translateY(-4px)';this.style.boxShadow='0 14px 35px rgba(78,205,196,.1)'" onmouseout="this.style.borderColor='rgba(78,205,196,.1)';this.style.transform='';this.style.boxShadow=''">
-        <div style="position:absolute;top:-20px;right:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(78,205,196,.06),transparent 70%);pointer-events:none"></div>
-        <div style="font-size:13px;color:var(--teal);font-weight:700;letter-spacing:1.5px;margin-bottom:6px">LONGEVITY MARKET</div>
-        <div style="font-size:clamp(2rem,3.5vw,2.8rem);font-weight:900;font-family:'Playfair Display',serif;line-height:1"><span style="color:var(--dim)">$25B</span> <span style="color:var(--teal)">&rarr; $127B</span></div>
-        <div style="font-size:13px;color:var(--bright);margin-top:8px;font-weight:600">500%+ projected growth</div>
-        <div style="font-size:11px;color:var(--dim);margin-top:4px;line-height:1.5">Fastest-growing segment of global healthcare. Fueled by demand for preventive, root-cause medicine.</div>
-        <div style="margin-top:12px;display:flex;align-items:center;gap:6px">
-          <div style="flex:1;height:5px;border-radius:2px;background:rgba(78,205,196,.08);overflow:hidden"><div style="width:92%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--teal),rgba(78,205,196,.4))"></div></div>
-          <span style="font-size:10px;color:var(--teal);font-weight:700">+508%</span>
+      <div onclick="openModal('opp_market')" style="padding:14px 16px;border-radius:14px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(78,205,196,.3)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 25px rgba(78,205,196,.1)'" onmouseout="this.style.borderColor='rgba(78,205,196,.1)';this.style.transform='';this.style.boxShadow=''">
+        <div style="font-size:11px;color:var(--teal);font-weight:700;letter-spacing:1.5px;margin-bottom:4px">LONGEVITY MARKET</div>
+        <div style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;font-family:'Playfair Display',serif;line-height:1"><span style="color:var(--dim)">$25B</span> <span style="color:var(--teal)">&rarr; $127B</span></div>
+        <div style="font-size:12px;color:var(--bright);margin-top:6px;font-weight:600">500%+ projected growth</div>
+        <div style="font-size:10px;color:var(--dim);margin-top:3px;line-height:1.4">Fastest-growing segment. Preventive, root-cause medicine.</div>
+        <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
+          <div style="flex:1;height:4px;border-radius:2px;background:rgba(78,205,196,.08);overflow:hidden"><div style="width:92%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--teal),rgba(78,205,196,.4))"></div></div>
+          <span style="font-size:9px;color:var(--teal);font-weight:700">+508%</span>
         </div>
-        <div style="font-size:10.5px;color:var(--teal);margin-top:10px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
+        <div style="font-size:9.5px;color:var(--teal);margin-top:8px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
       </div>
     </div>
 
     <!-- Bottom: Crisis indicators — why the urgency -->
     <div class="anim anim-scale d3">
-      <div style="font-size:11px;color:var(--coral);font-weight:800;letter-spacing:2px;margin-bottom:8px">THE CRISIS &mdash; WHY NOW</div>
-      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
-        <div style="padding:12px;border-radius:12px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.2)';this.style.background='rgba(255,107,107,.06)'" onmouseout="this.style.borderColor='rgba(255,107,107,.06)';this.style.background='rgba(255,107,107,.03)'">
-          <div style="font-size:20px;margin-bottom:4px">&#129482;</div>
-          <div style="font-size:20px;font-weight:900;color:var(--coral);font-family:'Playfair Display',serif">60%</div>
-          <div style="font-size:10px;color:var(--dim);margin-top:4px;line-height:1.4">of adults have a chronic disease</div>
+      <div style="font-size:10px;color:var(--coral);font-weight:800;letter-spacing:2px;margin-bottom:6px">THE CRISIS &mdash; WHY NOW</div>
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:6px">
+        <div style="padding:8px;border-radius:10px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.2)';this.style.background='rgba(255,107,107,.06)'" onmouseout="this.style.borderColor='rgba(255,107,107,.06)';this.style.background='rgba(255,107,107,.03)'">
+          <div style="font-size:18px;font-weight:900;color:var(--coral);font-family:'Playfair Display',serif">60%</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.3">of adults have a chronic disease</div>
         </div>
-        <div style="padding:12px;border-radius:12px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(251,180,91,.2)';this.style.background='rgba(251,180,91,.06)'" onmouseout="this.style.borderColor='rgba(251,180,91,.06)';this.style.background='rgba(251,180,91,.03)'">
-          <div style="font-size:20px;margin-bottom:4px">&#128138;</div>
-          <div style="font-size:20px;font-weight:900;color:var(--gold);font-family:'Playfair Display',serif">$4.5T</div>
-          <div style="font-size:10px;color:var(--dim);margin-top:4px;line-height:1.4">annual US healthcare spend</div>
+        <div style="padding:8px;border-radius:10px;background:rgba(251,180,91,.03);border:1px solid rgba(251,180,91,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(251,180,91,.2)';this.style.background='rgba(251,180,91,.06)'" onmouseout="this.style.borderColor='rgba(251,180,91,.06)';this.style.background='rgba(251,180,91,.03)'">
+          <div style="font-size:18px;font-weight:900;color:var(--gold);font-family:'Playfair Display',serif">$4.5T</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.3">annual US healthcare spend</div>
         </div>
-        <div style="padding:12px;border-radius:12px;background:rgba(167,139,250,.03);border:1px solid rgba(167,139,250,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(167,139,250,.2)';this.style.background='rgba(167,139,250,.06)'" onmouseout="this.style.borderColor='rgba(167,139,250,.06)';this.style.background='rgba(167,139,250,.03)'">
-          <div style="font-size:20px;margin-bottom:4px">&#129504;</div>
-          <div style="font-size:20px;font-weight:900;color:var(--purple);font-family:'Playfair Display',serif">90%</div>
-          <div style="font-size:10px;color:var(--dim);margin-top:4px;line-height:1.4">of spend on symptom management, not cures</div>
+        <div style="padding:8px;border-radius:10px;background:rgba(167,139,250,.03);border:1px solid rgba(167,139,250,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(167,139,250,.2)';this.style.background='rgba(167,139,250,.06)'" onmouseout="this.style.borderColor='rgba(167,139,250,.06)';this.style.background='rgba(167,139,250,.03)'">
+          <div style="font-size:18px;font-weight:900;color:var(--purple);font-family:'Playfair Display',serif">90%</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.3">spent on symptoms, not cures</div>
         </div>
-        <div style="padding:12px;border-radius:12px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(78,205,196,.2)';this.style.background='rgba(78,205,196,.06)'" onmouseout="this.style.borderColor='rgba(78,205,196,.06)';this.style.background='rgba(78,205,196,.03)'">
-          <div style="font-size:20px;margin-bottom:4px">&#9888;&#65039;</div>
-          <div style="font-size:20px;font-weight:900;color:var(--teal);font-family:'Playfair Display',serif">74%</div>
-          <div style="font-size:10px;color:var(--dim);margin-top:4px;line-height:1.4">of deaths caused by chronic conditions</div>
+        <div style="padding:8px;border-radius:10px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(78,205,196,.2)';this.style.background='rgba(78,205,196,.06)'" onmouseout="this.style.borderColor='rgba(78,205,196,.06)';this.style.background='rgba(78,205,196,.03)'">
+          <div style="font-size:18px;font-weight:900;color:var(--teal);font-family:'Playfair Display',serif">74%</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.3">of deaths from chronic conditions</div>
         </div>
-        <div style="padding:12px;border-radius:12px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.2)';this.style.background='rgba(255,107,107,.06)'" onmouseout="this.style.borderColor='rgba(255,107,107,.06)';this.style.background='rgba(255,107,107,.03)'">
-          <div style="font-size:20px;margin-bottom:4px">&#128200;</div>
-          <div style="font-size:20px;font-weight:900;color:var(--coral);font-family:'Playfair Display',serif">0.04%</div>
-          <div style="font-size:10px;color:var(--dim);margin-top:4px;line-height:1.4">of healthcare spend goes to prevention</div>
+        <div style="padding:8px;border-radius:10px;background:rgba(255,107,107,.03);border:1px solid rgba(255,107,107,.06);text-align:center;transition:all .3s" onmouseover="this.style.borderColor='rgba(255,107,107,.2)';this.style.background='rgba(255,107,107,.06)'" onmouseout="this.style.borderColor='rgba(255,107,107,.06)';this.style.background='rgba(255,107,107,.03)'">
+          <div style="font-size:18px;font-weight:900;color:var(--coral);font-family:'Playfair Display',serif">0.04%</div>
+          <div style="font-size:9px;color:var(--dim);margin-top:3px;line-height:1.3">of spend goes to prevention</div>
         </div>
       </div>
     </div>
 
     <!-- TAM → SAM → SOM — Concentric Rings -->
-    <div class="anim d4" style="display:flex;align-items:center;gap:32px;padding:18px 24px;border-radius:16px;background:linear-gradient(135deg,rgba(78,205,196,.03),rgba(167,139,250,.02));border:1px solid rgba(78,205,196,.1)">
+    <div class="anim d4" style="display:flex;align-items:center;gap:28px;padding:14px 20px;border-radius:16px;background:linear-gradient(135deg,rgba(78,205,196,.03),rgba(167,139,250,.02));border:1px solid rgba(78,205,196,.1)">
 
       <!-- Concentric rings visualization -->
-      <div style="position:relative;width:180px;height:180px;flex-shrink:0">
+      <div style="position:relative;width:140px;height:140px;flex-shrink:0">
         <!-- TAM outer ring -->
         <div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,255,255,.08);background:radial-gradient(circle,transparent 60%,rgba(167,139,250,.04))"></div>
-        <div style="position:absolute;top:6px;right:2px;font-size:10px;font-weight:800;color:var(--dim);letter-spacing:1px">TAM</div>
+        <div style="position:absolute;top:4px;right:0;font-size:9px;font-weight:800;color:var(--dim);letter-spacing:1px">TAM</div>
         <!-- SAM middle ring -->
-        <div style="position:absolute;top:28px;left:28px;right:28px;bottom:28px;border-radius:50%;border:2px solid rgba(167,139,250,.2);background:radial-gradient(circle,transparent 55%,rgba(167,139,250,.06))"></div>
-        <div style="position:absolute;top:30px;right:24px;font-size:10px;font-weight:800;color:var(--purple);letter-spacing:1px">SAM</div>
+        <div style="position:absolute;top:22px;left:22px;right:22px;bottom:22px;border-radius:50%;border:2px solid rgba(167,139,250,.2);background:radial-gradient(circle,transparent 55%,rgba(167,139,250,.06))"></div>
+        <div style="position:absolute;top:24px;right:18px;font-size:9px;font-weight:800;color:var(--purple);letter-spacing:1px">SAM</div>
         <!-- SOM center -->
-        <div style="position:absolute;top:56px;left:56px;right:56px;bottom:56px;border-radius:50%;background:radial-gradient(circle,rgba(78,205,196,.2),rgba(78,205,196,.08));border:2px solid rgba(78,205,196,.4);box-shadow:0 0 30px rgba(78,205,196,.15),0 0 60px rgba(78,205,196,.05);display:flex;align-items:center;justify-content:center;flex-direction:column">
-          <div style="font-size:9px;font-weight:800;color:var(--teal);letter-spacing:1.5px;margin-bottom:2px">SOM</div>
-          <div style="font-family:var(--head);font-size:18px;font-weight:900;color:var(--teal);line-height:1">$890M</div>
+        <div style="position:absolute;top:44px;left:44px;right:44px;bottom:44px;border-radius:50%;background:radial-gradient(circle,rgba(78,205,196,.2),rgba(78,205,196,.08));border:2px solid rgba(78,205,196,.4);box-shadow:0 0 30px rgba(78,205,196,.15),0 0 60px rgba(78,205,196,.05);display:flex;align-items:center;justify-content:center;flex-direction:column">
+          <div style="font-size:8px;font-weight:800;color:var(--teal);letter-spacing:1.5px;margin-bottom:1px">SOM</div>
+          <div style="font-family:var(--head);font-size:14px;font-weight:900;color:var(--teal);line-height:1">$890M</div>
         </div>
         <!-- Pulse animation on SOM -->
-        <div style="position:absolute;top:56px;left:56px;right:56px;bottom:56px;border-radius:50%;border:1px solid rgba(78,205,196,.2);animation:somPulse 3s ease-in-out infinite"></div>
+        <div style="position:absolute;top:44px;left:44px;right:44px;bottom:44px;border-radius:50%;border:1px solid rgba(78,205,196,.2);animation:somPulse 3s ease-in-out infinite"></div>
       </div>
 
       <!-- Data column -->
-      <div style="flex:1;display:flex;flex-direction:column;gap:10px">
+      <div style="flex:1;display:flex;flex-direction:column;gap:6px">
         <!-- TAM row -->
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:10px;height:10px;border-radius:50%;border:2px solid rgba(255,255,255,.15);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:8px;height:8px;border-radius:50%;border:2px solid rgba(255,255,255,.15);flex-shrink:0"></div>
           <div style="flex:1">
-            <div style="display:flex;align-items:baseline;gap:8px">
-              <span style="font-family:var(--head);font-size:24px;font-weight:900;color:var(--bright)">$127B</span>
-              <span style="font-size:10px;font-weight:700;color:var(--dim);letter-spacing:1px">TAM</span>
+            <div style="display:flex;align-items:baseline;gap:6px">
+              <span style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--bright)">$127B</span>
+              <span style="font-size:9px;font-weight:700;color:var(--dim);letter-spacing:1px">TAM</span>
+              <span style="font-size:10px;color:var(--dim)">&mdash; Global Longevity &amp; Anti-Aging</span>
             </div>
-            <div style="font-size:11px;color:var(--dim);margin-top:2px">Global Longevity &amp; Anti-Aging Market</div>
           </div>
         </div>
         <!-- SAM row -->
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:10px;height:10px;border-radius:50%;background:rgba(167,139,250,.3);border:2px solid rgba(167,139,250,.5);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:8px;height:8px;border-radius:50%;background:rgba(167,139,250,.3);border:2px solid rgba(167,139,250,.5);flex-shrink:0"></div>
           <div style="flex:1">
-            <div style="display:flex;align-items:baseline;gap:8px">
-              <span style="font-family:var(--head);font-size:24px;font-weight:900;color:var(--purple)">$9.3B</span>
-              <span style="font-size:10px;font-weight:700;color:var(--purple);letter-spacing:1px">SAM</span>
+            <div style="display:flex;align-items:baseline;gap:6px">
+              <span style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--purple)">$9.3B</span>
+              <span style="font-size:9px;font-weight:700;color:var(--purple);letter-spacing:1px">SAM</span>
+              <span style="font-size:10px;color:var(--dim)">&mdash; Addressable across 7 product lines</span>
             </div>
-            <div style="font-size:11px;color:var(--dim);margin-top:2px">Addressable across 7 product lines</div>
           </div>
         </div>
         <!-- SOM row -->
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:10px;height:10px;border-radius:50%;background:rgba(78,205,196,.4);border:2px solid rgba(78,205,196,.6);box-shadow:0 0 8px rgba(78,205,196,.3);flex-shrink:0"></div>
+        <div style="display:flex;align-items:center;gap:10px">
+          <div style="width:8px;height:8px;border-radius:50%;background:rgba(78,205,196,.4);border:2px solid rgba(78,205,196,.6);box-shadow:0 0 8px rgba(78,205,196,.3);flex-shrink:0"></div>
           <div style="flex:1">
-            <div style="display:flex;align-items:baseline;gap:8px">
-              <span style="font-family:var(--head);font-size:24px;font-weight:900;color:var(--teal)">$890M</span>
-              <span style="font-size:10px;font-weight:700;color:var(--teal);letter-spacing:1px">SOM &mdash; 2030 TARGET</span>
+            <div style="display:flex;align-items:baseline;gap:6px">
+              <span style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--teal)">$890M</span>
+              <span style="font-size:9px;font-weight:700;color:var(--teal);letter-spacing:1px">SOM</span>
+              <span style="font-size:10px;color:var(--dim)">&mdash; 2030 target &middot; 9.6% SAM capture</span>
             </div>
-            <div style="font-size:11px;color:var(--dim);margin-top:2px">9.6% SAM capture &middot; 0.7% of TAM</div>
           </div>
         </div>
         <!-- Segment pills -->
-        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:4px">
-          <span style="font-size:9px;padding:4px 10px;border-radius:6px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.12);color:var(--coral);font-weight:700">Blood Purification $3.0B</span>
-          <span style="font-size:9px;padding:4px 10px;border-radius:6px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.12);color:var(--teal);font-weight:700">Longevity Clinics $2.9B</span>
-          <span style="font-size:9px;padding:4px 10px;border-radius:6px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.12);color:var(--purple);font-weight:700">Digital Health $1.1B</span>
-          <span style="font-size:9px;padding:4px 10px;border-radius:6px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.12);color:var(--gold);font-weight:700">Supplements $1.1B</span>
-          <span style="font-size:9px;padding:4px 10px;border-radius:6px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.12);color:var(--teal);font-weight:700">Devices $0.6B</span>
-          <span style="font-size:9px;padding:4px 10px;border-radius:6px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.12);color:var(--purple);font-weight:700">Diagnostics $0.6B</span>
+        <div style="display:flex;gap:5px;flex-wrap:wrap;margin-top:2px">
+          <span style="font-size:8.5px;padding:3px 8px;border-radius:5px;background:rgba(255,107,107,.06);border:1px solid rgba(255,107,107,.12);color:var(--coral);font-weight:700">Blood Purification $3.0B</span>
+          <span style="font-size:8.5px;padding:3px 8px;border-radius:5px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.12);color:var(--teal);font-weight:700">Longevity Clinics $2.9B</span>
+          <span style="font-size:8.5px;padding:3px 8px;border-radius:5px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.12);color:var(--purple);font-weight:700">Digital Health $1.1B</span>
+          <span style="font-size:8.5px;padding:3px 8px;border-radius:5px;background:rgba(251,180,91,.06);border:1px solid rgba(251,180,91,.12);color:var(--gold);font-weight:700">Supplements $1.1B</span>
+          <span style="font-size:8.5px;padding:3px 8px;border-radius:5px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.12);color:var(--teal);font-weight:700">Devices $0.6B</span>
+          <span style="font-size:8.5px;padding:3px 8px;border-radius:5px;background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.12);color:var(--purple);font-weight:700">Diagnostics $0.6B</span>
         </div>
       </div>
     </div>
@@ -1109,7 +1101,7 @@ div:hover > .inst-hint{opacity:1!important}
       <!-- ===== ORODETOX ===== -->
       <div style="flex:1;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;background:rgba(10,12,18,1);border:1px solid rgba(78,205,196,.18);box-shadow:0 4px 30px rgba(0,0,0,.4);transition:transform .4s,box-shadow .4s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(78,205,196,.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 30px rgba(0,0,0,.4)'">
         <!-- Image with dark tint overlay -->
-        <div style="height:120px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
+        <div style="height:180px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
           <img loading="lazy" src="img/crop/orodetox_dental.png" alt="OroDetox Procedure" style="width:100%;height:100%;object-fit:cover;object-position:center 35%;filter:brightness(.55) contrast(1.15) saturate(1.1);transition:filter .5s,transform .5s" onmouseover="this.style.filter='brightness(.65) contrast(1.1) saturate(1.1)';this.style.transform='scale(1.03)'" onmouseout="this.style.filter='brightness(.55) contrast(1.15) saturate(1.1)';this.style.transform=''"/>
           <!-- Color tint -->
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(78,205,196,.12) 0%,transparent 60%);pointer-events:none"></div>
@@ -1141,7 +1133,7 @@ div:hover > .inst-hint{opacity:1!important}
       <!-- ===== HEMODETOX ===== -->
       <div style="flex:1;border-radius:20px;overflow:hidden;display:flex;flex-direction:column;background:rgba(10,12,18,1);border:1px solid rgba(255,107,107,.18);box-shadow:0 4px 30px rgba(0,0,0,.4);transition:transform .4s,box-shadow .4s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 16px 48px rgba(255,107,107,.15)'" onmouseout="this.style.transform='';this.style.boxShadow='0 4px 30px rgba(0,0,0,.4)'">
         <!-- Image with dark tint overlay -->
-        <div style="height:120px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
+        <div style="height:180px;overflow:hidden;flex-shrink:0;position:relative;background:#060608">
           <img loading="lazy" src="img/crop/hemodetox_patient.png" alt="HemoDetox Treatment" style="width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.55) contrast(1.15) saturate(1.1);transition:filter .5s,transform .5s" onmouseover="this.style.filter='brightness(.65) contrast(1.1) saturate(1.1)';this.style.transform='scale(1.03)'" onmouseout="this.style.filter='brightness(.55) contrast(1.15) saturate(1.1)';this.style.transform=''"/>
           <!-- Color tint -->
           <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,107,.1) 0%,transparent 60%);pointer-events:none"></div>
