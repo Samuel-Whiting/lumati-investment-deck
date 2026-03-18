@@ -4,6 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Lumati Holdings — Series A Investment Deck</title>
+<meta name="description" content="Lumati Holdings Series A Investment Deck — Building the Infrastructure of the Longevity Economy. $40M raise at $100M pre-money. Confidential."/>
+<meta property="og:title" content="Lumati Holdings — Series A Investment Deck"/>
+<meta property="og:description" content="Building the Infrastructure of the Longevity Economy. Five revenue engines. A mission to impact 1 billion lives by 2035."/>
+<meta property="og:image" content="logo-color.png"/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/png" href="logo-color.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet"/>
 <style>
@@ -195,6 +201,20 @@ h3{font-family:var(--head);font-weight:700;font-size:clamp(1rem,1.6vw,1.4rem);li
 .app-fan img:nth-child(2){transform:rotate(-2.5deg) translateY(2px) translateX(6px);z-index:2}
 .app-fan img:nth-child(3){transform:rotate(2.5deg) translateY(2px) translateX(-6px);z-index:2}
 .app-fan img:nth-child(4){transform:rotate(7deg) translateY(12px) translateX(-14px)}
+
+/* === PRINT === */
+@media print{
+  html,body{overflow:visible!important;height:auto!important}
+  .deck{height:auto!important}
+  .slide{position:relative!important;opacity:1!important;pointer-events:auto!important;
+    transform:none!important;page-break-after:always;page-break-inside:avoid;
+    min-height:100vh;width:100vw}
+  .progress,.slide-num,.slide-nav,.nav-arrow,.overview-overlay,.modal-overlay,
+  canvas#particles,.grain,.orb,.aurora{display:none!important}
+  .glass,.glass-sm,.glass-panel{backdrop-filter:none!important;-webkit-backdrop-filter:none!important;
+    print-color-adjust:exact;-webkit-print-color-adjust:exact}
+  *{animation:none!important;transition:none!important}
+}
 
 /* === SLIDE OVERVIEW === */
 .overview-overlay{position:fixed;inset:0;z-index:400;
@@ -434,7 +454,7 @@ div:hover > .inst-hint{opacity:1!important}
     </p>
     <div class="divider anim d4"></div>
     <div class="anim d5" style="font-size:12px;color:var(--dim);letter-spacing:2px">
-      LUMATI HOLDINGS, INC. &middot; CONFIDENTIAL
+      LUMATI HOLDINGS, INC. &middot; CONFIDENTIAL &middot; MARCH 2026
     </div>
   </div>
 </section>
@@ -490,11 +510,11 @@ div:hover > .inst-hint{opacity:1!important}
       <div onclick="openModal('opp_market')" style="padding:14px 16px;border-radius:14px;background:rgba(78,205,196,.03);border:1px solid rgba(78,205,196,.1);position:relative;overflow:hidden;cursor:pointer;transition:all .35s ease" onmouseover="this.style.borderColor='rgba(78,205,196,.3)';this.style.transform='translateY(-3px)';this.style.boxShadow='0 10px 25px rgba(78,205,196,.1)'" onmouseout="this.style.borderColor='rgba(78,205,196,.1)';this.style.transform='';this.style.boxShadow=''">
         <div style="font-size:11px;color:var(--teal);font-weight:700;letter-spacing:1.5px;margin-bottom:4px">LONGEVITY MARKET</div>
         <div style="font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;font-family:'Playfair Display',serif;line-height:1"><span style="color:var(--dim)">$25B</span> <span style="color:var(--teal)">&rarr; $127B</span></div>
-        <div style="font-size:12px;color:var(--bright);margin-top:6px;font-weight:600">500%+ projected growth</div>
+        <div style="font-size:12px;color:var(--bright);margin-top:6px;font-weight:600">5x projected growth</div>
         <div style="font-size:10px;color:var(--dim);margin-top:3px;line-height:1.4">Fastest-growing segment. Preventive, root-cause medicine.</div>
         <div style="margin-top:8px;display:flex;align-items:center;gap:6px">
           <div style="flex:1;height:4px;border-radius:2px;background:rgba(78,205,196,.08);overflow:hidden"><div style="width:92%;height:100%;border-radius:2px;background:linear-gradient(90deg,var(--teal),rgba(78,205,196,.4))"></div></div>
-          <span style="font-size:9px;color:var(--teal);font-weight:700">+508%</span>
+          <span style="font-size:9px;color:var(--teal);font-weight:700">5.1x</span>
         </div>
         <div style="font-size:9.5px;color:var(--teal);margin-top:8px;letter-spacing:1px;font-weight:700">DEEP DIVE &#8599;</div>
       </div>
@@ -593,6 +613,7 @@ div:hover > .inst-hint{opacity:1!important}
         </div>
       </div>
     </div>
+    <div style="margin-top:4px;font-size:8.5px;color:var(--dim);opacity:.5;line-height:1.4;text-align:right">Sources: UN World Population Prospects 2024; AARP Longevity Economy Report 2024; Grand View Research Longevity &amp; Anti-Aging Market 2024; CDC Chronic Disease Prevention 2024; CMS National Health Expenditure Data 2024.</div>
   </div>
 </section>
 
@@ -1509,9 +1530,13 @@ div:hover > .inst-hint{opacity:1!important}
         <!-- Traction KPIs -->
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
           <div style="padding:16px;border-radius:14px;background:var(--teal-dim);border:1px solid var(--teal-border)">
-            <div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--teal)">$5.7M</div>
+            <div style="display:flex;align-items:baseline;gap:6px"><div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--teal)">$5.7M</div><div style="font-size:10px;color:var(--teal);font-weight:700">2.4x YoY</div></div>
             <div style="font-size:10px;color:var(--dim);margin-top:3px">2025 Revenue (Live)</div>
-            <div style="margin-top:6px;height:4px;border-radius:2px;background:var(--teal-lo);overflow:hidden"><div style="width:100%;height:100%;background:var(--teal);border-radius:2px"></div></div>
+            <div style="display:flex;align-items:flex-end;gap:6px;margin-top:8px;height:32px">
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px"><div style="width:100%;border-radius:2px;background:rgba(78,205,196,.25);height:6px"></div><div style="font-size:7px;color:var(--dim)">$1.0M</div><div style="font-size:7px;color:var(--dim);opacity:.6">&rsquo;23</div></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px"><div style="width:100%;border-radius:2px;background:rgba(78,205,196,.45);height:15px"></div><div style="font-size:7px;color:var(--dim)">$2.7M</div><div style="font-size:7px;color:var(--dim);opacity:.6">&rsquo;24</div></div>
+              <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:2px"><div style="width:100%;border-radius:2px;background:var(--teal);height:32px"></div><div style="font-size:7px;color:var(--bright);font-weight:700">$5.7M</div><div style="font-size:7px;color:var(--dim);opacity:.6">&rsquo;25</div></div>
+            </div>
           </div>
           <div style="padding:16px;border-radius:14px;background:var(--gold-dim);border:1px solid var(--gold-border)">
             <div style="font-family:var(--head);font-size:28px;font-weight:900;color:var(--gold)">50+</div>
@@ -1753,7 +1778,7 @@ div:hover > .inst-hint{opacity:1!important}
         <div style="flex:1;text-align:center;position:relative;z-index:1">
           <div style="width:10px;height:10px;border-radius:50%;background:var(--teal);margin:0 auto 4px;border:2px solid var(--bg);box-shadow:0 0 8px rgba(78,205,196,.5)"></div>
           <div style="font-size:9px;font-weight:800;color:var(--bright)">Founded</div>
-          <div style="font-size:8px;color:var(--dim)">May &rsquo;24</div>
+          <div style="font-size:8px;color:var(--dim)">&rsquo;22 / Lumati &rsquo;24</div>
         </div>
         <div style="flex:1;text-align:center;position:relative;z-index:1">
           <div style="width:10px;height:10px;border-radius:50%;background:var(--teal);margin:0 auto 4px;border:2px solid var(--bg);box-shadow:0 0 8px rgba(78,205,196,.5)"></div>
@@ -1762,7 +1787,7 @@ div:hover > .inst-hint{opacity:1!important}
         </div>
         <div style="flex:1;text-align:center;position:relative;z-index:1">
           <div style="width:10px;height:10px;border-radius:50%;background:var(--gold);margin:0 auto 4px;border:2px solid var(--bg);box-shadow:0 0 8px rgba(251,180,91,.5)"></div>
-          <div style="font-size:9px;font-weight:800;color:var(--bright)">$5.6M Rev</div>
+          <div style="font-size:9px;font-weight:800;color:var(--bright)">$5.7M Rev</div>
           <div style="font-size:8px;color:var(--dim)">Dec &rsquo;25</div>
         </div>
         <div style="flex:1;text-align:center;position:relative;z-index:1">
@@ -2166,7 +2191,7 @@ div:hover > .inst-hint{opacity:1!important}
           </tr>
           <tr style="border-bottom:1px solid rgba(255,255,255,.04)">
             <td style="padding:7px 10px;font-weight:700;color:var(--bright);font-size:11px">&#129504; Published Clinical Data</td>
-            <td style="text-align:center;padding:7px 6px"><span style="color:var(--gold);font-size:11px">Partial</span></td>
+            <td style="text-align:center;padding:7px 6px"><span style="color:var(--teal);font-size:14px">&#10003;</span></td>
             <td style="text-align:center;padding:7px 6px"><span style="color:rgba(255,255,255,.15);font-size:14px">&mdash;</span></td>
             <td style="text-align:center;padding:7px 6px"><span style="color:rgba(255,255,255,.15);font-size:14px">&mdash;</span></td>
             <td style="text-align:center;padding:7px 6px"><span style="color:var(--gold);font-size:11px">Partial</span></td>
@@ -2191,7 +2216,7 @@ div:hover > .inst-hint{opacity:1!important}
       <!-- Lumati Score -->
       <div style="flex:1.3;padding:12px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(78,205,196,.06),rgba(167,139,250,.04));border:1px solid rgba(78,205,196,.2);display:flex;align-items:center;gap:14px">
         <div style="flex-shrink:0;width:52px;height:52px;border-radius:50%;background:rgba(78,205,196,.12);border:2px solid rgba(78,205,196,.3);display:flex;align-items:center;justify-content:center;flex-direction:column">
-          <div style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--teal);line-height:1">7.5/8</div>
+          <div style="font-family:var(--head);font-size:20px;font-weight:900;color:var(--teal);line-height:1">8/8</div>
         </div>
         <div>
           <div style="font-size:12px;font-weight:900;color:var(--bright)">Lumati &mdash; Full Stack Integration</div>
@@ -2381,7 +2406,7 @@ div:hover > .inst-hint{opacity:1!important}
         <h2 style="margin-top:6px;font-size:clamp(1.5rem,2.8vw,2.2rem)">The Bridge to <span class="grad-text">$890M</span></h2>
       </div>
       <div style="display:flex;gap:12px">
-        <div class="glass-sm" style="text-align:center;padding:10px 18px;border-color:rgba(78,205,196,.12)"><div class="sv-sm" style="color:var(--teal);font-size:clamp(1.1rem,1.6vw,1.4rem)">157x</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Revenue Growth</div></div>
+        <div class="glass-sm" style="text-align:center;padding:10px 18px;border-color:rgba(78,205,196,.12)"><div class="sv-sm" style="color:var(--teal);font-size:clamp(1.1rem,1.6vw,1.4rem)">157x</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Revenue Growth</div><div style="font-size:8px;color:var(--dim);margin-top:1px;opacity:.6">&rsquo;25 &rarr; &rsquo;30</div></div>
         <div class="glass-sm" style="text-align:center;padding:10px 18px;border-color:rgba(251,180,91,.12)"><div class="sv-sm" style="color:var(--gold);font-size:clamp(1.1rem,1.6vw,1.4rem)">$218M</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">2030 Gross Profit</div></div>
         <div class="glass-sm" style="text-align:center;padding:10px 18px;border-color:rgba(167,139,250,.12)"><div class="sv-sm" style="color:var(--purple);font-size:clamp(1.1rem,1.6vw,1.4rem)">2027</div><div style="font-size:10.5px;color:var(--dim);margin-top:3px">Profitable</div></div>
       </div>
@@ -2393,12 +2418,29 @@ div:hover > .inst-hint{opacity:1!important}
         <!-- Today vs 2030 -->
         <div style="display:flex;gap:10px;align-items:stretch">
           <div class="glass anim d1" style="flex:1;padding:14px 16px;text-align:center;border-color:rgba(255,255,255,.08)">
-            <div style="font-size:10px;color:var(--dim);letter-spacing:2px;font-weight:700">TODAY (2025)</div>
-            <div style="font-family:var(--head);font-size:clamp(1.4rem,2.4vw,2rem);font-weight:900;color:var(--bright);margin-top:4px">$5.7M</div>
-            <div style="display:flex;gap:16px;justify-content:center;margin-top:6px">
-              <div><div style="font-size:16px;font-weight:900;color:var(--teal)">12</div><div style="font-size:9.5px;color:var(--dim)">Clinics</div></div>
-              <div><div style="font-size:16px;font-weight:900;color:var(--gold)">450</div><div style="font-size:9.5px;color:var(--dim)">Patients</div></div>
-              <div><div style="font-size:16px;font-weight:900;color:var(--purple)">1</div><div style="font-size:9.5px;color:var(--dim)">Hospital</div></div>
+            <div style="font-size:10px;color:var(--dim);letter-spacing:2px;font-weight:700">PROVEN GROWTH</div>
+            <div style="display:flex;align-items:flex-end;gap:8px;justify-content:center;margin-top:8px;height:60px">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1">
+                <div style="font-size:10px;font-weight:900;color:var(--dim)">$1.0M</div>
+                <div style="width:100%;border-radius:3px 3px 0 0;background:linear-gradient(to top,rgba(78,205,196,.1),rgba(78,205,196,.25));height:10px"></div>
+                <div style="font-size:8px;color:var(--dim)">&rsquo;23</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1">
+                <div style="font-size:10px;font-weight:900;color:var(--dim)">$2.7M</div>
+                <div style="width:100%;border-radius:3px 3px 0 0;background:linear-gradient(to top,rgba(78,205,196,.15),rgba(78,205,196,.4));height:28px"></div>
+                <div style="font-size:8px;color:var(--dim)">&rsquo;24</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:2px;flex:1">
+                <div style="font-size:12px;font-weight:900;color:var(--teal)">$5.7M</div>
+                <div style="width:100%;border-radius:3px 3px 0 0;background:linear-gradient(to top,rgba(78,205,196,.3),var(--teal));height:60px;box-shadow:0 0 12px rgba(78,205,196,.15)"></div>
+                <div style="font-size:8px;color:var(--teal);font-weight:700">&rsquo;25</div>
+              </div>
+            </div>
+            <div style="font-size:9px;color:var(--teal);font-weight:700;margin-top:6px">2.4x avg YoY</div>
+            <div style="display:flex;gap:12px;justify-content:center;margin-top:6px">
+              <div><div style="font-size:14px;font-weight:900;color:var(--teal)">12</div><div style="font-size:9px;color:var(--dim)">Clinics</div></div>
+              <div><div style="font-size:14px;font-weight:900;color:var(--gold)">450</div><div style="font-size:9px;color:var(--dim)">Patients</div></div>
+              <div><div style="font-size:14px;font-weight:900;color:var(--purple)">1</div><div style="font-size:9px;color:var(--dim)">Hospital</div></div>
             </div>
           </div>
           <!-- Arrow -->
@@ -2454,7 +2496,7 @@ div:hover > .inst-hint{opacity:1!important}
             <div style="font-size:12px;font-weight:800;color:var(--bright)">HemoDetox Network</div>
             <div style="margin-left:auto;font-family:var(--head);font-size:15px;font-weight:900;color:var(--coral)">$731M</div>
           </div>
-          <div style="font-size:10.5px;color:var(--dim);line-height:1.5">Scale blood filtration across <b style="color:var(--bright)">371 clinics</b>. ~$2M/clinic. <b style="color:var(--coral)">15% GM</b> at scale with upside as equipment amortizes and volume efficiencies improve.</div>
+          <div style="font-size:10.5px;color:var(--dim);line-height:1.5">Scale blood filtration across <b style="color:var(--bright)">371 clinics</b>. ~$2M/clinic. <b style="color:var(--coral)">15% net GM</b> after clinic rev-share (direct treatment margin 80%+). Upside as equipment amortizes and volume improves.</div>
           <div style="margin-top:6px;height:4px;border-radius:2px;background:rgba(255,107,107,.08);overflow:hidden"><div class="bridge-bar" data-w="82" style="height:100%;width:0;border-radius:2px;background:var(--coral);transition:width 1.2s cubic-bezier(.25,.46,.45,.94)"></div></div>
           <div style="font-size:9px;color:var(--dim);margin-top:3px">82% of 2030 revenue</div>
         </div>
@@ -2502,7 +2544,7 @@ div:hover > .inst-hint{opacity:1!important}
               <div style="color:var(--dim);font-size:10px">&#8594;</div>
               <div style="text-align:center"><div style="font-size:10px;font-weight:900;color:var(--gold)">$145.7M</div><div style="font-size:8px;color:var(--dim)">2029</div></div>
               <div style="color:var(--dim);font-size:10px">&#8594;</div>
-              <div style="text-align:center;position:relative"><div style="font-size:10px;font-weight:900;color:var(--gold)">$121.5M</div><div style="font-size:8px;color:var(--dim)">2030</div><div style="font-size:6.5px;color:var(--dim);margin-top:1px;font-style:italic;white-space:nowrap">*reinvestment yr</div></div>
+              <div style="text-align:center;position:relative"><div style="font-size:10px;font-weight:900;color:var(--gold)">$121.5M</div><div style="font-size:8px;color:var(--dim)">2030</div><div style="font-size:8px;color:var(--dim);margin-top:1px;font-style:italic;white-space:nowrap">*reinvest yr</div></div>
             </div>
           </div>
           <div style="margin-top:5px;font-size:8px;color:var(--dim);font-style:italic;line-height:1.4;opacity:.7">*2030 EBITDA reflects ~$24M strategic reinvestment in international expansion (15+ new markets), accelerated R&amp;D pipeline, and Lumati Foundation commitment &mdash; prioritizing long-term platform value.</div>
@@ -2533,7 +2575,7 @@ div:hover > .inst-hint{opacity:1!important}
           <div style="font-size:10.5px;color:var(--dim);margin-top:4px;letter-spacing:.5px">Five revenue lines &mdash; diversified margins, compounding growth</div>
         </div>
         <div style="margin-left:auto;display:flex;gap:12px">
-          <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(78,205,196,.12)"><div class="sv-sm" style="color:var(--teal);font-size:clamp(1rem,1.6vw,1.4rem)">48x</div><div class="sl" style="font-size:10.5px;margin-top:2px">Revenue Growth</div></div>
+          <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(78,205,196,.12)"><div class="sv-sm" style="color:var(--teal);font-size:clamp(1rem,1.6vw,1.4rem)">48x</div><div class="sl" style="font-size:10.5px;margin-top:2px">Revenue Growth</div><div style="font-size:8px;color:var(--dim);margin-top:1px;opacity:.6">&rsquo;26 &rarr; &rsquo;30</div></div>
           <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(251,180,91,.12)"><div class="sv-sm" style="color:var(--gold);font-size:clamp(1rem,1.6vw,1.4rem)">83%</div><div class="sl" style="font-size:10.5px;margin-top:2px">Best GM</div></div>
           <div class="glass-sm" style="text-align:center;padding:8px 16px;border-color:rgba(167,139,250,.12)"><div class="sv-sm" style="color:var(--purple);font-size:clamp(1rem,1.6vw,1.4rem)">$218M</div><div class="sl" style="font-size:10.5px;margin-top:2px">Gross Profit &rsquo;30</div></div>
         </div>
@@ -2569,7 +2611,7 @@ div:hover > .inst-hint{opacity:1!important}
                 <td style="text-align:right;padding:5px 6px;color:var(--dim)">$229.1</td>
                 <td style="text-align:right;padding:5px 6px;color:var(--dim)">$524.3</td>
                 <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$731.1</td>
-                <td style="text-align:right;padding:5px 6px;color:var(--coral);font-weight:700">15%</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--coral);font-weight:700" title="Net margin after clinic revenue share; direct treatment margin 80%+">15%*</td>
               </tr>
               <tr style="border-bottom:1px solid rgba(255,255,255,.04);background:rgba(78,205,196,.015)">
                 <td style="padding:5px 6px;font-weight:700;color:var(--bright)"><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--teal);margin-right:6px;vertical-align:middle"></span>Recharge Portal</td>
@@ -2605,7 +2647,7 @@ div:hover > .inst-hint{opacity:1!important}
                 <td style="text-align:right;padding:5px 6px;color:var(--dim)">$0.8</td>
                 <td style="text-align:right;padding:5px 6px;color:var(--dim)">$1.8</td>
                 <td style="text-align:right;padding:5px 6px;color:var(--bright);font-weight:700">$3.6</td>
-                <td style="text-align:right;padding:5px 6px;color:var(--dim);font-weight:700">36%</td>
+                <td style="text-align:right;padding:5px 6px;color:var(--dim);font-weight:700" title="Blended margin across wholesale/marketplace channels; direct-to-consumer margin 83%">36%&dagger;</td>
               </tr>
               <tr style="border-top:2px solid var(--border-hi)">
                 <td style="padding:6px 6px;font-weight:900;color:var(--teal)">Total</td>
@@ -2618,6 +2660,7 @@ div:hover > .inst-hint{opacity:1!important}
               </tr>
             </tbody>
           </table>
+          <div style="font-size:8px;color:var(--dim);margin-top:4px;line-height:1.4;opacity:.7">*Net margin after clinic rev-share; direct treatment margin 80%+. &dagger;Blended wholesale/marketplace; DTC margin 83%.</div>
         </div>
 
         <!-- Stacked Revenue Bar Chart — fixed height -->
@@ -3029,7 +3072,7 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
       <div style="flex:1;padding:10px 14px;border-radius:12px;background:rgba(251,180,91,.04);border:1px solid rgba(251,180,91,.1)">
         <div style="font-size:10px;color:var(--gold);font-weight:800;letter-spacing:1.5px">EXECUTION TRACK RECORD</div>
-        <div style="font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.4">Founded May &rsquo;24 &#8594; <b style="color:var(--bright)">$5.6M revenue</b> by Dec &rsquo;25. Portal shipped, app live, 200+ patients treated. Team executes.</div>
+        <div style="font-size:10.5px;color:var(--dim);margin-top:3px;line-height:1.4">Founded &rsquo;22 (Hydrate Wellness), rebranded Lumati May &rsquo;24 &#8594; <b style="color:var(--bright)">$5.7M revenue</b> by Dec &rsquo;25. Portal shipped, app live, 200+ patients treated. Team executes.</div>
       </div>
       <div style="flex:1;padding:10px 14px;border-radius:12px;background:rgba(167,139,250,.04);border:1px solid rgba(167,139,250,.1)">
         <div style="font-size:10px;color:var(--purple);font-weight:800;letter-spacing:1.5px">DIVERSIFICATION PATH</div>
@@ -3054,6 +3097,22 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
     </div>
 
+    <!-- WHY NOW -->
+    <div class="anim d1" style="display:flex;gap:10px;margin-bottom:14px">
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(78,205,196,.04),rgba(251,180,91,.03));border:1px solid rgba(78,205,196,.12);display:flex;align-items:center;gap:10px">
+        <div style="width:32px;height:32px;border-radius:8px;background:rgba(78,205,196,.1);border:1px solid rgba(78,205,196,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">&#9202;</div>
+        <div><div style="font-size:10px;color:var(--teal);font-weight:800;letter-spacing:1.5px">TIMING</div><div style="font-size:10px;color:var(--dim);margin-top:1px;line-height:1.4">Longevity market inflecting <b style="color:var(--bright)">5x to $127B</b> by 2030. First-mover advantage in integrated protocols is closing fast.</div></div>
+      </div>
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(251,180,91,.04),rgba(255,107,107,.03));border:1px solid rgba(251,180,91,.12);display:flex;align-items:center;gap:10px">
+        <div style="width:32px;height:32px;border-radius:8px;background:rgba(251,180,91,.1);border:1px solid rgba(251,180,91,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">&#9889;</div>
+        <div><div style="font-size:10px;color:var(--gold);font-weight:800;letter-spacing:1.5px">TRACTION</div><div style="font-size:10px;color:var(--dim);margin-top:1px;line-height:1.4"><b style="color:var(--bright)">$5.7M revenue</b>, 50+ clinic pipeline, XPRIZE selection, resort partners live. Capital now accelerates a proven flywheel.</div></div>
+      </div>
+      <div style="flex:1;padding:10px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(167,139,250,.04),rgba(78,205,196,.03));border:1px solid rgba(167,139,250,.12);display:flex;align-items:center;gap:10px">
+        <div style="width:32px;height:32px;border-radius:8px;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:14px">&#9829;</div>
+        <div><div style="font-size:10px;color:var(--purple);font-weight:800;letter-spacing:1.5px">MISSION</div><div style="font-size:10px;color:var(--dim);margin-top:1px;line-height:1.4"><b style="color:var(--bright)">1 billion lives by 2035.</b> Every month without scale is lives not reached. This capital builds the infrastructure of a movement.</div></div>
+      </div>
+    </div>
+
     <div class="row" style="align-items:start;gap:24px">
       <!-- LEFT: The Ask + Use of Proceeds -->
       <div class="col anim-left" style="flex:1.1">
@@ -3063,6 +3122,16 @@ div:hover > .inst-hint{opacity:1!important}
             <div class="tag" style="color:var(--teal);margin-bottom:6px">Series A</div>
             <div style="font-family:var(--head);font-size:clamp(3.5rem,7vw,5.5rem);font-weight:900;line-height:1"><span class="grad-text">$40M</span></div>
             <div style="font-size:12px;color:var(--dim);margin-top:4px">Pre-Money: <span style="color:var(--teal);font-weight:700">$100M</span></div>
+            <div style="margin-top:8px;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)">
+              <div style="font-size:8px;color:var(--dim);letter-spacing:1.5px;font-weight:700;margin-bottom:3px">PRIOR CAPITAL RAISED</div>
+              <div style="display:flex;gap:8px;justify-content:center;font-size:9px;color:var(--dim)">
+                <span>Conv. Note <b style="color:var(--bright)">$3.7M</b></span>
+                <span style="opacity:.3">|</span>
+                <span>SAFEs <b style="color:var(--bright)">$4.4M</b></span>
+                <span style="opacity:.3">|</span>
+                <span>Total <b style="color:var(--teal)">$8.1M</b></span>
+              </div>
+            </div>
           </div>
           <!-- Donut Card -->
           <div class="glass" style="flex:1;padding:20px;text-align:center;border-color:rgba(78,205,196,.12)">
@@ -3109,6 +3178,17 @@ div:hover > .inst-hint{opacity:1!important}
                 <div style="font-size:9.5px;color:var(--dim);line-height:1.4;margin-top:1px"><b style="color:var(--bright)">Portal V2</b>, Recovery Pods, Molecular H&#8322; Baths, Lumi App v3, Detect Cancer Test.</div>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- Capital Position -->
+        <div class="glass-sm anim d3" style="margin-top:8px;padding:10px 16px;border-color:rgba(251,180,91,.1);display:flex;align-items:center;gap:14px">
+          <div style="font-size:8px;color:var(--gold);font-weight:800;letter-spacing:1.5px;flex-shrink:0">CAPITAL POSITION</div>
+          <div style="display:flex;gap:12px;font-size:10px;color:var(--dim)">
+            <span>Total Assets <b style="color:var(--bright)">$8.0M</b></span>
+            <span style="opacity:.3">|</span>
+            <span>2025 Revenue <b style="color:var(--teal)">$5.7M</b></span>
+            <span style="opacity:.3">|</span>
+            <span>Gross Margin <b style="color:var(--bright)">48%</b></span>
           </div>
         </div>
       </div>
@@ -3176,15 +3256,25 @@ div:hover > .inst-hint{opacity:1!important}
       One ecosystem. Five revenue engines. A mission to impact <strong style="color:var(--teal)">1 billion lives by 2035</strong>.
     </p>
     <div class="divider anim d3" style="margin:28px auto"></div>
-    <div class="anim d4">
-      <div style="font-size:20px;font-weight:700;color:var(--bright)">David Perez</div>
-      <div style="font-size:13px;color:var(--dim);margin-top:4px">Founder &amp; CEO</div>
-      <div style="margin-top:14px;display:flex;gap:28px;justify-content:center;font-size:13px">
-        <a href="mailto:david@lumati.com" style="color:var(--text);transition:color .3s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--text)'">david@lumati.com</a>
-        <span style="color:var(--text)">+1 (858) 414 4811</span>
+    <div class="anim d4" style="display:flex;gap:48px;justify-content:center;align-items:start">
+      <div style="text-align:center">
+        <div style="font-size:20px;font-weight:700;color:var(--bright)">David Perez</div>
+        <div style="font-size:13px;color:var(--dim);margin-top:4px">Founder &amp; CEO</div>
+        <div style="margin-top:10px;font-size:13px">
+          <a href="mailto:david@lumati.com" style="color:var(--text);transition:color .3s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--text)'">david@lumati.com</a>
+        </div>
+        <div style="font-size:13px;color:var(--text);margin-top:4px">+1 (858) 414 4811</div>
       </div>
-      <div style="margin-top:12px"><a href="https://www.lumati.com" target="_blank" rel="noopener" style="font-size:12px;color:var(--teal);font-weight:700;letter-spacing:1px">www.lumati.com &#8599;</a></div>
+      <div style="text-align:center">
+        <div style="font-size:20px;font-weight:700;color:var(--bright)">Samuel Whiting</div>
+        <div style="font-size:13px;color:var(--dim);margin-top:4px">Chief Strategy Officer</div>
+        <div style="margin-top:10px;font-size:13px">
+          <a href="mailto:samuel@lumati.com" style="color:var(--text);transition:color .3s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--text)'">samuel@lumati.com</a>
+        </div>
+        <div style="font-size:13px;color:var(--text);margin-top:4px">+1 (413) 262 9257</div>
+      </div>
     </div>
+    <div class="anim d4" style="margin-top:12px"><a href="https://www.lumati.com" target="_blank" rel="noopener" style="font-size:12px;color:var(--teal);font-weight:700;letter-spacing:1px">www.lumati.com &#8599;</a></div>
     <div class="anim d5" style="margin-top:28px;padding:10px 20px;border-radius:8px;background:rgba(78,205,196,.06);border:1px solid rgba(78,205,196,.12)">
       <a href="https://www.lumati.org" target="_blank" rel="noopener" style="font-size:10px;color:var(--dim);text-decoration:none;border-bottom:1px dotted rgba(78,205,196,.3);transition:color .3s" onmouseover="this.style.color='var(--teal)'" onmouseout="this.style.color='var(--dim)'">Lumati Foundation</a><span style="font-size:10px;color:var(--dim)">: </span><span style="font-size:10px;color:var(--teal);font-weight:700">10% Pre-tax Revenue</span><span style="font-size:10px;color:var(--dim)"> to community programs</span>
     </div>
@@ -3288,7 +3378,7 @@ div:hover > .inst-hint{opacity:1!important}
 
   // Slide overview
   const SLIDE_NAMES=['Cover','Problem & Opportunity','Vision & Ecosystem','The Science','Clinical Framework','Clinical Evidence','Licensing Model','Subtractive Medicine','Lumi App','Lumati Institute','Lumati Home','GTM & Traction','Competitive Moat','Competitive Comparison','Team','Board & Advisors','Revenue Bridge','Revenue by Division','Unit Economics','Risks & Mitigations','The Ask','Close','Disclaimer'];
-  const SLIDE_SUBS=['','$840B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Consumer products','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','Growth drivers','Division margins','Per-unit proof','Risk posture','$40M Series A','','Legal'];
+  const SLIDE_SUBS=['','$127B market','5-layer platform','Longevity science','3-tier clinic model','Published outcomes','Revenue engine','Cellular protocol','AI health OS','Flagship center','Consumer products','Market traction','8-dimension lead','Feature matrix','Leadership','Governance','Growth drivers','Division margins','Per-unit proof','Risk posture','$40M Series A','','Legal'];
   const SLIDE_ICONS=['\u25C6','\u26A1','\u25CE','\u2B21','\u25B3','\u2726','\u229E','\u2193','\u25EB','\u23E3','\u2302','\u2197','\u2B22','\u2630','\u25C9','\u25C8','\u25C7','\u25A6','\u25A3','\u26A0','\u2295','\u2727','\u25A1'];
   const SLIDE_SECTIONS=[
     {label:'Introduction',color:'var(--teal)',from:0,to:2},
@@ -3418,7 +3508,7 @@ const MODALS={
   app_insights:{title:'Biomarker Intelligence',subtitle:'Your Health Data, Decoded by AI',img:'img/crop/app_v1_insights.png',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:14px">The Insights screen transforms raw lab data into actionable intelligence. Patients track every biomarker longitudinally &mdash; seeing trends over weeks, months, and years. AI-powered analysis highlights what&rsquo;s improving, what needs attention, and what to discuss with their physician.</p><div style="font-size:11px;font-weight:700;color:var(--purple);letter-spacing:1px;margin-bottom:8px">KEY FEATURES</div><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--purple)">&#9679;</b> <b style="color:var(--bright)">Longitudinal tracking</b> &mdash; 6-month, 1-year, and 5-year trend views</li><li><b style="color:var(--purple)">&#9679;</b> <b style="color:var(--bright)">Range indicators</b> &mdash; optimal vs. acceptable vs. out-of-range with color coding</li><li><b style="color:var(--purple)">&#9679;</b> <b style="color:var(--bright)">AI highlights</b> &mdash; automated analysis comparing current vs. previous results</li><li><b style="color:var(--purple)">&#9679;</b> <b style="color:var(--bright)">Multi-panel support</b> &mdash; blood work, hormones, inflammation, metabolic markers</li><li><b style="color:var(--purple)">&#9679;</b> <b style="color:var(--bright)">PDF report export</b> &mdash; share with any physician or specialist</li></ul><p style="color:var(--dim);font-size:12px;line-height:1.7;margin-top:12px"><b style="color:var(--bright)">Why it matters:</b> This is the digital twin in action. Every data point feeds the model, giving both patient and physician a living, evolving picture of cellular health &mdash; turning reactive medicine into predictive, personalized care.</p>'},
   opp_aging:{title:'The Global Aging Crisis',subtitle:'1.8 Billion People Over 50 &mdash; And Accelerating',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:16px">The world is aging at an unprecedented rate. For the first time in human history, the population over 50 outnumbers children under 5. This demographic mega-shift is creating the largest healthcare demand wave ever seen.</p><h4 style="color:var(--coral);font-size:15px;margin-bottom:10px">The Numbers</h4><table class="fin-table" style="font-size:12px;margin-bottom:16px"><thead><tr><th>Year</th><th>Global 50+</th><th>% of Population</th><th>Growth</th></tr></thead><tbody><tr><td>1970</td><td style="color:var(--dim)">450M</td><td>12%</td><td>&mdash;</td></tr><tr><td>2000</td><td style="color:var(--gold)">900M</td><td>15%</td><td style="color:var(--gold)">+100%</td></tr><tr><td>2024</td><td style="color:var(--coral);font-weight:700">1.8B</td><td>22%</td><td style="color:var(--coral);font-weight:700">+400%</td></tr><tr><td>2050*</td><td style="color:var(--coral);font-weight:700">2.1B</td><td>25%</td><td style="color:var(--coral);font-weight:700">+467%</td></tr></tbody></table><h4 style="color:var(--coral);font-size:15px;margin-bottom:10px">Why This Matters for Investors</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--coral)">&#9679;</b> By 2050, one in four humans will be over 50 &mdash; an irreversible megatrend</li><li><b style="color:var(--coral)">&#9679;</b> This cohort controls 70%+ of global wealth and spending power</li><li><b style="color:var(--coral)">&#9679;</b> Chronic disease prevalence doubles after age 50 &mdash; demand for solutions is exponential</li><li><b style="color:var(--coral)">&#9679;</b> Traditional healthcare is designed for acute care, not the chronic/preventive care this population demands</li><li><b style="color:var(--coral)">&#9679;</b> The gap between demand and supply creates a massive market opening for Lumati&rsquo;s root-cause model</li></ul><p style="color:var(--dim);font-size:13px;line-height:1.7;margin-top:14px"><b style="color:var(--bright)">Bottom line:</b> This isn&rsquo;t a trend &mdash; it&rsquo;s a permanent structural shift. The companies that build longevity infrastructure now will own the next century of healthcare.</p>'},
   opp_us:{title:'The US Market Opportunity',subtitle:'120M Americans Over 50 &mdash; $7.6T Spending Power',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:16px">The United States is ground zero for the longevity economy. 120M+ Americans over 50 represent the fastest-growing, wealthiest, and most health-conscious demographic in the country &mdash; and they&rsquo;re actively seeking what Lumati offers.</p><h4 style="color:var(--gold);font-size:15px;margin-bottom:10px">Market Profile</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--gold)">&#9679;</b> <b style="color:var(--bright)">120M+</b> Americans over 50 &mdash; 36% of the total population</li><li><b style="color:var(--gold)">&#9679;</b> <b style="color:var(--bright)">$7.6 trillion</b> annual spending power (AARP Longevity Economy)</li><li><b style="color:var(--gold)">&#9679;</b> <b style="color:var(--bright)">83%</b> say they&rsquo;d pay out-of-pocket for treatments that extend healthspan</li><li><b style="color:var(--gold)">&#9679;</b> <b style="color:var(--bright)">67%</b> are dissatisfied with conventional healthcare options</li><li><b style="color:var(--gold)">&#9679;</b> <b style="color:var(--bright)">$45K</b> average Lumati Institute program &mdash; affordable for this demographic</li></ul><h4 style="color:var(--gold);font-size:15px;margin-top:14px;margin-bottom:10px">Consumer Behavior Shift</h4><p style="color:var(--dim);font-size:13px;line-height:1.7;margin-bottom:12px">This generation is the first to proactively invest in longevity rather than wait for disease. They&rsquo;re already spending on:</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px"><div style="padding:10px;border-radius:8px;background:rgba(251,180,91,.05);border:1px solid rgba(251,180,91,.1);text-align:center"><div style="font-size:18px;font-weight:900;color:var(--gold)">$62B</div><div style="font-size:11px;color:var(--dim);margin-top:2px">Supplements &amp; nutraceuticals</div></div><div style="padding:10px;border-radius:8px;background:rgba(251,180,91,.05);border:1px solid rgba(251,180,91,.1);text-align:center"><div style="font-size:18px;font-weight:900;color:var(--gold)">$19B</div><div style="font-size:11px;color:var(--dim);margin-top:2px">Functional medicine visits</div></div><div style="padding:10px;border-radius:8px;background:rgba(251,180,91,.05);border:1px solid rgba(251,180,91,.1);text-align:center"><div style="font-size:18px;font-weight:900;color:var(--gold)">$8B</div><div style="font-size:11px;color:var(--dim);margin-top:2px">Medical tourism</div></div><div style="padding:10px;border-radius:8px;background:rgba(251,180,91,.05);border:1px solid rgba(251,180,91,.1);text-align:center"><div style="font-size:18px;font-weight:900;color:var(--gold)">$4B</div><div style="font-size:11px;color:var(--dim);margin-top:2px">Biohacking &amp; diagnostics</div></div></div><p style="color:var(--dim);font-size:13px;line-height:1.7"><b style="color:var(--bright)">Bottom line:</b> These consumers are already spending billions on fragmented solutions. Lumati consolidates the entire longevity stack into one integrated ecosystem &mdash; from diagnostics to daily maintenance.</p>'},
-  opp_market:{title:'The Longevity Market',subtitle:'$25B Today &rarr; $127B by 2030 &mdash; 508% Growth',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:16px">The global longevity and wellness market is the fastest-growing segment of healthcare. It&rsquo;s being driven by converging forces: aging demographics, consumer demand for prevention, and breakthrough science in cellular health.</p><h4 style="color:var(--teal);font-size:15px;margin-bottom:10px">Market Sizing</h4><table class="fin-table" style="font-size:12px;margin-bottom:16px"><thead><tr><th>Segment</th><th>2024</th><th>2030*</th><th>CAGR</th></tr></thead><tbody><tr><td>Longevity &amp; Anti-Aging</td><td>$25B</td><td style="color:var(--teal);font-weight:700">$127B</td><td style="color:var(--teal)">31%</td></tr><tr><td>Functional Medicine</td><td>$19B</td><td style="color:var(--teal);font-weight:700">$48B</td><td style="color:var(--teal)">17%</td></tr><tr><td>Wellness Tourism</td><td>$651B</td><td style="color:var(--teal);font-weight:700">$1.3T</td><td style="color:var(--teal)">12%</td></tr><tr><td>Digital Health</td><td>$330B</td><td style="color:var(--teal);font-weight:700">$780B</td><td style="color:var(--teal)">15%</td></tr></tbody></table><h4 style="color:var(--teal);font-size:15px;margin-bottom:10px">Why Lumati Wins in This Market</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">Full-stack play</b> &mdash; Lumati operates across all four market segments simultaneously</li><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">No comparable competitor</b> &mdash; competitors own one slice; Lumati integrates the entire continuum</li><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">Hardware + software + clinical</b> &mdash; the &ldquo;Apple of longevity&rdquo; model creates lock-in and recurring revenue</li><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">TAM expands with every layer</b> &mdash; Institute patients become app users, portal visitors, and home product buyers</li></ul><h4 style="color:var(--teal);font-size:15px;margin-top:14px;margin-bottom:10px">Competitive Landscape</h4><p style="color:var(--dim);font-size:13px;line-height:1.7;margin-bottom:12px">Existing players are fragmented and single-layer:</p><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Fountain Life</b> &mdash; diagnostics only, no treatment protocol</li><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Equinox / Life Time</b> &mdash; fitness, no clinical</li><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Hims / Ro</b> &mdash; telemedicine, no hardware or in-person</li><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Lumati</b> &mdash; Institute + Clinics + Portals + Home + App = full ecosystem</li></ul><p style="color:var(--dim);font-size:13px;line-height:1.7;margin-top:12px"><b style="color:var(--bright)">Bottom line:</b> The longevity market is entering its exponential growth phase. Lumati is the only company positioned to capture value across the entire stack &mdash; from diagnosis to daily maintenance, clinic to living room.</p>'},
+  opp_market:{title:'The Longevity Market',subtitle:'$25B Today &rarr; $127B by 2030 &mdash; 5x Growth',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:16px">The global longevity and wellness market is the fastest-growing segment of healthcare. It&rsquo;s being driven by converging forces: aging demographics, consumer demand for prevention, and breakthrough science in cellular health.</p><h4 style="color:var(--teal);font-size:15px;margin-bottom:10px">Market Sizing</h4><table class="fin-table" style="font-size:12px;margin-bottom:16px"><thead><tr><th>Segment</th><th>2024</th><th>2030*</th><th>CAGR</th></tr></thead><tbody><tr><td>Longevity &amp; Anti-Aging</td><td>$25B</td><td style="color:var(--teal);font-weight:700">$127B</td><td style="color:var(--teal)">31%</td></tr><tr><td>Functional Medicine</td><td>$19B</td><td style="color:var(--teal);font-weight:700">$48B</td><td style="color:var(--teal)">17%</td></tr><tr><td>Wellness Tourism</td><td>$651B</td><td style="color:var(--teal);font-weight:700">$1.3T</td><td style="color:var(--teal)">12%</td></tr><tr><td>Digital Health</td><td>$330B</td><td style="color:var(--teal);font-weight:700">$780B</td><td style="color:var(--teal)">15%</td></tr></tbody></table><h4 style="color:var(--teal);font-size:15px;margin-bottom:10px">Why Lumati Wins in This Market</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">Full-stack play</b> &mdash; Lumati operates across all four market segments simultaneously</li><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">No comparable competitor</b> &mdash; competitors own one slice; Lumati integrates the entire continuum</li><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">Hardware + software + clinical</b> &mdash; the &ldquo;Apple of longevity&rdquo; model creates lock-in and recurring revenue</li><li><b style="color:var(--teal)">&#9679;</b> <b style="color:var(--bright)">TAM expands with every layer</b> &mdash; Institute patients become app users, portal visitors, and home product buyers</li></ul><h4 style="color:var(--teal);font-size:15px;margin-top:14px;margin-bottom:10px">Competitive Landscape</h4><p style="color:var(--dim);font-size:13px;line-height:1.7;margin-bottom:12px">Existing players are fragmented and single-layer:</p><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Fountain Life</b> &mdash; diagnostics only, no treatment protocol</li><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Equinox / Life Time</b> &mdash; fitness, no clinical</li><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Hims / Ro</b> &mdash; telemedicine, no hardware or in-person</li><li><b style="color:var(--dim)">&#9679;</b> <b style="color:var(--bright)">Lumati</b> &mdash; Institute + Clinics + Portals + Home + App = full ecosystem</li></ul><p style="color:var(--dim);font-size:13px;line-height:1.7;margin-top:12px"><b style="color:var(--bright)">Bottom line:</b> The longevity market is entering its exponential growth phase. Lumati is the only company positioned to capture value across the entire stack &mdash; from diagnosis to daily maintenance, clinic to living room.</p>'},
   hall_hypoxia:{title:'Hypoxia',subtitle:'Cellular Oxygen Deprivation',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:14px">When cells don&rsquo;t receive enough oxygen, energy production collapses. Hypoxia triggers a cascade of damage &mdash; from impaired mitochondrial function to increased oxidative stress and chronic inflammation.</p><h4 style="color:var(--coral);font-size:14px;margin-bottom:8px">How It Accelerates Aging</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--coral)">&#9679;</b> Reduced ATP production &mdash; cells lack energy to repair and regenerate</li><li><b style="color:var(--coral)">&#9679;</b> Increased lactic acid &mdash; tissue acidification damages healthy cells</li><li><b style="color:var(--coral)">&#9679;</b> Triggers HIF-1&alpha; pathways that promote tumor growth</li><li><b style="color:var(--coral)">&#9679;</b> Impairs immune cell function and wound healing</li></ul><h4 style="color:var(--teal);font-size:14px;margin-top:14px;margin-bottom:8px">How Lumati Addresses It</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--teal)">&#10003;</b> Red Light+ photobiomodulation increases cellular oxygenation</li><li><b style="color:var(--teal)">&#10003;</b> Molecular hydrogen improves oxygen utilization efficiency</li><li><b style="color:var(--teal)">&#10003;</b> PEMF enhances microcirculation and blood flow to tissues</li></ul>'},
   hall_mito:{title:'Mitochondrial Dysfunction',subtitle:'Impaired Cellular Energy Production',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:14px">Mitochondria are the power plants of every cell. When they malfunction, cells can&rsquo;t produce enough ATP (energy), leading to fatigue, cognitive decline, organ dysfunction, and accelerated aging across every system.</p><h4 style="color:var(--gold);font-size:14px;margin-bottom:8px">How It Accelerates Aging</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--gold)">&#9679;</b> Cells operate in an energy deficit &mdash; repair mechanisms shut down</li><li><b style="color:var(--gold)">&#9679;</b> mtDNA mutations accumulate 10x faster than nuclear DNA</li><li><b style="color:var(--gold)">&#9679;</b> Excess ROS production damages proteins, lipids, and DNA</li><li><b style="color:var(--gold)">&#9679;</b> Linked to Alzheimer&rsquo;s, Parkinson&rsquo;s, heart disease, and diabetes</li></ul><h4 style="color:var(--teal);font-size:14px;margin-top:14px;margin-bottom:8px">How Lumati Addresses It</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--teal)">&#10003;</b> Red Light+ directly stimulates cytochrome c oxidase (Complex IV) &mdash; 104% energy increase in clinical study</li><li><b style="color:var(--teal)">&#10003;</b> Molecular hydrogen scavenges excess ROS protecting mitochondrial membranes</li><li><b style="color:var(--teal)">&#10003;</b> Micro-impact vibration stimulates mitochondrial biogenesis</li></ul>'},
   hall_protein:{title:'Misfolding Proteins',subtitle:'Proteotoxic Stress & Aggregation',body:'<p style="color:var(--dim);line-height:1.7;margin-bottom:14px">Proteins must fold into precise 3D shapes to function. When folding goes wrong, misfolded proteins aggregate into toxic clumps that overwhelm cellular cleanup systems and poison healthy tissue.</p><h4 style="color:var(--purple);font-size:14px;margin-bottom:8px">How It Accelerates Aging</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--purple)">&#9679;</b> Amyloid plaques (Alzheimer&rsquo;s), tau tangles, Lewy bodies (Parkinson&rsquo;s)</li><li><b style="color:var(--purple)">&#9679;</b> Overwhelms the proteasome &amp; autophagy systems</li><li><b style="color:var(--purple)">&#9679;</b> Triggers chronic inflammatory cascades</li><li><b style="color:var(--purple)">&#9679;</b> Impairs cellular signaling and metabolic function</li></ul><h4 style="color:var(--teal);font-size:14px;margin-top:14px;margin-bottom:8px">How Lumati Addresses It</h4><ul style="color:var(--dim);font-size:13px;line-height:2;list-style:none;padding:0"><li><b style="color:var(--teal)">&#10003;</b> Molecular hydrogen reduces oxidative damage that triggers misfolding</li><li><b style="color:var(--teal)">&#10003;</b> HemoDetox blood filtration removes circulating toxic aggregates</li><li><b style="color:var(--teal)">&#10003;</b> Targeted nutraceuticals support heat shock protein (HSP) chaperone activity</li></ul>'},
