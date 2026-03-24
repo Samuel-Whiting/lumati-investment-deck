@@ -390,7 +390,26 @@ div:hover > .inst-hint{opacity:1!important}
     </div>
     <div class="landing-divider"></div>
     <div class="landing-sub">Series A &nbsp;&middot;&nbsp; 2026</div>
-    <button class="enter-btn" onclick="enterDeck()">Enter</button>
+    <button class="enter-btn" onclick="showGate()">Enter</button>
+  </div>
+</div>
+
+<!-- ======================= ACCESS GATE ======================= -->
+<div id="accessGate" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(6,6,10,0.92);backdrop-filter:blur(24px);display:none;align-items:center;justify-content:center">
+  <div style="width:380px;padding:40px;border-radius:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(78,205,196,0.12);text-align:center">
+    <img src="logo-color.png" alt="Lumati" style="height:36px;margin-bottom:20px;opacity:0.9"/>
+    <div style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);text-transform:uppercase;margin-bottom:24px">Confidential Investment Materials</div>
+    <div style="text-align:left;margin-bottom:12px">
+      <label style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;display:block;margin-bottom:6px">Email Address</label>
+      <input id="gateEmail" type="email" placeholder="you@company.com" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#e2e2ec;font-family:var(--body);font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='rgba(78,205,196,0.3)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'"/>
+    </div>
+    <div style="text-align:left;margin-bottom:20px">
+      <label style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;display:block;margin-bottom:6px">Access Code</label>
+      <input id="gatePassword" type="password" placeholder="Enter access code" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#e2e2ec;font-family:var(--body);font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='rgba(78,205,196,0.3)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'" onkeydown="if(event.key==='Enter')unlockDeck()"/>
+    </div>
+    <div id="gateError" style="font-size:11px;color:var(--coral);margin-bottom:12px;height:16px"></div>
+    <button onclick="unlockDeck()" style="width:100%;padding:14px;border-radius:12px;border:1px solid rgba(78,205,196,0.3);background:rgba(78,205,196,0.08);color:var(--teal);font-family:var(--body);font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;cursor:pointer;transition:all 0.3s" onmouseover="this.style.background='rgba(78,205,196,0.15)';this.style.borderColor='rgba(78,205,196,0.5)'" onmouseout="this.style.background='rgba(78,205,196,0.08)';this.style.borderColor='rgba(78,205,196,0.3)'">Unlock</button>
+    <div style="margin-top:16px;font-size:9px;color:rgba(255,255,255,0.2);line-height:1.5">By accessing these materials you agree to maintain confidentiality.<br/>Lumati Holdings, Inc. &middot; Confidential</div>
   </div>
 </div>
 
@@ -3993,6 +4012,28 @@ setInterval(()=>{tInner.style.opacity='0';setTimeout(()=>{tIdx=(tIdx+1)%TESTIMON
     if(s10.classList.contains('active'))startMap();
   }
 })();
+
+/* ── Access Gate ── */
+window.showGate=function(){
+  var gate=document.getElementById('accessGate');
+  gate.style.display='flex';
+  setTimeout(function(){document.getElementById('gateEmail').focus()},100);
+};
+window.unlockDeck=function(){
+  var email=document.getElementById('gateEmail').value.trim();
+  var pw=document.getElementById('gatePassword').value.trim().toLowerCase();
+  var err=document.getElementById('gateError');
+  if(!email||!email.includes('@')){err.textContent='Please enter a valid email address';return}
+  if(pw!=='vitality'){err.textContent='Invalid access code';document.getElementById('gatePassword').value='';return}
+  err.textContent='';
+  // Log the access (store in localStorage for now, could POST to API)
+  var log=JSON.parse(localStorage.getItem('lumati_deck_access')||'[]');
+  log.push({email:email,time:new Date().toISOString(),ua:navigator.userAgent});
+  localStorage.setItem('lumati_deck_access',JSON.stringify(log));
+  // Hide gate and enter deck
+  document.getElementById('accessGate').style.display='none';
+  enterDeck();
+};
 
 /* ── Landing Page Enter ── */
 window.enterDeck=function(){
