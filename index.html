@@ -4024,7 +4024,7 @@ window.unlockDeck=function(){
   var pw=document.getElementById('gatePassword').value.trim().toLowerCase();
   var err=document.getElementById('gateError');
   if(!email||!email.includes('@')){err.textContent='Please enter a valid email address';return}
-  if(pw!=='vitality'){err.textContent='Invalid access code';document.getElementById('gatePassword').value='';return}
+  if(pw!=='longevity'){err.textContent='Invalid access code';document.getElementById('gatePassword').value='';return}
   err.textContent='';
   // Log the access (store in localStorage for now, could POST to API)
   var log=JSON.parse(localStorage.getItem('lumati_deck_access')||'[]');
