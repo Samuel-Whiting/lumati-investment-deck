@@ -4089,6 +4089,8 @@ function _sendLog(final){
     duration:mins+'m '+s+'s',
     lastSlide:_currentSlideLabel
   };
+  var _skipEmails=['samuel@lumati.com','sam@lumati.com','swhiting89@gmail.com','david@lumati.com','ruta@lumati.com','erol@lumati.com'];
+  if(_skipEmails.indexOf(_deckUser.toLowerCase())!==-1){return;}
   if(navigator.sendBeacon&&final){
     navigator.sendBeacon(LOG_URL,JSON.stringify(payload));
   }else{
