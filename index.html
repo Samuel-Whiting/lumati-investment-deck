@@ -4033,7 +4033,60 @@ setInterval(()=>{tInner.style.opacity='0';setTimeout(()=>{tIdx=(tIdx+1)%TESTIMON
   }
 })();
 
-/* ── Access Gate ── */
+/* ── Access Gate + Analytics ── */
+var LOG_URL='https://script.google.com/macros/s/AKfycbz8-VYBtaTlbMo48khJt13SxRcBHpxHeV--07WCTGRAPmcgmTE2HQsXS1AjNsl2ef3o/exec';
+var _deckUser='';
+var _deckStart=0;
+var _slideViews=[];
+var _slideEnterTime=0;
+var _currentSlideLabel='';
+
+function _trackSlideEnter(slideNum){
+  _slideEnterTime=Date.now();
+  var el=document.querySelector('.slide[data-slide="'+slideNum+'"] h2')||document.querySelector('.slide[data-slide="'+slideNum+'"] h1');
+  _currentSlideLabel='S'+slideNum+(el?' '+el.textContent.trim().substring(0,30):'');
+}
+function _trackSlideExit(){
+  if(_slideEnterTime&&_currentSlideLabel){
+    var secs=Math.round((Date.now()-_slideEnterTime)/1000);
+    _slideViews.push(_currentSlideLabel+' ('+secs+'s)');
+  }
+}
+function _sendLog(final){
+  if(!_deckUser)return;
+  var duration=Math.round((Date.now()-_deckStart)/1000);
+  var mins=Math.floor(duration/60);
+  var secs=duration%60;
+  var payload={
+    email:_deckUser,
+    time:new Date(_deckStart).toISOString(),
+    ua:navigator.userAgent,
+    slides:_slideViews.join(', '),
+    duration:mins+'m '+secs+'s',
+    lastSlide:_currentSlideLabel
+  };
+  if(navigator.sendBeacon&&final){
+    navigator.sendBeacon(LOG_URL,JSON.stringify(payload));
+  }else{
+    fetch(LOG_URL,{method:'POST',body:JSON.stringify(payload),mode:'no-cors'}).catch(function(){});
+  }
+}
+
+// Send periodic updates every 60s so we capture data even if they close abruptly
+setInterval(function(){if(_deckUser)_sendLog(false)},60000);
+// Send final log on page close
+window.addEventListener('beforeunload',function(){_trackSlideExit();_sendLog(true)});
+// Also capture visibility change (mobile tab switch / close)
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser){_trackSlideExit();_sendLog(true)}});
+
+// Hook into slide navigation to track views
+var _origGoSlide=window.goSlide;
+window.goSlide=function(n){
+  _trackSlideExit();
+  if(_origGoSlide)_origGoSlide(n);
+  _trackSlideEnter(n);
+};
+
 window.showGate=function(){
   var gate=document.getElementById('accessGate');
   gate.style.display='flex';
@@ -4046,13 +4099,16 @@ window.unlockDeck=function(){
   if(!email||!email.includes('@')){err.textContent='Please enter a valid email address';return}
   if(pw!=='longevity'){err.textContent='Invalid access code';document.getElementById('gatePassword').value='';return}
   err.textContent='';
-  // Log the access (store in localStorage for now, could POST to API)
-  var log=JSON.parse(localStorage.getItem('lumati_deck_access')||'[]');
-  log.push({email:email,time:new Date().toISOString(),ua:navigator.userAgent});
-  localStorage.setItem('lumati_deck_access',JSON.stringify(log));
+  // Set tracking state
+  _deckUser=email;
+  _deckStart=Date.now();
+  // Send initial access log
+  _sendLog(false);
   // Hide gate and enter deck
   document.getElementById('accessGate').style.display='none';
   enterDeck();
+  // Start tracking first slide
+  _trackSlideEnter(cur+1);
 };
 
 /* ── Landing Page Enter ── */
