@@ -4043,8 +4043,11 @@ var _currentSlideLabel='';
 
 function _trackSlideEnter(slideNum){
   _slideEnterTime=Date.now();
-  var el=document.querySelector('.slide[data-slide="'+slideNum+'"] h2')||document.querySelector('.slide[data-slide="'+slideNum+'"] h1');
-  _currentSlideLabel='S'+slideNum+(el?' '+el.textContent.trim().substring(0,30):'');
+  // cur is 0-indexed, display as 1-indexed
+  var display=typeof slideNum==='number'?slideNum+1:slideNum;
+  var active=document.querySelector('.slide.active');
+  var el=active?(active.querySelector('h2')||active.querySelector('h1')):null;
+  _currentSlideLabel='S'+display+(el?' '+el.textContent.trim().substring(0,30):'');
 }
 function _trackSlideExit(){
   if(_slideEnterTime&&_currentSlideLabel){
@@ -4079,13 +4082,33 @@ window.addEventListener('beforeunload',function(){_trackSlideExit();_sendLog(tru
 // Also capture visibility change (mobile tab switch / close)
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser){_trackSlideExit();_sendLog(true)}});
 
-// Hook into slide navigation to track views
+// Hook into ALL slide navigation to track views
 var _origGoSlide=window.goSlide;
+var _origNavPrev=window.navPrev;
+var _origNavNext=window.navNext;
 window.goSlide=function(n){
   _trackSlideExit();
   if(_origGoSlide)_origGoSlide(n);
   _trackSlideEnter(n);
 };
+window.navPrev=function(){
+  _trackSlideExit();
+  if(_origNavPrev)_origNavPrev();
+  // cur is updated by go() inside navPrev, read it after
+  setTimeout(function(){_trackSlideEnter(cur)},50);
+};
+window.navNext=function(){
+  _trackSlideExit();
+  if(_origNavNext)_origNavNext();
+  setTimeout(function(){_trackSlideEnter(cur)},50);
+};
+// Also capture keyboard/touch nav
+document.addEventListener('keydown',function(e){
+  if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
+    // nav functions already hooked, but track delayed for cur update
+    setTimeout(function(){_trackSlideEnter(cur)},100);
+  }
+});
 
 window.showGate=function(){
   var gate=document.getElementById('accessGate');
@@ -4107,8 +4130,8 @@ window.unlockDeck=function(){
   // Hide gate and enter deck
   document.getElementById('accessGate').style.display='none';
   enterDeck();
-  // Start tracking first slide
-  _trackSlideEnter(cur+1);
+  // Start tracking first slide (cur is 0-indexed, _trackSlideEnter adds 1)
+  _trackSlideEnter(cur);
 };
 
 /* ── Landing Page Enter ── */
