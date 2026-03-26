@@ -4040,32 +4040,53 @@ var _deckStart=0;
 var _slideViews=[];
 var _slideEnterTime=0;
 var _currentSlideLabel='';
+var _lastTrackedIdx=-1;
 
-function _trackSlideEnter(slideNum){
-  _slideEnterTime=Date.now();
-  // cur is 0-indexed, display as 1-indexed
-  var display=typeof slideNum==='number'?slideNum+1:slideNum;
-  var active=document.querySelector('.slide.active');
-  var el=active?(active.querySelector('h2')||active.querySelector('h1')):null;
-  _currentSlideLabel='S'+display+(el?' '+el.textContent.trim().substring(0,30):'');
+function _getActiveSlide(){
+  var slides=document.querySelectorAll('.slide');
+  var idx=-1;
+  slides.forEach(function(s,i){if(s.classList.contains('active'))idx=i});
+  if(idx<0)return{idx:-1,label:''};
+  var el=slides[idx].querySelector('h2')||slides[idx].querySelector('h1');
+  var label='S'+(idx+1)+(el?' '+el.textContent.trim().substring(0,30):'');
+  return{idx:idx,label:label};
 }
-function _trackSlideExit(){
+function _onSlideChange(){
+  var info=_getActiveSlide();
+  if(info.idx<0||info.idx===_lastTrackedIdx)return;
+  // Exit previous slide
   if(_slideEnterTime&&_currentSlideLabel){
     var secs=Math.round((Date.now()-_slideEnterTime)/1000);
-    _slideViews.push(_currentSlideLabel+' ('+secs+'s)');
+    if(secs>0)_slideViews.push(_currentSlideLabel+' ('+secs+'s)');
   }
+  // Enter new slide
+  _lastTrackedIdx=info.idx;
+  _currentSlideLabel=info.label;
+  _slideEnterTime=Date.now();
 }
 function _sendLog(final){
   if(!_deckUser)return;
+  // Capture current slide time before sending
+  if(_slideEnterTime&&_currentSlideLabel){
+    var secs=Math.round((Date.now()-_slideEnterTime)/1000);
+    // Update last entry or add new
+    var current=_currentSlideLabel+' ('+secs+'s)';
+    // Remove previous entry for same slide if exists (update in place)
+    var updated=false;
+    for(var i=_slideViews.length-1;i>=0;i--){
+      if(_slideViews[i].indexOf(_currentSlideLabel)===0){_slideViews[i]=current;updated=true;break}
+    }
+    if(!updated)_slideViews.push(current);
+  }
   var duration=Math.round((Date.now()-_deckStart)/1000);
   var mins=Math.floor(duration/60);
-  var secs=duration%60;
+  var s=duration%60;
   var payload={
     email:_deckUser,
     time:new Date(_deckStart).toISOString(),
     ua:navigator.userAgent,
     slides:_slideViews.join(', '),
-    duration:mins+'m '+secs+'s',
+    duration:mins+'m '+s+'s',
     lastSlide:_currentSlideLabel
   };
   if(navigator.sendBeacon&&final){
@@ -4075,40 +4096,13 @@ function _sendLog(final){
   }
 }
 
-// Send periodic updates every 60s so we capture data even if they close abruptly
-setInterval(function(){if(_deckUser)_sendLog(false)},60000);
+// Poll for slide changes every 500ms — bulletproof, no hooks needed
+setInterval(function(){if(_deckUser)_onSlideChange()},500);
+// Send data to sheet every 30s
+setInterval(function(){if(_deckUser)_sendLog(false)},30000);
 // Send final log on page close
-window.addEventListener('beforeunload',function(){_trackSlideExit();_sendLog(true)});
-// Also capture visibility change (mobile tab switch / close)
-document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser){_trackSlideExit();_sendLog(true)}});
-
-// Hook into ALL slide navigation to track views
-var _origGoSlide=window.goSlide;
-var _origNavPrev=window.navPrev;
-var _origNavNext=window.navNext;
-window.goSlide=function(n){
-  _trackSlideExit();
-  if(_origGoSlide)_origGoSlide(n);
-  _trackSlideEnter(n);
-};
-window.navPrev=function(){
-  _trackSlideExit();
-  if(_origNavPrev)_origNavPrev();
-  // cur is updated by go() inside navPrev, read it after
-  setTimeout(function(){_trackSlideEnter(cur)},50);
-};
-window.navNext=function(){
-  _trackSlideExit();
-  if(_origNavNext)_origNavNext();
-  setTimeout(function(){_trackSlideEnter(cur)},50);
-};
-// Also capture keyboard/touch nav
-document.addEventListener('keydown',function(e){
-  if(e.key==='ArrowRight'||e.key==='ArrowLeft'){
-    // nav functions already hooked, but track delayed for cur update
-    setTimeout(function(){_trackSlideEnter(cur)},100);
-  }
-});
+window.addEventListener('beforeunload',function(){_sendLog(true)});
+document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser)_sendLog(true)});
 
 window.showGate=function(){
   var gate=document.getElementById('accessGate');
@@ -4122,16 +4116,11 @@ window.unlockDeck=function(){
   if(!email||!email.includes('@')){err.textContent='Please enter a valid email address';return}
   if(pw!=='longevity'){err.textContent='Invalid access code';document.getElementById('gatePassword').value='';return}
   err.textContent='';
-  // Set tracking state
   _deckUser=email;
   _deckStart=Date.now();
-  // Send initial access log
   _sendLog(false);
-  // Hide gate and enter deck
   document.getElementById('accessGate').style.display='none';
   enterDeck();
-  // Start tracking first slide (cur is 0-indexed, _trackSlideEnter adds 1)
-  _trackSlideEnter(cur);
 };
 
 /* ── Landing Page Enter ── */
