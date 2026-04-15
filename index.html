@@ -3436,16 +3436,15 @@ div:hover > .inst-hint{opacity:1!important}
       </div>
     </div>
 
-    <!-- Category Surface — Post-Approval Upside strip -->
-    <div class="anim d3" style="padding:10px 16px;border-radius:12px;background:linear-gradient(135deg,rgba(255,107,107,.05),rgba(167,139,250,.03));border:1px solid rgba(255,107,107,.15)">
-      <div style="font-size:12px;color:var(--coral);font-weight:800;letter-spacing:1.5px;margin-bottom:4px">CATEGORY SURFACE &mdash; POST-APPROVAL UPSIDE&dagger;</div>
-      <div style="font-size:12px;color:var(--dim);line-height:1.5"><b style="color:var(--coral)">3.7B global</b> &middot; HSV-1 category &middot; <b style="color:var(--coral)">491M global</b> &middot; HSV-2 category &middot; <b style="color:var(--gold)">50%+ US adults</b> &middot; HSV-1 category &middot; <b style="color:var(--purple)">65M US</b> &middot; Long COVID + Lyme category &middot; <b style="color:var(--teal)">100% of adults</b> &middot; microplastics category. <b style="color:var(--bright)">Category surface is in the billions, not millions.</b></div>
-      <div style="font-size:9.5px;color:var(--dim);opacity:.7;line-height:1.35;margin-top:4px;font-style:italic">&dagger; Population figures cite category surface from published sources. Lumati HemoDetox is not FDA-cleared for the treatment of any of these conditions and is upside-only in the Series A base case until regulatory clearance via the pathways above. Figures reference category scale only &mdash; not treatment, prevalence, or efficacy claims.</div>
-    </div>
-
-    <!-- Category raises strip -->
-    <div class="anim d3" style="padding:7px 12px;border-radius:10px;background:linear-gradient(90deg,rgba(251,180,91,.04),rgba(78,205,196,.03));border:1px solid rgba(251,180,91,.12);font-size:11px;color:var(--dim);line-height:1.5;text-align:center">
-      <span style="color:var(--gold);font-weight:800;letter-spacing:1.5px;font-size:10px">CATEGORY CAPITAL 2025</span> &middot; <b style="color:var(--bright)">Circulate Health $12M</b> Khosla <span style="opacity:.7">(Issue 365)</span> &middot; <b style="color:var(--bright)">Cambiotics &euro;4M</b> <span style="opacity:.7">(Issue 345)</span> &middot; <b style="color:var(--bright)">PolyGone $4M</b> <span style="opacity:.7">(Issue 376)</span> &middot; <b style="color:var(--bright)">MoldCo $8M</b> <span style="opacity:.7">(Issue 354)</span>
+    <!-- Category Surface + Capital — unified upside strip -->
+    <div class="anim d3" title="Population figures cite category surface from published sources. Lumati HemoDetox is not FDA-cleared for treatment of any of these conditions and is upside-only in the Series A base case until regulatory clearance via the pathways above. Figures reference category scale only, not treatment, prevalence, or efficacy claims." style="padding:8px 14px;border-radius:12px;background:linear-gradient(135deg,rgba(255,107,107,.05),rgba(167,139,250,.03));border:1px solid rgba(255,107,107,.15);display:flex;gap:14px;align-items:center;flex-wrap:wrap">
+      <div style="flex-shrink:0">
+        <div style="font-size:10px;color:var(--coral);font-weight:800;letter-spacing:1.5px">CATEGORY SURFACE</div>
+        <div style="font-size:9px;color:var(--dim);letter-spacing:.5px;margin-top:1px">Post-approval upside&dagger;</div>
+      </div>
+      <div style="flex:1;min-width:260px;font-size:11px;color:var(--dim);line-height:1.45"><b style="color:var(--coral)">3.7B</b> HSV-1 &middot; <b style="color:var(--purple)">65M US</b> Long COVID+Lyme &middot; <b style="color:var(--teal)">100%</b> adults microplastics &middot; category scale in <b style="color:var(--bright)">billions</b>.</div>
+      <div style="font-size:10px;color:var(--gold);font-weight:800;letter-spacing:1px;flex-shrink:0">CATEGORY $ 2025</div>
+      <div style="font-size:11px;color:var(--dim);flex-shrink:0"><b style="color:var(--bright)">Circulate $12M</b> &middot; <b style="color:var(--bright)">Cambiotics &euro;4M</b> &middot; <b style="color:var(--bright)">PolyGone $4M</b> &middot; <b style="color:var(--bright)">MoldCo $8M</b></div>
     </div>
 
     <!-- Bottom: Pipeline Ready -->
@@ -3800,58 +3799,56 @@ div:hover > .inst-hint{opacity:1!important}
             </div>
           </div>
         </div>
-        <!-- Where Your Capital Goes — detailed allocation -->
+        <!-- Where Your Capital Goes — compact 2-col allocation -->
         <div class="glass anim d2" style="padding:12px 16px">
-          <h3 style="font-size:12px;margin-bottom:6px;color:var(--bright)">Where Your Capital Goes</h3>
-          <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:8px">
+            <h3 style="font-size:12px;color:var(--bright)">Where Your Capital Goes</h3>
+            <div style="font-size:10px;color:var(--gold);font-weight:800;letter-spacing:1px">SIZED TO PLAN &middot; NO RE-RAISE</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px 14px">
             <div style="display:flex;gap:8px;align-items:start">
               <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--teal)">$2.5M</span></div>
-              <div style="flex:1">
-                <div style="font-size:13px;font-weight:700;color:var(--bright)">LV Clinic Launch</div>
-                <div style="font-size:13px;color:var(--dim);line-height:1.4;margin-top:1px">Second location build-out, equipment, and staffing.</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:700;color:var(--bright)">LV Clinic Launch</div>
+                <div style="font-size:11px;color:var(--dim);line-height:1.35">Second flagship build-out + staffing</div>
               </div>
             </div>
             <div style="display:flex;gap:8px;align-items:start">
               <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--gold)">$2.0M</span></div>
-              <div style="flex:1">
-                <div style="font-size:13px;font-weight:700;color:var(--bright)">E-Commerce &amp; Marketing</div>
-                <div style="font-size:13px;color:var(--dim);line-height:1.4;margin-top:1px">Brand, digital acquisition, and supplement channel scale.</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:700;color:var(--bright)">E-Commerce &amp; Marketing</div>
+                <div style="font-size:11px;color:var(--dim);line-height:1.35">Brand + supplement scale</div>
               </div>
             </div>
             <div style="display:flex;gap:8px;align-items:start">
               <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--coral)">$1.9M</span></div>
-              <div style="flex:1">
-                <div style="font-size:13px;font-weight:700;color:var(--bright)">Working Capital</div>
-                <div style="font-size:13px;color:var(--dim);line-height:1.4;margin-top:1px">Inventory, payroll bridge, and operational runway.</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:700;color:var(--bright)">Working Capital</div>
+                <div style="font-size:11px;color:var(--dim);line-height:1.35">Inventory + payroll runway</div>
               </div>
             </div>
             <div style="display:flex;gap:8px;align-items:start">
               <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--purple)">$1.7M</span></div>
-              <div style="flex:1">
-                <div style="font-size:13px;font-weight:700;color:var(--bright)">Hardware R&amp;D (Portal V2)</div>
-                <div style="font-size:13px;color:var(--dim);line-height:1.4;margin-top:1px">Next-gen portal design, engineering, and certification.</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:700;color:var(--bright)">Hardware R&amp;D Portal V2</div>
+                <div style="font-size:11px;color:var(--dim);line-height:1.35">Next-gen design + certification</div>
               </div>
             </div>
             <div style="display:flex;gap:8px;align-items:start">
-              <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--dim)">$1.0M</span></div>
-              <div style="flex:1">
-                <div style="font-size:13px;font-weight:700;color:var(--bright)">AI Platform (Lumati OS)</div>
-                <div style="font-size:13px;color:var(--dim);line-height:1.4;margin-top:1px">Lumi AI development, Ziva voice agent, and platform infra.</div>
+              <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--teal)">$1.0M</span></div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:700;color:var(--bright)">AI Platform (Lumati OS)</div>
+                <div style="font-size:11px;color:var(--dim);line-height:1.35">Lumi + Ziva + infra</div>
               </div>
             </div>
             <div style="display:flex;gap:8px;align-items:start">
               <div style="flex-shrink:0;width:42px;text-align:right"><span style="font-size:14px;font-weight:900;color:var(--dim)">$0.9M</span></div>
-              <div style="flex:1">
-                <div style="font-size:13px;font-weight:700;color:var(--bright)">Staffing + Debt Service</div>
-                <div style="font-size:13px;color:var(--dim);line-height:1.4;margin-top:1px">Key hires across clinic, engineering, and ops; debt service.</div>
+              <div style="flex:1;min-width:0">
+                <div style="font-size:12px;font-weight:700;color:var(--bright)">Staffing + Debt</div>
+                <div style="font-size:11px;color:var(--dim);line-height:1.35">Key hires + debt service</div>
               </div>
             </div>
           </div>
-        </div>
-        <!-- WHY $10M -->
-        <div class="glass-sm anim d3" style="margin-top:6px;padding:8px 16px;border-color:rgba(251,180,91,.1);display:flex;flex-direction:column;gap:4px">
-          <div style="font-size:12px;color:var(--gold);font-weight:800;letter-spacing:1.5px">WHY $10M</div>
-          <div style="font-size:13px;color:var(--dim);line-height:1.4">Sized to capital plan &mdash; not a round number | No additional fundraising required | FCF positive from 2028</div>
         </div>
       </div>
 
