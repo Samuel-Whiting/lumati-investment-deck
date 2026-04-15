@@ -5079,6 +5079,14 @@ window.addEventListener('beforeunload',function(){_sendLog(true)});
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser)_sendLog(true)});
 
 window.showGate=function(){
+  // Localhost bypass — skip the gate during local testing so Sam can actually use the deck
+  var h=location.hostname;
+  if(h==='localhost'||h==='127.0.0.1'||h===''||h==='0.0.0.0'){
+    _deckUser='dev@localhost';
+    _deckStart=Date.now();
+    if(typeof window.enterDeck==='function')window.enterDeck();
+    return;
+  }
   var gate=document.getElementById('accessGate');
   gate.style.display='flex';
   setTimeout(function(){document.getElementById('gateEmail').focus()},100);
@@ -5111,16 +5119,26 @@ window.enterDeck=function(){
   },1400);
 };
 
-/* ── Enter-key support when gate is visible (landing handler is in slide-nav listener above) ── */
+/* ── Bulletproof Enter handler (top-level, outside any IIFE) ──
+   Fires regardless of whether the slide-nav IIFE at line 4379 completed.
+   Handles: landing visible → showGate; gate visible + focus outside inputs → unlockDeck */
 document.addEventListener('keydown',function(e){
-  if(e.key!=='Enter')return;
+  if(e.key!=='Enter'&&e.key!==' ')return;
+  var tag=(document.activeElement&&document.activeElement.tagName)||'';
+  if(tag==='INPUT'||tag==='TEXTAREA')return;
+  var landing=document.getElementById('landing');
   var gate=document.getElementById('accessGate');
-  if(gate && gate.style.display==='flex'){
-    var active=document.activeElement;
-    // Email + password inputs have their own inline Enter handlers; this fires only if focus is elsewhere
-    if(active && (active.id==='gateEmail'||active.id==='gatePassword'))return;
+  // Landing visible (via CSS) + portal transition hasn't started → pop gate (or localhost bypass inside showGate)
+  if(landing && getComputedStyle(landing).display!=='none' && !landing.classList.contains('portal-enter')){
+    if(gate && gate.style.display==='flex')return;
     e.preventDefault();
-    window.unlockDeck();
+    if(typeof window.showGate==='function')window.showGate();
+    return;
+  }
+  // Gate visible → submit unlock
+  if(gate && gate.style.display==='flex'){
+    e.preventDefault();
+    if(typeof window.unlockDeck==='function')window.unlockDeck();
   }
 });
 // Hide slide nav/progress/num until entered
