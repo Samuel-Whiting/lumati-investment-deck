@@ -4376,7 +4376,7 @@ div:hover > .inst-hint{opacity:1!important}
     else{ovEl.classList.remove('open')}
   };
 
-  document.addEventListener('keydown',e=>{var l=document.getElementById('landing');if(l&&l.style.display!=='none'){if(e.key==='Enter'||e.key===' '){e.preventDefault();enterDeck()}return}if(ovOpen){if(e.key==='Escape'||e.key==='g'||e.key==='G'){e.preventDefault();toggleOverview()}return}if(document.getElementById('modal').classList.contains('open')){if(e.key==='Escape')closeModal();return}if(e.key==='g'||e.key==='G'){e.preventDefault();toggleOverview();return}if(e.key==='ArrowRight'||e.key===' '||e.key==='ArrowDown'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();go(cur-1)}if(e.key==='Escape')closeModal()});
+  document.addEventListener('keydown',e=>{var l=document.getElementById('landing');var g=document.getElementById('accessGate');if(l&&l.style.display!=='none'&&!l.classList.contains('portal-enter')){if(g&&g.style.display==='flex'){return}if(e.key==='Enter'||e.key===' '){e.preventDefault();showGate()}return}if(ovOpen){if(e.key==='Escape'||e.key==='g'||e.key==='G'){e.preventDefault();toggleOverview()}return}if(document.getElementById('modal').classList.contains('open')){if(e.key==='Escape')closeModal();return}if(e.key==='g'||e.key==='G'){e.preventDefault();toggleOverview();return}if(e.key==='ArrowRight'||e.key===' '||e.key==='ArrowDown'){e.preventDefault();go(cur+1)}if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();go(cur-1)}if(e.key==='Escape')closeModal()});
   let wt;document.addEventListener('wheel',e=>{if(document.getElementById('modal').classList.contains('open'))return;if(ovOpen)return;e.preventDefault();clearTimeout(wt);wt=setTimeout(()=>{if(e.deltaY>25)go(cur+1);else if(e.deltaY<-25)go(cur-1)},50)},{passive:false});
   let ty;document.addEventListener('touchstart',e=>ty=e.touches[0].clientY);document.addEventListener('touchend',e=>{if(document.getElementById('modal').classList.contains('open'))return;const d=ty-e.changedTouches[0].clientY;if(Math.abs(d)>40){d>0?go(cur+1):go(cur-1)}});
 
@@ -5111,22 +5111,13 @@ window.enterDeck=function(){
   },1400);
 };
 
-/* ── Enter-key support for landing page + access gate ── */
+/* ── Enter-key support when gate is visible (landing handler is in slide-nav listener above) ── */
 document.addEventListener('keydown',function(e){
   if(e.key!=='Enter')return;
-  var landing=document.getElementById('landing');
   var gate=document.getElementById('accessGate');
-  // Landing visible + gate not yet shown → pop the gate
-  if(landing && landing.style.display!=='none' && !landing.classList.contains('portal-enter') && (!gate || gate.style.display!=='flex')){
-    e.preventDefault();
-    window.showGate();
-    return;
-  }
-  // Gate visible → submit unlock unless inline handler already fired
   if(gate && gate.style.display==='flex'){
     var active=document.activeElement;
-    // Email field handles its own Enter (focuses password); password handles its own Enter (calls unlockDeck)
-    // This handler only fires if focus is NOT in either input (e.g., user clicked outside then pressed Enter)
+    // Email + password inputs have their own inline Enter handlers; this fires only if focus is elsewhere
     if(active && (active.id==='gateEmail'||active.id==='gatePassword'))return;
     e.preventDefault();
     window.unlockDeck();
