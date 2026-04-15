@@ -407,14 +407,14 @@ div:hover > .inst-hint{opacity:1!important}
 </div>
 
 <!-- ======================= ACCESS GATE ======================= -->
-<div id="accessGate" style="display:none;position:fixed;inset:0;z-index:10000;background:rgba(6,6,10,0.92);backdrop-filter:blur(24px);align-items:center;justify-content:center">
+<div id="accessGate" style="display:flex;position:fixed;inset:0;z-index:10000;background:rgba(6,6,10,0.92);backdrop-filter:blur(24px);align-items:center;justify-content:center">
   <div style="width:380px;padding:40px;border-radius:20px;background:rgba(255,255,255,0.03);border:1px solid rgba(78,205,196,0.12);text-align:center">
     <img src="logo-color.png" alt="Lumati" style="height:36px;margin-bottom:20px;opacity:0.9"/>
     <div style="font-size:10px;letter-spacing:3px;color:rgba(255,255,255,0.35);text-transform:uppercase;margin-bottom:8px">Confidential Investment Materials</div>
     <div style="font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:24px;line-height:1.5">Enter your email and the access code provided to you.</div>
     <div style="text-align:left;margin-bottom:12px">
       <label style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;display:block;margin-bottom:6px">Email Address</label>
-      <input id="gateEmail" type="email" placeholder="you@company.com" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#e2e2ec;font-family:var(--body);font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='rgba(78,205,196,0.3)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'" onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('gatePassword').focus();}"/>
+      <input id="gateEmail" type="email" autofocus placeholder="you@company.com" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#e2e2ec;font-family:var(--body);font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='rgba(78,205,196,0.3)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'" onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('gatePassword').focus();}"/>
     </div>
     <div style="text-align:left;margin-bottom:20px">
       <label style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;display:block;margin-bottom:6px">Access Code</label>
@@ -1100,13 +1100,12 @@ div:hover > .inst-hint{opacity:1!important}
     <!-- Main 2-Column -->
     <div style="display:flex;gap:16px;flex:1;min-height:0">
       <!-- LEFT: Mitochondria Chart + Key Finding -->
-      <div class="glass anim d3" style="flex:1.05;padding:18px 16px 14px;display:flex;flex-direction:column;border-color:rgba(78,205,196,.08);overflow:hidden">
-        <div class="center" style="margin-bottom:14px;flex-shrink:0;position:relative;z-index:2">
-          <div style="font-size:14px;font-weight:700;color:var(--dim);letter-spacing:1.5px">MITOCHONDRIA ENERGY SCORE</div>
-          <div style="font-size:13px;color:var(--dim);margin-top:3px">3x/week Recharge Portal Sessions</div>
+      <div class="glass anim d3" style="flex:1.05;padding:14px 16px 12px;display:flex;flex-direction:column;border-color:rgba(78,205,196,.08);overflow:hidden;min-height:0">
+        <div class="center" style="margin-bottom:8px;flex-shrink:0;position:relative;z-index:2">
+          <div style="font-size:13px;font-weight:700;color:var(--dim);letter-spacing:1.5px">MITOCHONDRIA ENERGY SCORE</div>
+          <div style="font-size:12px;color:var(--dim);margin-top:2px">3x/week Recharge Portal Sessions</div>
         </div>
-        <div style="flex-shrink:0;height:8px"></div>
-        <div id="mitoChart" style="display:flex;align-items:flex-end;gap:14px;flex:1;justify-content:center;min-height:0;padding-bottom:8px;overflow:hidden">
+        <div id="mitoChart" style="display:flex;align-items:flex-end;gap:14px;flex:1;justify-content:center;min-height:0;padding-bottom:6px;overflow:hidden">
           <!-- Bar 1: Day 0 -->
           <div style="display:flex;flex-direction:column;align-items:center;width:64px">
             <span style="font-family:var(--head);font-size:18px;font-weight:900;color:var(--bright);margin-bottom:4px">38</span>
@@ -4246,7 +4245,7 @@ div:hover > .inst-hint{opacity:1!important}
   function ui(){prog.style.width=((cur+1)/total*100)+'%';num.textContent=String(cur+1).padStart(2,'0')+' / '+total}
   function go(n){if(n<0||n>=total||n===cur||busy)return;busy=true;slides[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');ui();anim(slides[cur]);setTimeout(()=>busy=false,650)}
   window.navPrev=function(){go(cur-1)};window.navNext=function(){go(cur+1)};window.goSlide=go;
-  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*85)+'px'),300);if(s.id==='s15')buildBridgeChart();if(s.id==='s16')buildDivRev();if(s.id==='s16a')setTimeout(function(){s.querySelectorAll('.gm-bar-ue').forEach(function(b){b.style.width=b.dataset.w+'%'})},500)}
+  function anim(s){s.querySelectorAll('.anim').forEach(e=>{e.style.animation='none';e.offsetHeight;e.style.animation=''});if(s.id==='s6')setTimeout(()=>s.querySelectorAll('.mbar').forEach(b=>b.style.height=(b.dataset.h/80*58)+'px'),300);if(s.id==='s15')buildBridgeChart();if(s.id==='s16')buildDivRev();if(s.id==='s16a')setTimeout(function(){s.querySelectorAll('.gm-bar-ue').forEach(function(b){b.style.width=b.dataset.w+'%'})},500)}
   function buildBridgeChart(){const c=document.getElementById('bridgeChart');if(!c||c.dataset.b)return;c.dataset.b='1';
     const maxH=Math.max(c.offsetHeight-130,80);
     // Financial Model v2.2 - bottoms-up verified ($000s converted to $M)
