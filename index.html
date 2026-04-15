@@ -5079,14 +5079,6 @@ window.addEventListener('beforeunload',function(){_sendLog(true)});
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser)_sendLog(true)});
 
 window.showGate=function(){
-  // Localhost bypass — skip the gate during local testing so Sam can actually use the deck
-  var h=location.hostname;
-  if(h==='localhost'||h==='127.0.0.1'||h===''||h==='0.0.0.0'){
-    _deckUser='dev@localhost';
-    _deckStart=Date.now();
-    if(typeof window.enterDeck==='function')window.enterDeck();
-    return;
-  }
   var gate=document.getElementById('accessGate');
   gate.style.display='flex';
   setTimeout(function(){document.getElementById('gateEmail').focus()},100);
@@ -5182,42 +5174,6 @@ document.addEventListener('keydown',function(e){
   document.addEventListener('touchstart',resetLinger);
   document.addEventListener('wheel',resetLinger);
   resetLinger();
-})();
-</script>
-<script>
-/* ============================================================
-   LOCALHOST AUTO-ENTRY — rips out the gate entirely on local dev.
-   Runs after all other scripts and bypasses every event handler,
-   autofocus, button click, keydown dance. If you can read this
-   script running on localhost, the deck enters the first slide.
-   ============================================================ */
-(function(){
-  var h=location.hostname;
-  if(h!=='localhost'&&h!=='127.0.0.1'&&h!=='0.0.0.0'&&h!==''){return;}
-  window._deckUser='dev@localhost';
-  window._deckStart=Date.now();
-  // Kick the portal-entry transition immediately. enterDeck is wrapped
-  // by the nav-reveal IIFE earlier in the script, so calling it here
-  // triggers the landing fade + slide chrome reveal + first slide display.
-  if(typeof window.enterDeck==='function'){
-    try{window.enterDeck();}catch(e){console.warn('enterDeck threw, forcing manual fallback',e);manualFallback();}
-  }else{
-    manualFallback();
-  }
-  function manualFallback(){
-    // If enterDeck isn't defined for any reason, do the bare minimum:
-    // hide the landing div, activate the first slide, reveal the nav chrome.
-    var l=document.getElementById('landing');
-    if(l){l.style.display='none';}
-    var first=document.querySelector('.slide');
-    if(first&&!first.classList.contains('active'))first.classList.add('active');
-    var nav=document.getElementById('slideNav');
-    var num=document.getElementById('slideNum');
-    var prog=document.getElementById('progress');
-    if(nav){nav.style.opacity='';nav.style.pointerEvents='';}
-    if(num)num.style.opacity='';
-    if(prog)prog.style.opacity='';
-  }
 })();
 </script>
 </body>
