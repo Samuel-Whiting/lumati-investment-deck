@@ -414,7 +414,7 @@ div:hover > .inst-hint{opacity:1!important}
     <div style="font-size:12px;color:rgba(255,255,255,0.45);margin-bottom:24px;line-height:1.5">Enter your email and the access code provided to you.</div>
     <div style="text-align:left;margin-bottom:12px">
       <label style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;display:block;margin-bottom:6px">Email Address</label>
-      <input id="gateEmail" type="email" placeholder="you@company.com" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#e2e2ec;font-family:var(--body);font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='rgba(78,205,196,0.3)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'"/>
+      <input id="gateEmail" type="email" placeholder="you@company.com" style="width:100%;padding:12px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.03);color:#e2e2ec;font-family:var(--body);font-size:14px;outline:none;transition:border-color 0.3s" onfocus="this.style.borderColor='rgba(78,205,196,0.3)'" onblur="this.style.borderColor='rgba(255,255,255,0.08)'" onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('gatePassword').focus();}"/>
     </div>
     <div style="text-align:left;margin-bottom:20px">
       <label style="font-size:10px;letter-spacing:1.5px;color:rgba(255,255,255,0.4);text-transform:uppercase;display:block;margin-bottom:6px">Access Code</label>
@@ -5110,6 +5110,28 @@ window.enterDeck=function(){
     document.getElementById('progress').style.opacity='';
   },1400);
 };
+
+/* ── Enter-key support for landing page + access gate ── */
+document.addEventListener('keydown',function(e){
+  if(e.key!=='Enter')return;
+  var landing=document.getElementById('landing');
+  var gate=document.getElementById('accessGate');
+  // Landing visible + gate not yet shown → pop the gate
+  if(landing && landing.style.display!=='none' && !landing.classList.contains('portal-enter') && (!gate || gate.style.display!=='flex')){
+    e.preventDefault();
+    window.showGate();
+    return;
+  }
+  // Gate visible → submit unlock unless inline handler already fired
+  if(gate && gate.style.display==='flex'){
+    var active=document.activeElement;
+    // Email field handles its own Enter (focuses password); password handles its own Enter (calls unlockDeck)
+    // This handler only fires if focus is NOT in either input (e.g., user clicked outside then pressed Enter)
+    if(active && (active.id==='gateEmail'||active.id==='gatePassword'))return;
+    e.preventDefault();
+    window.unlockDeck();
+  }
+});
 // Hide slide nav/progress/num until entered
 (function(){
   var nav=document.getElementById('slideNav');
