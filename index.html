@@ -5089,13 +5089,11 @@ window.addEventListener('beforeunload',function(){_sendLog(true)});
 document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden'&&_deckUser)_sendLog(true)});
 
 window.showGate=function(){
-  console.log('[deck] showGate called at',new Date().toISOString());
   var gate=document.getElementById('accessGate');
-  if(!gate){console.error('[deck] accessGate element not found');return;}
+  if(!gate)return;
   gate.style.display='flex';
   gate.style.visibility='visible';
   gate.style.opacity='1';
-  console.log('[deck] gate display set to',gate.style.display);
   setTimeout(function(){var e=document.getElementById('gateEmail');if(e)e.focus();},100);
 };
 window.unlockDeck=function(){
