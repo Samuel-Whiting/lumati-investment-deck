@@ -4612,8 +4612,10 @@ const tQuote=document.getElementById('tQuote');
 const tAuthor=document.getElementById('tAuthor');
 const tInner=document.getElementById('testimonialInner');
 const tDots=document.getElementById('tDots');
-TESTIMONIALS.forEach((_,i)=>{const d=document.createElement('div');d.style.cssText='width:5px;height:5px;border-radius:50%;background:rgba(78,205,196,'+(i===0?'.7':'.2')+');transition:background .3s';tDots.appendChild(d)});
-setInterval(()=>{tInner.style.opacity='0';setTimeout(()=>{tIdx=(tIdx+1)%TESTIMONIALS.length;tQuote.innerHTML='\u201C'+TESTIMONIALS[tIdx].q+'\u201D';tAuthor.textContent=TESTIMONIALS[tIdx].a;tDots.childNodes.forEach((d,i)=>d.style.background='rgba(78,205,196,'+(i===tIdx?'.7':'.2')+')');tInner.style.opacity='1'},400)},4500);
+if(tQuote&&tAuthor&&tInner&&tDots){
+  TESTIMONIALS.forEach((_,i)=>{const d=document.createElement('div');d.style.cssText='width:5px;height:5px;border-radius:50%;background:rgba(78,205,196,'+(i===0?'.7':'.2')+');transition:background .3s';tDots.appendChild(d)});
+  setInterval(()=>{tInner.style.opacity='0';setTimeout(()=>{tIdx=(tIdx+1)%TESTIMONIALS.length;tQuote.innerHTML='\u201C'+TESTIMONIALS[tIdx].q+'\u201D';tAuthor.textContent=TESTIMONIALS[tIdx].a;tDots.childNodes.forEach((d,i)=>d.style.background='rgba(78,205,196,'+(i===tIdx?'.7':'.2')+')');tInner.style.opacity='1'},400)},4500);
+}
 
 /* ── Ecosystem 3D Orbit Animation ── */
 (function(){
